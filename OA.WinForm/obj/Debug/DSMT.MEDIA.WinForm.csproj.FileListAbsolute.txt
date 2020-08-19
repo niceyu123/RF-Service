@@ -1,0 +1,78 @@
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinForm.exe.config
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinForm.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinForm.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Core.Common.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NLog.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WebService.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\MySql.Data.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.OOXML.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Entity.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.Model.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Web.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.BLL.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\MattBerseth.WebControls.AJAX.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\MediaInfoDotNet.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.IDAL.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.DALFactory.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\AjaxControlToolkit.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Core.Common.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WebService.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Entity.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.Model.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Web.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.BLL.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\MattBerseth.WebControls.AJAX.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.IDAL.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.DB.DALFactory.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\AjaxControlToolkit.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ar\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\cs\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\de\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\es\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\fr\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\he\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\hi\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\it\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ja\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ko\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\nl\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\pt\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ru\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.Form1.resources
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.Properties.Resources.resources
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.csproj.GenerateResource.Cache
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinForm.exe.config
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinForm.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinForm.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Core.Common.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NLog.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\MySql.Data.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ServiceStack.Redis.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.OOXML.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\ServiceStack.Text.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Debug\DSMT.MEDIA.Core.Common.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.Form1.resources
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.Properties.Resources.resources
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.csproj.GenerateResource.Cache
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Debug\DSMT.MEDIA.WinForm.pdb

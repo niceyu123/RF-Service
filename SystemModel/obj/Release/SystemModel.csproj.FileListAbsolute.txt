@@ -1,0 +1,6 @@
+C:\Users\user\source\repos\OAService\SystemModel\bin\Release\SystemModel.dll
+C:\Users\user\source\repos\OAService\SystemModel\bin\Release\SystemModel.pdb
+C:\Users\user\source\repos\OAService\SystemModel\obj\Release\SystemModel.csprojAssemblyReference.cache
+C:\Users\user\source\repos\OAService\SystemModel\obj\Release\SystemModel.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OAService\SystemModel\obj\Release\SystemModel.dll
+C:\Users\user\source\repos\OAService\SystemModel\obj\Release\SystemModel.pdb

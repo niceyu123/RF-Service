@@ -1,0 +1,39 @@
+2020-06-24 11:08:19.8247 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060087","sqr":"171","zdrq":"2020-06-24","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":1,"gh":"2047753","dw":"6558708"}
+2020-06-24 11:54:08.5971 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"3931","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"10525","dw":"6558708"}
+2020-06-24 11:54:34.3403 OAService.Test.SaveBGRK 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 301
+2020-06-24 11:54:34.3931 OAService.Test.SaveBGRK false
+2020-06-24 11:54:42.3030 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"3931","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"10525","dw":"6558708"}
+2020-06-24 11:56:56.0244 OAService.Test.SaveBGRK 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 301
+2020-06-24 11:56:56.0244 OAService.Test.SaveBGRK false
+2020-06-24 11:57:50.8847 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"171","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"10525","dw":"6558708"}
+2020-06-24 11:58:11.3557 OAService.Test.SaveBGRK 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 301
+2020-06-24 11:58:11.3676 OAService.Test.SaveBGRK false
+2020-06-24 11:58:16.4121 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"171","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"10525","dw":"6558708"}
+2020-06-24 11:58:22.3858 OAService.Test.SaveBGRK 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 301
+2020-06-24 11:58:22.3858 OAService.Test.SaveBGRK false
+2020-06-24 11:58:30.0025 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"171","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"10525","dw":"6558708"}
+2020-06-24 11:58:37.2213 OAService.Test.SaveBGRK 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 301
+2020-06-24 11:58:37.2213 OAService.Test.SaveBGRK false
+2020-06-24 11:59:12.5286 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"171","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"10525","dw":"6558708"}
+2020-06-24 11:59:16.0013 OAService.Test.SaveBGRK 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 301
+2020-06-24 11:59:16.0013 OAService.Test.SaveBGRK false
+2020-06-24 11:59:37.0869 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020060088","sqr":"171","zdrq":"2020-06-24","cgy":"3931","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"2047753","dw":"6558708"}
+2020-06-24 12:00:10.1725 OAService.Test.SaveBGRK 办公用品入库单SQL:update FORMTABLE_MAIN_330_DT1 set ycgsl='0'  where id='2221'

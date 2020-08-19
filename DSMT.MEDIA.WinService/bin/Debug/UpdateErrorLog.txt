@@ -1,0 +1,2 @@
+2017-07-18 15:35:53
+在 ServiceModel 客户端配置部分中，找不到引用协定“DSMT_MEDIA_ServiceReference.DSMT_MEDIA_ServiceSoap”的默认终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此协定匹配的终结点元素。

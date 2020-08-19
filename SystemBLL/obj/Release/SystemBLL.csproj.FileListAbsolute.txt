@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\SystemBLL.dll
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\SystemBLL.pdb
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\SystemDAL.dll
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\SystemModel.dll
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\SystemDAL.pdb
+C:\Users\user\source\repos\OAService\SystemBLL\bin\Release\SystemModel.pdb
+C:\Users\user\source\repos\OAService\SystemBLL\obj\Release\SystemBLL.csprojAssemblyReference.cache
+C:\Users\user\source\repos\OAService\SystemBLL\obj\Release\SystemBLL.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OAService\SystemBLL\obj\Release\SystemBLL.csproj.CopyComplete
+C:\Users\user\source\repos\OAService\SystemBLL\obj\Release\SystemBLL.dll
+C:\Users\user\source\repos\OAService\SystemBLL\obj\Release\SystemBLL.pdb

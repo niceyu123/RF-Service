@@ -1,0 +1,9 @@
+C#或者delphi语言调用ErpAesCode.dll文件中的加解密方法之前
+需要加一下几个必要的dll
+%IKVM_HOME%\bin\IKVM.OpenJDK.Core.dll
+%IKVM_HOME%\bin\IKVM.Runtime.dll
+%IKVM_HOME%\bin\IKVM.Runtime.JNI.dll
+class: AesCode
+1.加密方法：String encryptStr = AesCode.encrypt(String strXml);
+2.解密方法：String decryptGBKStr  = AesCode.decrypt2GBK(String str);//将加密串解密成GBK格式字符串
+						String decryptUTF8Str = AesCode.decrypt2UTF8(String str);//将加密串解密成UTF-8格式字符串

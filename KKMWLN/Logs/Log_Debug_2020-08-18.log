@@ -1,0 +1,37 @@
+2020-08-18 14:18:31.9617 KKMWLN.MyPublic.CommonHelper.Requestbill_add {"address":"","bill_code":"","city":"","district":"","mobile":"","outer_bill_code":"","province":"","reason":"","receiver":"","remark":"","storage_code":"CK002","details":[{"index":"","remark":"","size":"2160","spec_code":"CC-3101Y"}]}
+2020-08-18 17:17:10.0709 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.ArgumentException: 列“TWHFID”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 167
+2020-08-18 17:17:11.1171 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.ArgumentException: 列“TWHFID”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 167
+2020-08-18 17:17:12.1274 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.ArgumentException: 列“TWHFID”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 167
+2020-08-18 17:17:13.1387 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.ArgumentException: 列“TWHFID”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 167
+2020-08-18 17:17:53.5535 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.ArgumentException: 列“TWHFID”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 167
+2020-08-18 17:17:58.8613 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.ArgumentException: 列“TWHFID”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 167
+2020-08-18 17:20:48.2340 KKMWLN.MyPublic.CommonHelper.Requestbill_add {"address":"","bill_code":"","city":"","district":"","mobile":"","outer_bill_code":"","province":"","reason":"","receiver":"","remark":"","storage_code":"CK002","details":[{"index":"","remark":"","size":"1670","spec_code":"CC-3101P"},{"index":"","remark":"","size":"1670","spec_code":"CC-3101P"},{"index":"","remark":"","size":"1670","spec_code":"CC-3101P"},{"index":"","remark":"","size":"1670","spec_code":"CC-3101P"}]}
+2020-08-18 17:57:29.7142 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 166
+2020-08-18 17:58:05.9537 KKMWLN.MyPublic.CommonHelper.Requestbill_add System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 KKMWLN.MyPublic.CommonHelper.Requestbill_add() 位置 C:\Users\user\source\repos\备份\200807\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 166
+2020-08-18 17:59:57.3653 KKMWLN.MyPublic.CommonHelper.Requestbill_add {"address":"","bill_code":"","city":"","district":"","mobile":"","outer_bill_code":"","province":"","reason":"","receiver":"","remark":"","storage_code":"CK002","details":[{"index":"","remark":"","size":"340","spec_code":"8799-CG"},{"index":"","remark":"","size":"840","spec_code":"8799-SG"},{"index":"","remark":"","size":"900","spec_code":"8799-WG"},{"index":"","remark":"","size":"480","spec_code":"8799-S"},{"index":"","remark":"","size":"360","spec_code":"8799-JT"},{"index":"","remark":"","size":"420","spec_code":"8799-CW"},{"index":"","remark":"","size":"160","spec_code":"8799-CK"},{"index":"","remark":"","size":"240","spec_code":"8799-CJ"},{"index":"","remark":"","size":"240","spec_code":"8799-C"},{"index":"","remark":"","size":"360","spec_code":"8799-B"},{"index":"","remark":"","size":"200","spec_code":"9941F-S-P"},{"index":"","remark":"","size":"200","spec_code":"9941F-S-G"},{"index":"","remark":"","size":"100","spec_code":"6058-P"},{"index":"","remark":"","size":"100","spec_code":"6058-B"},{"index":"","remark":"","size":"100","spec_code":"6058-G"},{"index":"","remark":"","size":"240","spec_code":"8586-P"},{"index":"","remark":"","size":"200","spec_code":"8586-B"}]}
+2020-08-18 18:00:13.5121 KKMWLN.MyPublic.CommonHelper.Requestbill_add {"address":"","bill_code":"","city":"","district":"","mobile":"","outer_bill_code":"","province":"","reason":"","receiver":"","remark":"","storage_code":"CK002","details":[{"index":"","remark":"","size":"340","spec_code":"8799-CG"},{"index":"","remark":"","size":"840","spec_code":"8799-SG"},{"index":"","remark":"","size":"900","spec_code":"8799-WG"},{"index":"","remark":"","size":"480","spec_code":"8799-S"},{"index":"","remark":"","size":"360","spec_code":"8799-JT"},{"index":"","remark":"","size":"420","spec_code":"8799-CW"},{"index":"","remark":"","size":"160","spec_code":"8799-CK"},{"index":"","remark":"","size":"240","spec_code":"8799-CJ"},{"index":"","remark":"","size":"240","spec_code":"8799-C"},{"index":"","remark":"","size":"360","spec_code":"8799-B"},{"index":"","remark":"","size":"200","spec_code":"9941F-S-P"},{"index":"","remark":"","size":"200","spec_code":"9941F-S-G"},{"index":"","remark":"","size":"100","spec_code":"6058-P"},{"index":"","remark":"","size":"100","spec_code":"6058-B"},{"index":"","remark":"","size":"100","spec_code":"6058-G"},{"index":"","remark":"","size":"240","spec_code":"8586-P"},{"index":"","remark":"","size":"200","spec_code":"8586-B"}]}
+2020-08-18 18:00:53.8414 KKMWLN.MyPublic.CommonHelper.Requestbill_add {"address":"","bill_code":"","city":"","district":"","mobile":"","outer_bill_code":"","province":"","reason":"","receiver":"","remark":"","storage_code":"CK002","details":[{"index":"","remark":"","size":"360","spec_code":"CC-3101B"},{"index":"","remark":"","size":"432","spec_code":"CC-3101R"},{"index":"","remark":"","size":"250","spec_code":"CC-3101G"},{"index":"","remark":"","size":"1670","spec_code":"CC-3101P"},{"index":"","remark":"","size":"2160","spec_code":"CC-3101Y"}]}

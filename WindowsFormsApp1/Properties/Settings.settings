@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsFormsApp1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WindowsFormsApp1_cn_com_webxml_www_qqOnlineWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.webxml.com.cn/webservices/qqOnlineWebService.asmx</Value>
+    </Setting>
+    <Setting Name="WindowsFormsApp1_WebTest_tests" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.11.17:8080/services/tests</Value>
+    </Setting>
+    <Setting Name="WindowsFormsApp1_WorkflowServiceXml_WorkflowServiceXml" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.11.17:8080/services/WorkflowServiceXml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

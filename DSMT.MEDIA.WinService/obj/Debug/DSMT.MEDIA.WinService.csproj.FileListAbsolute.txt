@@ -1,0 +1,179 @@
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe.config
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WebService.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\MediaInfoDotNet.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NLog.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\MySql.Data.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OOXML.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\Dapper.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Web.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\MattBerseth.WebControls.AJAX.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\AjaxControlToolkit.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WebService.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Web.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\MattBerseth.WebControls.AJAX.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\AjaxControlToolkit.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ar\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\cs\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\de\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\es\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\fr\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\he\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\hi\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\it\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ja\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ko\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\nl\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\pt\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ru\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csprojResolveAssemblyReference.cache
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.ProjectInstaller.resources
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.GenerateResource.Cache
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NLog.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe.config
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\MediaInfoDotNet.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\MySql.Data.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Redis.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OOXML.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\Dapper.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Text.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csprojResolveAssemblyReference.cache
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.ProjectInstaller.resources
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.GenerateResource.Cache
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\DSMT.MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe.config
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\MediaInfoDotNet.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\MySql.Data.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NLog.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Redis.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OOXML.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\Dapper.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Text.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.pdb
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csprojResolveAssemblyReference.cache
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.ProjectInstaller.resources
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.GenerateResource.Cache
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\YUJIE-PC\Documents\Visual Studio 2015\Projects\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csprojAssemblyReference.cache
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.ProjectInstaller.resources
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.GenerateResource.cache
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe.config
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\MediaInfoDotNet.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NLog.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Redis.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OOXML.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\Dapper.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\ServiceStack.Text.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Core.Common.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.BLL.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.Model.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.MySQLDAL.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.Entity.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.IDAL.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.DB.DALFactory.pdb
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.CopyComplete
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\user\Desktop\123\MEDIA\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.pdb
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\DSMT.MEDIA.WinService.exe.config
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\OAService.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\NPOI.OOXML.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\NPOI.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\NLog.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\OAService.pdb
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\OAService.dll.config
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csprojAssemblyReference.cache
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.ProjectInstaller.resources
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.GenerateResource.cache
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.csproj.CopyComplete
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.exe
+C:\Users\user\source\repos\OAService\DSMT.MEDIA.WinService\obj\Debug\DSMT.MEDIA.WinService.pdb

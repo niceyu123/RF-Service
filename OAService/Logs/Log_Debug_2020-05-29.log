@@ -1,0 +1,4 @@
+2020-05-29 10:42:24.8000 OAService.Test.SaveBGCKa 23办公用品领用(出库)单测试{"oano":"R0-BGYPLY1590719898597","sqr":"3931","sqbm":"128","sqrq":"2020-05-29 10:40:15","remark":"","xh":1,"zs":1}
+2020-05-29 10:42:39.6892 OAService.Test.SaveBGCKa 办公用品领用(出库)单SQL select B.* from FORMTABLE_MAIN_42 a left join FORMTABLE_MAIN_42_DT1 b on a.id=b.mainid where a.lcbh='R0-BGYPLY1590719898597' order by b.id 
+2020-05-29 10:42:41.0166 OAService.Test.SaveBGCKa 办公用品领用(出库)单WLIDBG0386
+2020-05-29 18:39:07.4131 OAService.Test.SaveLY 办公用品保存:R0-BGYPLY1590748567613;1

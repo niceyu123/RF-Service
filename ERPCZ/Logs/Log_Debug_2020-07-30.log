@@ -1,0 +1,25 @@
+2020-07-30 15:51:50.8839 ERPCZ.NBCZWebService.QUERYACCLIST message
+2020-07-30 15:58:10.3400 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R2-FKSQD2020070005","skzh":"7550110182600013999","skdw":"宁波众享网络科技有限公司","fkje":"128700.00","skyh":"中信银行&nbsp;宁波高新区支行"}
+2020-07-30 15:59:06.2201 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?>
+<body><head><erpSysCode></erpSysCode><custNo></custNo><tradeName></tradeName><retCode>2</retCode><retMsg>请求报文不是合格的xml请核对检查</retMsg></head></body>
+2020-07-30 16:00:29.0903 ERPCZ.NBCZWebService.TRANSFER zt2
+2020-07-30 16:18:21.5119 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R2-FKSQD2020070006","skzh":"3301040160009397061","skdw":"杭州硕果数码科技有限公司","fkje":"20000.00","skyh":"杭州银行学院路支行"}
+2020-07-30 16:18:40.9550 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?><body><head><erpSysCode>ERP001</erpSysCode><custNo>0000082075</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>2</retCode><retMsg>erp报文重复上送，上送失败验证签名失败</retMsg><signData>null</signData></head></body>
+2020-07-30 16:18:40.9550 ERPCZ.NBCZWebService.TRANSFER zt2
+2020-07-30 16:18:57.9121 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R2-FKSQD2020070066","skzh":"3301040160009397061","skdw":"杭州硕果数码科技有限公司","fkje":"20000.00","skyh":"杭州银行学院路支行"}
+2020-07-30 16:20:48.3670 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?><body><head><erpSysCode>ERP001</erpSysCode><custNo>0000082075</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>0</retCode><retMsg>交易成功</retMsg><signData>null</signData></head><map><billCode>ERP200730000003</billCode></map></body>
+2020-07-30 16:20:48.3670 ERPCZ.NBCZWebService.TRANSFER zt0
+2020-07-30 16:20:48.3670 ERPCZ.NBCZWebService.TRANSFER dsfERP200730000003
+2020-07-30 16:20:48.3670 ERPCZ.NBCZWebService.TRANSFER 123
+2020-07-30 16:20:48.6563 ERPCZ.NBCZWebService.TRANSFER sql update formtable_main_418 set BILLCODE='ERP200730000003' where sqdh='R2-FKSQD2020070066'
+2020-07-30 16:20:48.6672 ERPCZ.NBCZWebService.TRANSFER int0
+2020-07-30 16:21:53.6494 ERPCZ.NBCZWebService.OAQUERYTRANSFER 开始R2-FKSQD2020070066
+2020-07-30 16:22:16.5501 ERPCZ.NBCZWebService.OAQUERYTRANSFER 开始R2-FKSQD2020070066
+2020-07-30 16:31:52.8551 ERPCZ.NBCZWebService.TRANSFERT message{"sqdh":"R2-FKSQD2020070099","skzh":"75200122000010790","skdw":"794590849","fkje":"1234.00","skyh":"宁波银行股份有限公司昆山高新技术开发区支行"}
+2020-07-30 16:34:11.2109 ERPCZ.NBCZWebService.TRANSFERT messages<?xml version="1.0" encoding="UTF-8"?><body><head><erpSysCode>ERP001</erpSysCode><custNo>0000082075</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>0</retCode><retMsg>交易成功</retMsg><signData>null</signData></head><map><billCode>ERP200730000004</billCode></map></body>
+2020-07-30 16:34:11.2109 ERPCZ.NBCZWebService.TRANSFERT zt0
+2020-07-30 16:34:11.2109 ERPCZ.NBCZWebService.TRANSFERT dsfERP200730000004
+2020-07-30 16:34:11.2288 ERPCZ.NBCZWebService.TRANSFERT 123
+2020-07-30 16:34:11.5699 ERPCZ.NBCZWebService.TRANSFERT sql update formtable_main_418 set BILLCODE='ERP200730000004' where sqdh='R2-FKSQD2020070099'
+2020-07-30 16:34:11.5699 ERPCZ.NBCZWebService.TRANSFERT int0
+2020-07-30 16:35:31.1729 ERPCZ.NBCZWebService.OAQUERYTRANSFER 开始R2-FKSQD2020070099

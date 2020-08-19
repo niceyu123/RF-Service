@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://mediaservice.51ipc.com/DSMT_MEDIA_Service.asmx?wsdl" docRef="http://mediaservice.51ipc.com/DSMT_MEDIA_Service.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://mediaservice.51ipc.com/DSMT_MEDIA_Service.asmx" xmlns:q1="http://medservice.51ipc.com/DSMT_MEDIA_Service/" binding="q1:DSMT_MEDIA_ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://mediaservice.51ipc.com/DSMT_MEDIA_Service.asmx" xmlns:q2="http://medservice.51ipc.com/DSMT_MEDIA_Service/" binding="q2:DSMT_MEDIA_ServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

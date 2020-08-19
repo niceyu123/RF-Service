@@ -1,0 +1,9 @@
+2020-08-06 11:01:23.0371 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R6-FKSQD2020080048","skzh":"571900288010111776562795","skdw":"阿里巴巴（中国）网络技术有限公司","fkje":"1.00","skyh":"招商银行杭州分行钱塘支行","dw":"ys"}
+2020-08-06 11:01:50.0567 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?>
+<body><head><erpSysCode>ERP001</erpSysCode><custNo>0000070887</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>0</retCode><retMsg>交易成功</retMsg><signData></signData></head><map><billCode>ERP200806000219</billCode></map></body>
+2020-08-06 11:02:08.0605 ERPCZ.NBCZWebService.TRANSFER zt0
+2020-08-06 11:03:38.1706 ERPCZ.NBCZWebService.TRANSFER dsfERP200806000219
+2020-08-06 11:03:38.1706 ERPCZ.NBCZWebService.TRANSFER 123
+2020-08-06 11:03:38.5566 ERPCZ.NBCZWebService.TRANSFER sql update formtable_main_418 set BILLCODE='ERP200806000219' where sqdh='R6-FKSQD2020080048'
+2020-08-06 11:03:38.5645 ERPCZ.NBCZWebService.TRANSFER int1
+2020-08-06 11:04:11.1040 ERPCZ.NBCZWebService.OAQUERYTRANSFER 开始R6-FKSQD2020080048

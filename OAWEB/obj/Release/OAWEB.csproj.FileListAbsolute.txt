@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\OAService\OAWEB\bin\OAWEB.dll.config
+C:\Users\user\source\repos\OAService\OAWEB\bin\OAWEB.dll
+C:\Users\user\source\repos\OAService\OAWEB\bin\OAWEB.pdb
+C:\Users\user\source\repos\OAService\OAWEB\obj\Release\OAWEB.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OAService\OAWEB\obj\Release\OAWEB.dll
+C:\Users\user\source\repos\OAService\OAWEB\obj\Release\OAWEB.pdb
+C:\Users\user\source\repos\OAService\OAWEB\bin\SystemBLL.dll
+C:\Users\user\source\repos\OAService\OAWEB\bin\SystemDAL.dll
+C:\Users\user\source\repos\OAService\OAWEB\bin\SystemModel.dll
+C:\Users\user\source\repos\OAService\OAWEB\bin\Oracle.ManagedDataAccess.dll
+C:\Users\user\source\repos\OAService\OAWEB\bin\SystemBLL.pdb
+C:\Users\user\source\repos\OAService\OAWEB\bin\SystemDAL.pdb
+C:\Users\user\source\repos\OAService\OAWEB\bin\SystemModel.pdb
+C:\Users\user\source\repos\OAService\OAWEB\obj\Release\OAWEB.csprojAssemblyReference.cache
+C:\Users\user\source\repos\OAService\OAWEB\obj\Release\OAWEB.csproj.CopyComplete

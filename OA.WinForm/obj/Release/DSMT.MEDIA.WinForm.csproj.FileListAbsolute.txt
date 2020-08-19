@@ -1,0 +1,7 @@
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Release\DSMT.MEDIA.WinForm.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\bin\Release\DSMT.MEDIA.WinForm.pdb
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Release\DSMT.MEDIA.WinForm.Form1.resources
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Release\DSMT.MEDIA.WinForm.Properties.Resources.resources
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Release\DSMT.MEDIA.WinForm.csproj.GenerateResource.Cache
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Release\DSMT.MEDIA.WinForm.exe
+C:\Users\龙联\Desktop\DEV无刷卡版\DSMT.MEDIA\DSMT.MEDIA.WinForm\obj\Release\DSMT.MEDIA.WinForm.pdb

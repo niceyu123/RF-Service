@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\OAService\SystemDAL\bin\Debug\SystemDAL.dll
+C:\Users\user\source\repos\OAService\SystemDAL\bin\Debug\SystemDAL.pdb
+C:\Users\user\source\repos\OAService\SystemDAL\obj\Debug\SystemDAL.csprojAssemblyReference.cache
+C:\Users\user\source\repos\OAService\SystemDAL\obj\Debug\SystemDAL.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OAService\SystemDAL\obj\Debug\SystemDAL.dll
+C:\Users\user\source\repos\OAService\SystemDAL\obj\Debug\SystemDAL.pdb
+C:\Users\user\source\repos\OAService\SystemDAL\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\user\source\repos\OAService\SystemDAL\obj\Debug\SystemDAL.csproj.CopyComplete

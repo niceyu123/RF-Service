@@ -1,0 +1,29 @@
+2020-05-21 11:33:42.4889 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050060","sqr":"171","zdrq":"2020-05-21","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.03","zs":1,"gh":"2047753"}
+2020-05-21 11:36:33.5547 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050060","sqr":"171","zdrq":"2020-05-21","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.03","zs":1,"gh":"2047753"}
+2020-05-21 18:33:11.7415 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}
+2020-05-21 18:33:24.7069 OAService.Test.SaveBGRK1 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK1(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 540
+2020-05-21 18:33:24.7557 OAService.Test.SaveBGRK1 false
+2020-05-21 18:33:32.4013 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}
+2020-05-21 18:35:03.8131 OAService.Test.SaveBGRK1 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK1(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 540
+2020-05-21 18:35:03.8520 OAService.Test.SaveBGRK1 false
+2020-05-21 18:35:10.0833 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}
+2020-05-21 18:42:53.5136 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}
+2020-05-21 18:43:49.9545 OAService.Test.SaveBGRK1 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK1(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 559
+2020-05-21 18:43:50.0044 OAService.Test.SaveBGRK1 false
+2020-05-21 18:43:55.9714 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}
+2020-05-21 18:44:21.2621 OAService.Test.SaveBGRK1 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK1(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 559
+2020-05-21 18:44:21.3039 OAService.Test.SaveBGRK1 false
+2020-05-21 18:44:26.2188 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}
+2020-05-21 18:47:37.7424 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2020050010","sqr":"346","zdrq":"2020-05-21","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2,"gh":"1003154"}

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OAService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OAService_WorkflowServiceXml_WorkflowServiceXml" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.11.17:8080/services/WorkflowServiceXml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

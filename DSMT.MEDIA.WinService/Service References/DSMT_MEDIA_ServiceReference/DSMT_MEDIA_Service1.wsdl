@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://medservice.51ipc.com/DSMT_MEDIA_Service/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://medservice.51ipc.com/DSMT_MEDIA_Service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://medservice.51ipc.com/DSMT_MEDIA_Service/">
+      <s:element name="ClientReadCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getClientReadCardEntity" type="tns:GetClientReadCardEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetClientReadCardEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AdminToken" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ClientReadCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientReadCardResult" type="tns:BackClientReadCardEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BackClientReadCardEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IsSuccess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCpyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceCpyInfo" type="tns:WebServiceCpyInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceCpyInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CpySysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpyParentSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdySysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contactor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Logo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifyPerson" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SimpleName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCpyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCpyInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCpyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cpySysID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCpyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteCpyInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCpyInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceCpyInfo" type="tns:WebServiceCpyInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCpyInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCpyInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAdvInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAdvInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetAdvInfoResult" type="tns:ArrayOfWebServiceAdvInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWebServiceAdvInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebServiceAdvInfo" nillable="true" type="tns:WebServiceAdvInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WebServiceAdvInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AdvertisingSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaArrStr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdvertisingName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DayStartTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DayEndTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDayTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndDayTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdvertisingTypeSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdeReleaseAuth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdvToEmployeeSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaAudTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="NewSetAdvInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewSetAdvInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewSetAdvInfoResult" type="tns:ArrayOfWebServiceAdvInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMediaInfoResult" type="tns:ArrayOfWebServiceAdvInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewSetMediaInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="devNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewSetMediaInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewSetMediaInfoResult" type="tns:ArrayOfWebServiceAdvInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaInfo1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceMedInfo" type="tns:WebServiceMedInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceMedInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DevNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetMediaInfo1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMediaInfo1Result" type="tns:ArrayOfWebServiceAdvInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewSetMediaInfo1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceMedInfo" type="tns:WebServiceMedInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewSetMediaInfo1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewSetMediaInfo1Result" type="tns:ArrayOfWebServiceAdvInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mediaSysID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMediaFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMediaFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMediaFileBytes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mediaSysID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMediaFileBytesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMediaFileBytesResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceDeviceInfo" type="tns:WebServiceDeviceInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceDeviceInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DevSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpySysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevTypeSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevScreenType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevIsLAN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevMacAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevIPAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyFashion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewMediaSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldMediaSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MediaPurchase" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifyPerson" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastTimeConnection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssignTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QualityPeriod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperationLog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConnectionMode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManufacturerSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirmwareVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArchiveVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotCollectData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NowSystem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="System" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateDeviceInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeviceInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceGetDev" type="tns:WebServiceGetDev" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceGetDev">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DevNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastTimeConnection" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDeviceInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDeviceInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryMTAdminList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getQueryMTAdminListEntity" type="tns:GetQueryMTAdminListEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetQueryMTAdminListEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SearchName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageNow" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PageSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecordCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryMTAdminListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryMTAdminListResult" type="tns:BackQueryMTAdminListEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BackQueryMTAdminListEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RecordCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdminList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MTAddTokenCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceGetCard" type="tns:WebServiceGetCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceGetCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AdminSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReadCardNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TokenCardName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MTAddTokenCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MTAddTokenCardResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MTDeleteTokenCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceDeleteCard" type="tns:WebServiceDeleteCard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceDeleteCard">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AdminSysID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MTDeleteTokenCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MTDeleteTokenCardResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MTReplaceDev">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceReplace" type="tns:WebServiceReplace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceReplace">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OldDevID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevReplaceSysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifyPerson" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldOperationLog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplaceOperationLog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldDevNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevReplaceNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpySysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevTypeSysID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MTReplaceDevResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MTReplaceDevResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSoftVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceSoft" type="tns:WebServiceSoft" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceSoft">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CpySysID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SoftVersion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateSoftVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateSoftVersionResult" type="tns:WebServiceSoftInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceSoftInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SoftStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DownloadPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InstallPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SoftVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SyncDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="webServiceDownload" type="tns:WebServiceDownload" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebServiceDownload">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FileType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SyncDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncDownloadResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ClientReadCardSoapIn">
+    <wsdl:part name="parameters" element="tns:ClientReadCard" />
+  </wsdl:message>
+  <wsdl:message name="ClientReadCardSoapOut">
+    <wsdl:part name="parameters" element="tns:ClientReadCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCpyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCpyInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetCpyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCpyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCpyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteCpyInfo" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCpyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCpyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCpyInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCpyInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCpyInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCpyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAdvInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SetAdvInfo" />
+  </wsdl:message>
+  <wsdl:message name="SetAdvInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAdvInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewSetAdvInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:NewSetAdvInfo" />
+  </wsdl:message>
+  <wsdl:message name="NewSetAdvInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:NewSetAdvInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMediaInfo" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMediaInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewSetMediaInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:NewSetMediaInfo" />
+  </wsdl:message>
+  <wsdl:message name="NewSetMediaInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:NewSetMediaInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaInfo1SoapIn">
+    <wsdl:part name="parameters" element="tns:SetMediaInfo1" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaInfo1SoapOut">
+    <wsdl:part name="parameters" element="tns:SetMediaInfo1Response" />
+  </wsdl:message>
+  <wsdl:message name="NewSetMediaInfo1SoapIn">
+    <wsdl:part name="parameters" element="tns:NewSetMediaInfo1" />
+  </wsdl:message>
+  <wsdl:message name="NewSetMediaInfo1SoapOut">
+    <wsdl:part name="parameters" element="tns:NewSetMediaInfo1Response" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMediaFile" />
+  </wsdl:message>
+  <wsdl:message name="SetMediaFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMediaFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMediaFileBytesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMediaFileBytes" />
+  </wsdl:message>
+  <wsdl:message name="GetMediaFileBytesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMediaFileBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeviceInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeviceInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDeviceInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeviceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryMTAdminListSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryMTAdminList" />
+  </wsdl:message>
+  <wsdl:message name="QueryMTAdminListSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryMTAdminListResponse" />
+  </wsdl:message>
+  <wsdl:message name="MTAddTokenCardSoapIn">
+    <wsdl:part name="parameters" element="tns:MTAddTokenCard" />
+  </wsdl:message>
+  <wsdl:message name="MTAddTokenCardSoapOut">
+    <wsdl:part name="parameters" element="tns:MTAddTokenCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="MTDeleteTokenCardSoapIn">
+    <wsdl:part name="parameters" element="tns:MTDeleteTokenCard" />
+  </wsdl:message>
+  <wsdl:message name="MTDeleteTokenCardSoapOut">
+    <wsdl:part name="parameters" element="tns:MTDeleteTokenCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="MTReplaceDevSoapIn">
+    <wsdl:part name="parameters" element="tns:MTReplaceDev" />
+  </wsdl:message>
+  <wsdl:message name="MTReplaceDevSoapOut">
+    <wsdl:part name="parameters" element="tns:MTReplaceDevResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoftVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSoftVersion" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSoftVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSoftVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:SyncDownload" />
+  </wsdl:message>
+  <wsdl:message name="SyncDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:SyncDownloadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DSMT_MEDIA_ServiceSoap">
+    <wsdl:operation name="ClientReadCard">
+      <wsdl:input message="tns:ClientReadCardSoapIn" />
+      <wsdl:output message="tns:ClientReadCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCpyInfo">
+      <wsdl:input message="tns:GetCpyInfoSoapIn" />
+      <wsdl:output message="tns:GetCpyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCpyInfo">
+      <wsdl:input message="tns:DeleteCpyInfoSoapIn" />
+      <wsdl:output message="tns:DeleteCpyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCpyInfo">
+      <wsdl:input message="tns:UpdateCpyInfoSoapIn" />
+      <wsdl:output message="tns:UpdateCpyInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAdvInfo">
+      <wsdl:input message="tns:SetAdvInfoSoapIn" />
+      <wsdl:output message="tns:SetAdvInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewSetAdvInfo">
+      <wsdl:input message="tns:NewSetAdvInfoSoapIn" />
+      <wsdl:output message="tns:NewSetAdvInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaInfo">
+      <wsdl:input message="tns:SetMediaInfoSoapIn" />
+      <wsdl:output message="tns:SetMediaInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewSetMediaInfo">
+      <wsdl:input message="tns:NewSetMediaInfoSoapIn" />
+      <wsdl:output message="tns:NewSetMediaInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaInfo1">
+      <wsdl:input message="tns:SetMediaInfo1SoapIn" />
+      <wsdl:output message="tns:SetMediaInfo1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewSetMediaInfo1">
+      <wsdl:input message="tns:NewSetMediaInfo1SoapIn" />
+      <wsdl:output message="tns:NewSetMediaInfo1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaFile">
+      <wsdl:input message="tns:SetMediaFileSoapIn" />
+      <wsdl:output message="tns:SetMediaFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaFileBytes">
+      <wsdl:input message="tns:GetMediaFileBytesSoapIn" />
+      <wsdl:output message="tns:GetMediaFileBytesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceInfo">
+      <wsdl:input message="tns:UpdateDeviceInfoSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInfo">
+      <wsdl:input message="tns:GetDeviceInfoSoapIn" />
+      <wsdl:output message="tns:GetDeviceInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryMTAdminList">
+      <wsdl:input message="tns:QueryMTAdminListSoapIn" />
+      <wsdl:output message="tns:QueryMTAdminListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MTAddTokenCard">
+      <wsdl:input message="tns:MTAddTokenCardSoapIn" />
+      <wsdl:output message="tns:MTAddTokenCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MTDeleteTokenCard">
+      <wsdl:input message="tns:MTDeleteTokenCardSoapIn" />
+      <wsdl:output message="tns:MTDeleteTokenCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MTReplaceDev">
+      <wsdl:input message="tns:MTReplaceDevSoapIn" />
+      <wsdl:output message="tns:MTReplaceDevSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoftVersion">
+      <wsdl:input message="tns:UpdateSoftVersionSoapIn" />
+      <wsdl:output message="tns:UpdateSoftVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncDownload">
+      <wsdl:input message="tns:SyncDownloadSoapIn" />
+      <wsdl:output message="tns:SyncDownloadSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DSMT_MEDIA_ServiceSoap" type="tns:DSMT_MEDIA_ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClientReadCard">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/ClientReadCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCpyInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/GetCpyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCpyInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/DeleteCpyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCpyInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/UpdateCpyInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAdvInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetAdvInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewSetAdvInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/NewSetAdvInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetMediaInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewSetMediaInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/NewSetMediaInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaInfo1">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetMediaInfo1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewSetMediaInfo1">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/NewSetMediaInfo1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaFile">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetMediaFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaFileBytes">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/GetMediaFileBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/UpdateDeviceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInfo">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/GetDeviceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMTAdminList">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/QueryMTAdminList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTAddTokenCard">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/MTAddTokenCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTDeleteTokenCard">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/MTDeleteTokenCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTReplaceDev">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/MTReplaceDev" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoftVersion">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/UpdateSoftVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncDownload">
+      <soap:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SyncDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DSMT_MEDIA_ServiceSoap12" type="tns:DSMT_MEDIA_ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClientReadCard">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/ClientReadCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCpyInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/GetCpyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCpyInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/DeleteCpyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCpyInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/UpdateCpyInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAdvInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetAdvInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewSetAdvInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/NewSetAdvInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetMediaInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewSetMediaInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/NewSetMediaInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaInfo1">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetMediaInfo1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewSetMediaInfo1">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/NewSetMediaInfo1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMediaFile">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SetMediaFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMediaFileBytes">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/GetMediaFileBytes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/UpdateDeviceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceInfo">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/GetDeviceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMTAdminList">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/QueryMTAdminList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTAddTokenCard">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/MTAddTokenCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTDeleteTokenCard">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/MTDeleteTokenCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MTReplaceDev">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/MTReplaceDev" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSoftVersion">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/UpdateSoftVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncDownload">
+      <soap12:operation soapAction="http://medservice.51ipc.com/DSMT_MEDIA_Service/SyncDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DSMT_MEDIA_Service">
+    <wsdl:port name="DSMT_MEDIA_ServiceSoap" binding="tns:DSMT_MEDIA_ServiceSoap">
+      <soap:address location="http://mediaservice.51ipc.com/DSMT_MEDIA_Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DSMT_MEDIA_ServiceSoap12" binding="tns:DSMT_MEDIA_ServiceSoap12">
+      <soap12:address location="http://mediaservice.51ipc.com/DSMT_MEDIA_Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

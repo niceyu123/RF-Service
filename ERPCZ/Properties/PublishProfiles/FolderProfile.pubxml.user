@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此文件由 Web 项目的发布/打包过程使用。可以通过编辑此 MSBuild 文件
+自定义此过程的行为。为了解与此相关的更多内容，请访问 https://go.microsoft.com/fwlink/?LinkID=208121。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\My Web Sites\NBCZWebService</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ErpAesCode.dll">
+      <publishTime>10/09/2016 10:20:33</publishTime>
+    </File>
+    <File Include="bin/ERPCZ.dll">
+      <publishTime>08/07/2020 14:27:44</publishTime>
+    </File>
+    <File Include="bin/ERPCZ.pdb">
+      <publishTime>08/07/2020 14:27:44</publishTime>
+    </File>
+    <File Include="bin/ERPCZ.XmlSerializers.dll">
+      <publishTime>08/07/2020 14:27:44</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>11/27/2006 18:20:18</publishTime>
+    </File>
+    <File Include="bin/IKVM.AWT.WinForms.dll">
+      <publishTime>12/06/2012 09:53:16</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Beans.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Charsets.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Corba.dll">
+      <publishTime>12/06/2012 09:52:26</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Core.dll">
+      <publishTime>12/06/2012 09:52:26</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Jdbc.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Management.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Media.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Misc.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Naming.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Remoting.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Security.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.SwingAWT.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Text.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Tools.dll">
+      <publishTime>12/06/2012 09:53:16</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.Util.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.API.dll">
+      <publishTime>12/06/2012 09:52:26</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.Bind.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.Crypto.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.Parse.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.Transform.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.WebServices.dll">
+      <publishTime>12/06/2012 09:52:28</publishTime>
+    </File>
+    <File Include="bin/IKVM.OpenJDK.XML.XPath.dll">
+      <publishTime>12/06/2012 09:52:26</publishTime>
+    </File>
+    <File Include="bin/IKVM.Reflection.dll">
+      <publishTime>12/06/2012 09:46:38</publishTime>
+    </File>
+    <File Include="bin/IKVM.Runtime.dll">
+      <publishTime>12/06/2012 09:53:02</publishTime>
+    </File>
+    <File Include="bin/IKVM.Runtime.JNI.dll">
+      <publishTime>12/06/2012 09:53:00</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>08/20/2018 18:13:52</publishTime>
+    </File>
+    <File Include="bin/NPOI.dll">
+      <publishTime>12/17/2018 18:54:26</publishTime>
+    </File>
+    <File Include="bin/NPOI.OOXML.dll">
+      <publishTime>12/17/2018 18:54:26</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXml4Net.dll">
+      <publishTime>12/17/2018 18:54:26</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXmlFormats.dll">
+      <publishTime>12/17/2018 18:54:26</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>08/06/2013 08:28:13</publishTime>
+    </File>
+    <File Include="NBCZWebService.asmx">
+      <publishTime>07/14/2020 13:54:31</publishTime>
+    </File>
+    <File Include="Web References/erpPlatform/Reference.map">
+      <publishTime>07/14/2020 14:56:19</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/07/2020 14:25:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

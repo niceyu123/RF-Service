@@ -1,0 +1,57 @@
+2020-05-20 16:28:54.2222 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:30:09.9507 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:33:04.5232 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:37:34.3852 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:50:08.6322 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:51:21.9126 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:52:41.6433 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:58:57.6930 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 16:59:06.9193 OAService.Test.SaveBGRK 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x00000001): ORA-00001: 违反唯一约束条件 (RAVO2.SYS_C0096750)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 357
+2020-05-20 16:59:06.9353 OAService.Test.SaveBGRK false
+2020-05-20 17:18:40.8223 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:25:42.7050 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:29:36.6599 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:29:48.8982 OAService.Test.SaveBGRK 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x000003A8): ORA-00936: 缺失表达式
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteReader(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, OracleDataReaderImpl& rdrImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[] scnForExecution, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isDescribeOnly, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   在 Oracle.ManagedDataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 329
+2020-05-20 17:29:48.9271 OAService.Test.SaveBGRK false
+2020-05-20 17:29:56.4610 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:31:17.1508 OAService.Test.SaveBGRK 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x000003A8): ORA-00936: 缺失表达式
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteReader(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, OracleDataReaderImpl& rdrImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[] scnForExecution, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isDescribeOnly, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   在 Oracle.ManagedDataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 329
+2020-05-20 17:31:17.1558 OAService.Test.SaveBGRK false
+2020-05-20 17:31:22.3200 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:31:38.4488 OAService.Test.SaveBGRK 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x000003A8): ORA-00936: 缺失表达式
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteReader(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, OracleDataReaderImpl& rdrImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[] scnForExecution, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isDescribeOnly, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   在 Oracle.ManagedDataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 329
+2020-05-20 17:31:38.4518 OAService.Test.SaveBGRK false
+2020-05-20 17:31:43.1134 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:32:37.2179 OAService.Test.SaveBGRK 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x000003A8): ORA-00936: 缺失表达式
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteReader(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, OracleDataReaderImpl& rdrImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[] scnForExecution, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isDescribeOnly, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   在 Oracle.ManagedDataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 OAService.Test.SaveBGRK(String time) 位置 C:\Users\user\source\repos\OAService\OAService\Test.asmx.cs:行号 329
+2020-05-20 17:32:37.2179 OAService.Test.SaveBGRK false
+2020-05-20 17:32:42.7242 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:34:20.6435 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:35:11.6032 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}
+2020-05-20 17:37:11.3268 OAService.Test.SaveBGRK 办公用品入库单{"oano":"R0-BGYPRK2020050057","sqr":"171","zdrq":"2020-05-20","cgy":"171","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":2}

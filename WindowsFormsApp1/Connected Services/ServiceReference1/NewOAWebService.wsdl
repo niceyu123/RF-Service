@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://172.16.11.19:1915/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://172.16.11.19:1915/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://172.16.11.19:1915/">
+      <s:element name="GetLeaveTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLeaveTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLeaveTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIsPB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIsPBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIsPBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLeaveTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveLeaveTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveLeaveTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveTXTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveTXTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveTXTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCCTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCCTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveCCTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOTTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveOTTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveOTTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLeaveTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLeaveTime" />
+  </wsdl:message>
+  <wsdl:message name="GetLeaveTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLeaveTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIsPBSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIsPB" />
+  </wsdl:message>
+  <wsdl:message name="GetIsPBSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIsPBResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveLeaveTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveLeaveTime" />
+  </wsdl:message>
+  <wsdl:message name="SaveLeaveTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveLeaveTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveTXTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveTXTime" />
+  </wsdl:message>
+  <wsdl:message name="SaveTXTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveTXTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCCTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCCTime" />
+  </wsdl:message>
+  <wsdl:message name="SaveCCTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCCTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveOTTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveOTTime" />
+  </wsdl:message>
+  <wsdl:message name="SaveOTTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveOTTimeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NewOAWebServiceSoap">
+    <wsdl:operation name="GetLeaveTime">
+      <wsdl:input message="tns:GetLeaveTimeSoapIn" />
+      <wsdl:output message="tns:GetLeaveTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsPB">
+      <wsdl:input message="tns:GetIsPBSoapIn" />
+      <wsdl:output message="tns:GetIsPBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeaveTime">
+      <wsdl:input message="tns:SaveLeaveTimeSoapIn" />
+      <wsdl:output message="tns:SaveLeaveTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTXTime">
+      <wsdl:input message="tns:SaveTXTimeSoapIn" />
+      <wsdl:output message="tns:SaveTXTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCCTime">
+      <wsdl:input message="tns:SaveCCTimeSoapIn" />
+      <wsdl:output message="tns:SaveCCTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveOTTime">
+      <wsdl:input message="tns:SaveOTTimeSoapIn" />
+      <wsdl:output message="tns:SaveOTTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NewOAWebServiceSoap" type="tns:NewOAWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLeaveTime">
+      <soap:operation soapAction="http://172.16.11.19:1915/GetLeaveTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsPB">
+      <soap:operation soapAction="http://172.16.11.19:1915/GetIsPB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeaveTime">
+      <soap:operation soapAction="http://172.16.11.19:1915/SaveLeaveTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTXTime">
+      <soap:operation soapAction="http://172.16.11.19:1915/SaveTXTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCCTime">
+      <soap:operation soapAction="http://172.16.11.19:1915/SaveCCTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOTTime">
+      <soap:operation soapAction="http://172.16.11.19:1915/SaveOTTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NewOAWebServiceSoap12" type="tns:NewOAWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLeaveTime">
+      <soap12:operation soapAction="http://172.16.11.19:1915/GetLeaveTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsPB">
+      <soap12:operation soapAction="http://172.16.11.19:1915/GetIsPB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLeaveTime">
+      <soap12:operation soapAction="http://172.16.11.19:1915/SaveLeaveTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTXTime">
+      <soap12:operation soapAction="http://172.16.11.19:1915/SaveTXTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCCTime">
+      <soap12:operation soapAction="http://172.16.11.19:1915/SaveCCTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveOTTime">
+      <soap12:operation soapAction="http://172.16.11.19:1915/SaveOTTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewOAWebService">
+    <wsdl:port name="NewOAWebServiceSoap" binding="tns:NewOAWebServiceSoap">
+      <soap:address location="http://localhost:8077/NewOAWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NewOAWebServiceSoap12" binding="tns:NewOAWebServiceSoap12">
+      <soap12:address location="http://localhost:8077/NewOAWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

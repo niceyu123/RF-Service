@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://example" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://example" targetNamespace="http://example" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://example">
+      <xsd:element name="a" type="xsd:double" />
+      <xsd:element name="b" type="xsd:double" />
+      <xsd:element name="addReturn" type="xsd:double" />
+      <xsd:element name="from" type="xsd:string" />
+      <xsd:element name="sayHelloWorldFromReturn" type="xsd:string" />
+      <xsd:element name="xml" type="xsd:string" />
+      <xsd:element name="testToServerReturn" type="xsd:string" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="testToServerRequest">
+    <wsdl:part name="xml" element="impl:xml" />
+  </wsdl:message>
+  <wsdl:message name="testFileRequest" />
+  <wsdl:message name="testFileResponse" />
+  <wsdl:message name="testIntAndByteRequest" />
+  <wsdl:message name="sayHelloWorldFromResponse">
+    <wsdl:part name="sayHelloWorldFromReturn" element="impl:sayHelloWorldFromReturn" />
+  </wsdl:message>
+  <wsdl:message name="addResponse">
+    <wsdl:part name="addReturn" element="impl:addReturn" />
+  </wsdl:message>
+  <wsdl:message name="testIntAndByteResponse" />
+  <wsdl:message name="addRequest">
+    <wsdl:part name="a" element="impl:a" />
+    <wsdl:part name="b" element="impl:b" />
+  </wsdl:message>
+  <wsdl:message name="testToServerResponse">
+    <wsdl:part name="testToServerReturn" element="impl:testToServerReturn" />
+  </wsdl:message>
+  <wsdl:message name="testCodeRequest" />
+  <wsdl:message name="testCodeResponse" />
+  <wsdl:message name="sayHelloWorldFromRequest">
+    <wsdl:part name="from" element="impl:from" />
+  </wsdl:message>
+  <wsdl:portType name="HelloWorld">
+    <wsdl:operation name="add" parameterOrder="a b">
+      <wsdl:input name="addRequest" message="impl:addRequest" />
+      <wsdl:output name="addResponse" message="impl:addResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sayHelloWorldFrom" parameterOrder="from">
+      <wsdl:input name="sayHelloWorldFromRequest" message="impl:sayHelloWorldFromRequest" />
+      <wsdl:output name="sayHelloWorldFromResponse" message="impl:sayHelloWorldFromResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testFile">
+      <wsdl:input name="testFileRequest" message="impl:testFileRequest" />
+      <wsdl:output name="testFileResponse" message="impl:testFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testIntAndByte">
+      <wsdl:input name="testIntAndByteRequest" message="impl:testIntAndByteRequest" />
+      <wsdl:output name="testIntAndByteResponse" message="impl:testIntAndByteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testCode">
+      <wsdl:input name="testCodeRequest" message="impl:testCodeRequest" />
+      <wsdl:output name="testCodeResponse" message="impl:testCodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="testToServer" parameterOrder="xml">
+      <wsdl:input name="testToServerRequest" message="impl:testToServerRequest" />
+      <wsdl:output name="testToServerResponse" message="impl:testToServerResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HelloWorldSoapBinding" type="impl:HelloWorld">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="add">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="addResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sayHelloWorldFrom">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sayHelloWorldFromRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sayHelloWorldFromResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testFileRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testFileResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testIntAndByte">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testIntAndByteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testIntAndByteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testCode">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testCodeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testCodeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testToServer">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="testToServerRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="testToServerResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloWorldService">
+    <wsdl:port name="HelloWorld" binding="impl:HelloWorldSoapBinding">
+      <wsdlsoap:address location="http://192.168.31.11:8080/flight/services/HelloWorld" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

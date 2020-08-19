@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:tns="webservices.weaver.tests" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" targetNamespace="webservices.weaver.tests" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="webservices.weaver.tests">
+      <xsd:element name="helloword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hellowordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orderTest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orderTestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="hellowordResponse">
+    <wsdl:part name="parameters" element="tns:hellowordResponse" />
+  </wsdl:message>
+  <wsdl:message name="orderTestResponse">
+    <wsdl:part name="parameters" element="tns:orderTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="hellowordRequest">
+    <wsdl:part name="parameters" element="tns:helloword" />
+  </wsdl:message>
+  <wsdl:message name="orderTestRequest">
+    <wsdl:part name="parameters" element="tns:orderTest" />
+  </wsdl:message>
+  <wsdl:portType name="testsPortType">
+    <wsdl:operation name="helloword">
+      <wsdl:input name="hellowordRequest" message="tns:hellowordRequest" />
+      <wsdl:output name="hellowordResponse" message="tns:hellowordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="orderTest">
+      <wsdl:input name="orderTestRequest" message="tns:orderTestRequest" />
+      <wsdl:output name="orderTestResponse" message="tns:orderTestResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="testsHttpBinding" type="tns:testsPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="helloword">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="hellowordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="hellowordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="orderTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="orderTestRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="orderTestResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="tests">
+    <wsdl:port name="testsHttpPort" binding="tns:testsHttpBinding">
+      <wsdlsoap:address location="http://172.16.11.17:8080/services/tests" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
