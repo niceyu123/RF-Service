@@ -1,0 +1,27 @@
+2020-08-19 11:08:23.2963 KKMWLN.MyPublic.CommonHelper.Stockbill_query System.Data.SqlClient.SqlException (0x80131904): 违反了 PRIMARY KEY 约束 'PK__WLN_SALE__E7290D2D2609B1E1'。不能在对象 'dbo.WLN_SALESWHOUT' 中插入重复键。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 KKMWLN.MyPublic.CommonHelper.Stockbill_query() 位置 E:\Code\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 345
+ClientConnectionId:e29414c5-d842-49c0-9524-ddce87c3878e
+Error Number:2627,State:1,Class:14
+2020-08-19 11:24:05.5116 KKMWLN.MyPublic.CommonHelper.Stockbill_query System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 KKMWLN.MyPublic.CommonHelper.Stockbill_query() 位置 E:\Code\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 313
+2020-08-19 11:26:57.3886 KKMWLN.MyPublic.CommonHelper.Stockbill_query System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 KKMWLN.MyPublic.CommonHelper.Stockbill_query() 位置 E:\Code\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 313
+2020-08-19 11:27:56.7268 KKMWLN.MyPublic.CommonHelper.Stockbill_query System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   在 System.Collections.Generic.List`1.get_Item(Int32 index)
+   在 KKMWLN.MyPublic.CommonHelper.Stockbill_query() 位置 E:\Code\OAService\KKMWLN\MyPublic\CommonHelper.cs:行号 313

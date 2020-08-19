@@ -181,12 +181,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="NBCZWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="MyEntity\FKInfo.cs" />
     <Compile Include="MyEntity\OAnoInfo.cs" />
+    <Compile Include="MyPublic\CommonHelper.cs" />
     <Compile Include="MyPublic\ToolHelper.cs" />
     <Compile Include="NBCZWebService.asmx.cs">
       <DependentUpon>NBCZWebService.asmx</DependentUpon>
