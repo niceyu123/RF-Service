@@ -4311,6 +4311,10 @@ namespace WindowsFormsApp1
         {
             try
             {
+                //删除管理员
+                //bool bIsConnected = axCZKEM1.Connect_Net("192.168.24.11", 4370);
+                //bool ac =axCZKEM1.ClearAdministrators(3);
+
 
                 bool bIsConnected = axCZKEM1.Connect_Net("192.168.31.77", 4370);
                 axCZKEM1.EnableDevice(77, false);
@@ -4639,101 +4643,46 @@ namespace WindowsFormsApp1
         {
             try
             {
-                OracleConnection conn = ToolHelper.OpenRavoerp("OA");
-                OracleCommand myCommand = conn.CreateCommand();
-                string sql = " select * from FORMTABLE_MAIN_418 where sqrq >='2020-08-08' and fklsh is null ";
-                OracleCommand cmd = new OracleCommand(sql, conn);
-                OracleDataAdapter da = new OracleDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                int num = dt.Rows.Count;
-                if (num > 0)
-                {
-                    string oano = dt.Rows[0]["oano"].ToString();
-                    erpPlatform.erpPlatform erp = new erpPlatform.erpPlatform();
-                    string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
-                        "<body>" +
-                        "<head>" +
-                        "<erpSysCode>ERP001</erpSysCode>" +
-                        "<custNo>0000070887</custNo>" +
-                        "<tradeName>ERP_QUERYTRANSFER</tradeName>" +
-                        "</head>" +
-                        "<map>" +
-                        "<erpReqNo>" + oano + "</erpReqNo>" +
-                        "<billCode></billCode>" +
-                        "</map>" +
-                        "</body>";
+                int machinenumber = 77;
+                bool bIsConnected = axCZKEM1.Connect_Net("192.168.31.77", 4370);
+                axCZKEM1.EnableDevice(77, false);
 
-                    string xmls = ToolHelper.encrypt(xml);//加密
-                    string re = erp.serverErpXml(xmls);//传输 接收
-                    string bb = ToolHelper.decrypt(re);//解密
-                    XmlDocument xmlDoc = new XmlDocument();
-                    xmlDoc.LoadXml(bb);
-                    XmlNode rootNode = xmlDoc.SelectSingleNode("/body/head/retCode");
-                    string a1 = "";
-                    string an1 = "";
-                    string json = "";
-                    foreach (XmlNode xxNode in rootNode.ChildNodes)
-                    {
-                        a1 = xxNode.InnerText;
-                        an1 = xxNode.Name;
-                    }
-                    if (a1 == "0")
-                    {
-                        rootNode = xmlDoc.SelectSingleNode("/body/head/retMsg");
-                        string a2 = "";
-                        string an2 = "";
-                        foreach (XmlNode xxNode in rootNode.ChildNodes)
-                        {
-                            a2 = xxNode.InnerText;
-                            an2 = xxNode.Name;
-                        }
-                        rootNode = xmlDoc.SelectSingleNode("/body/map/payState");
-                        string a3 = "";
-                        string an3 = "";
-                        foreach (XmlNode xxNode in rootNode.ChildNodes)
-                        {
-                            a3 = xxNode.InnerText;
-                            an3 = xxNode.Name;
-                        }
-                        rootNode = xmlDoc.SelectSingleNode("/body/map/payMsg");
-                        string a4 = "";
-                        string an4 = "";
-                        foreach (XmlNode xxNode in rootNode.ChildNodes)
-                        {
-                            a4 = xxNode.InnerText;
-                            an4 = xxNode.Name;
-                        }
-                        rootNode = xmlDoc.SelectSingleNode("/body/map/returnMsg");
-                        string a5 = "";
-                        string an5 = "";
-                        foreach (XmlNode xxNode in rootNode.ChildNodes)
-                        {
-                            a5 = xxNode.InnerText;
-                            an5 = xxNode.Name;
-                        }
-                        rootNode = xmlDoc.SelectSingleNode("/body/map/bankSerial");
-                        string a6 = "";
-                        string an6 = "";
-                        foreach (XmlNode xxNode in rootNode.ChildNodes)
-                        {
-                            a6 = xxNode.InnerText;
-                            an6 = xxNode.Name;
-                        }
-                        json = "a1" + a1 + "a2" + a2 + "a3" + a3 + "a4" + a4 + "a5" + a5 + "a6" + a6 + "";
-                    }
-                    else
-                    {
-                        json = "a1" + a1 + "a2" + " " + "a3" + " " + "a4" + " " + "a5" + " " + "a6" + " " + "";
-                    }
+                axCZKEM1.ReadGeneralLogData(77);
+
+                string dwEnrollNumber = "";
+                int dwVerifyMode = 0;
+                int dwInOutMode = 0;
+                int dwYear = 0;
+                int dwMonth = 0;
+                int dwDay = 0;
+                int dwHour = 0;
+                int dwMinute = 0;
+                int dwSecond = 0;
+                int dwWorkcode = 0;
+                while (axCZKEM1.SSR_GetGeneralLogData(77, out dwEnrollNumber, out dwVerifyMode, out dwInOutMode, out dwYear, out dwMonth, out dwDay, out dwHour, out dwMinute, out dwSecond, ref dwWorkcode))
+                {
+                    //sql = " update OA_FT_POS_POA set FLC_STATA='1' where id='" + dt1.Rows[j]["ID"].ToString() + "' ";
+                    //yyyy-mm-dd hh24:mi:ss
+                    string date = Convert.ToString(dwYear) + "-" + Convert.ToString(dwMonth) + "-" + Convert.ToString(dwDay) + " " + Convert.ToString(dwHour) + ":" + Convert.ToString(dwMinute) + ":" + Convert.ToString(dwSecond);
+                    OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                    string sql = " INSERT INTO KQ_RECORD (OANO,MACHINENUMBER,VERIFYMODE,RECORDDATE) VALUES('" + dwEnrollNumber + "','" + machinenumber + "','" + dwVerifyMode + "',to_date('" + date + "','yyyy-mm-dd hh24:mi:ss')) ";
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    int result = cmd.ExecuteNonQuery();
+                    //OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    //DataTable dt = new DataTable();
+                    //da.Fill(dt);
+                    ToolHelper.CloseSql(conn);
                 }
 
+                //清楚机器内所有的考勤记录
+                axCZKEM1.ClearGLog(77);
 
+                axCZKEM1.EnableDevice(77, true);
+                axCZKEM1.Disconnect();
             }
             catch (Exception ex)
             {
 
-                throw;
             }
         }
     }

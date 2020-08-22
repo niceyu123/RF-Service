@@ -988,5 +988,39 @@ namespace OAService
             }
         }
 
+        [WebMethod]
+        public string SaveMemo(string oano)
+        {
+            try
+            {
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                string sql = " select B.* from FORMTABLE_MAIN_458 a left join FORMTABLE_MAIN_458_DT1 b on a.ID=b.MAINID where lcbh='" + oano + "' ";
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int num = dt.Rows.Count;
+                if (num > 0)
+                {
+                    for (int i = 0; i < num; i++)
+                    {
+                        string cid = dt.Rows[i]["cid"].ToString();
+                        string memo = dt.Rows[i]["memo"].ToString();
+                        string companyid= dt.Rows[i]["companyid"].ToString();
+                        conn = ToolHelper.OpenRavoerp("middle");
+                        sql = " update STORAGE_DELAY set memo='" + memo + "' where cid='" + cid + "' and companyid='"+ companyid + "' ";
+                        cmd = new OracleCommand(sql, conn);
+                        int resultt = cmd.ExecuteNonQuery();
+                        ToolHelper.CloseSql(conn);
+                    }
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

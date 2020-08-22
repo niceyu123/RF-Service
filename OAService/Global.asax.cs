@@ -45,33 +45,38 @@ namespace OAService
                 //addDept.Start();
 
 
-                Thread sendMessages = new Thread(new ThreadStart(new CommonHelper().SendMessages));
-                sendMessages.IsBackground = true;
-                sendMessages.Start();
-                Thread sendMessages3 = new Thread(new ThreadStart(new CommonHelper().SendMessages3));
-                sendMessages3.IsBackground = true;
-                sendMessages3.Start();
-                //获取微信id
-                Thread getUserID = new Thread(new ThreadStart(new CommonHelper().GetUserID));
-                getUserID.IsBackground = true;
-                getUserID.Start();
-                //获取部门信息
-                Thread getDept = new Thread(new ThreadStart(new CommonHelper().GetDept));
-                getDept.IsBackground = true;
-                getDept.Start();
+                //Thread sendMessages = new Thread(new ThreadStart(new CommonHelper().SendMessages));
+                //sendMessages.IsBackground = true;
+                //sendMessages.Start();
+                //Thread sendMessages3 = new Thread(new ThreadStart(new CommonHelper().SendMessages3));
+                //sendMessages3.IsBackground = true;
+                //sendMessages3.Start();
+                ////获取微信id
+                //Thread getUserID = new Thread(new ThreadStart(new CommonHelper().GetUserID));
+                //getUserID.IsBackground = true;
+                //getUserID.Start();
+                ////获取部门信息
+                //Thread getDept = new Thread(new ThreadStart(new CommonHelper().GetDept));
+                //getDept.IsBackground = true;
+                //getDept.Start();
 
-                //定时访问接口
-                Thread getService = new Thread(new ThreadStart(new CommonHelper().GetService));
-                getService.IsBackground = true;
-                getService.Start();
-                //模具ERP-采购订单 中间库到OA
-                Thread getERP = new Thread(new ThreadStart(new CommonHelper().GetERP));
-                getERP.IsBackground = true;
-                getERP.Start();
-                //创建模具ERP-采购订单流程
-                Thread getERPWorkflow = new Thread(new ThreadStart(new CommonHelper().getERPWorkflow));
-                getERPWorkflow.IsBackground = true;
-                getERPWorkflow.Start();
+                ////定时访问接口
+                //Thread getService = new Thread(new ThreadStart(new CommonHelper().GetService));
+                //getService.IsBackground = true;
+                //getService.Start();
+                ////模具ERP-采购订单 中间库到OA
+                //Thread getERP = new Thread(new ThreadStart(new CommonHelper().GetERP));
+                //getERP.IsBackground = true;
+                //getERP.Start();
+                ////创建模具ERP-采购订单流程
+                //Thread getERPWorkflow = new Thread(new ThreadStart(new CommonHelper().getERPWorkflow));
+                //getERPWorkflow.IsBackground = true;
+                //getERPWorkflow.Start();
+                //创建自产异常库存确认单
+                Thread getZCYCWorkflow = new Thread(new ThreadStart(new CommonHelper().getZCYCWorkflow));
+                getZCYCWorkflow.IsBackground = true;
+                getZCYCWorkflow.Start();
+
             }
             catch (Exception a)
             {

@@ -1262,6 +1262,247 @@ namespace OAService.MyPublic
             }
         }
 
+        public void getZCYCWorkflow()
+        {
+            while (true)
+            {
+                try
+                {
+                    string time = DateTime.Now.ToString("d");
+                    OracleConnection conn = ToolHelper.OpenRavoerp("middle");
+                    string sql = " select * from STORAGE_DELAY_MAIN where STATUS='0'  ";
+                    //string sql = " select * from STORAGE_DELAY_MAIN where STATUS='0' and createdate > to_date('20200819','yyyy-mm-dd') ";
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    ToolHelper.CloseSql(conn);
+                    int num = dt.Rows.Count;
+                    if (num > 0)
+                    {
+                        for (int i = 0; i < num; i++)
+                        {
+                            WorkflowServiceXml.WorkflowServiceXml wsx = new WorkflowServiceXml.WorkflowServiceXml();
+                            string xml0 = "<WorkflowRequestInfo> " +
+              "<requestName>R0-自产异常库存确认单</requestName> " +
+             " <requestLevel>0</requestLevel> " +
+              "<workflowBaseInfo> " +
+             " <workflowId>8641</workflowId> " +
+             " </workflowBaseInfo> " +
+             //创建人
+             " <creatorId>6175</creatorId> " +
+             " <workflowMainTableInfo> " +
+             "   <requestRecords> " +
+              //主表
+              "    <weaver.workflow.webservices.WorkflowRequestTableRecord> " +
+               "     <recordOrder>0</recordOrder> " +
+               "     <workflowRequestTableFields> " +
+
+               "       <weaver.workflow.webservices.WorkflowRequestTableField> " +
+              "          <fieldName>COMPANYNAME</fieldName> " +
+               "         <fieldValue>" + dt.Rows[i]["COMPANYNAME"].ToString() + "</fieldValue> " +
+                "       <isView>true</isView> " +
+                  "      <isEdit>true</isEdit> " +
+                      "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+              "       <weaver.workflow.webservices.WorkflowRequestTableField> " +
+              "          <fieldName>oaid</fieldName> " +
+               "         <fieldValue>" + dt.Rows[i]["oaid"].ToString() + "</fieldValue> " +
+                "       <isView>true</isView> " +
+                  "      <isEdit>true</isEdit> " +
+                      "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                       "       <weaver.workflow.webservices.WorkflowRequestTableField> " +
+              "          <fieldName>xfywbm</fieldName> " +
+               "         <fieldValue>" + dt.Rows[i]["departmentid"].ToString() + "</fieldValue> " +
+                "       <isView>true</isView> " +
+                  "      <isEdit>true</isEdit> " +
+                      "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+
+                   " </workflowRequestTableFields> " +
+                 " </weaver.workflow.webservices.WorkflowRequestTableRecord> " +
+               " </requestRecords> " +
+             " </workflowMainTableInfo> " +
+              //主表结束
+
+              " <workflowDetailTableInfos> " +
+             "   <weaver.workflow.webservices.WorkflowDetailTableInfo> " +
+              "    <workflowRequestTableRecords> ";
+
+                            string oaid = dt.Rows[i]["OAID"].ToString();
+                            string createDate= dt.Rows[i]["CREATEDATE"].ToString();
+                            string companyname = dt.Rows[i]["COMPANYNAME"].ToString();
+                            conn = ToolHelper.OpenRavoerp("middle");
+                            sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and creatdate like to_date('" + createDate + "','yyyy-mm-dd hh24:mi:ss') and companyname='"+ companyname + "' ";
+                            //sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and creatdate > to_date('2020-08-19','yyyy-mm-dd') ";
+                            cmd = new OracleCommand(sql, conn);
+                            da = new OracleDataAdapter(cmd);
+                            DataTable dts = new DataTable();
+                            da.Fill(dts);
+                            ToolHelper.CloseSql(conn);
+                            int nums = dts.Rows.Count;
+                            string xml1 = "";
+                            if (nums > 0)
+                            {
+                                for (int j = 0; j < nums; j++)
+                                {
+                                    xml1 = xml1 + "  <weaver.workflow.webservices.WorkflowRequestTableRecord> " +
+                     "     <recordOrder>0</recordOrder> " +
+                      "    <workflowRequestTableFields> " +
+                                        " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>COMPANYID</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["COMPANYID"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>SCNO</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["SCNO"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>HF_CUST_NO</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["HF_CUST_NO"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>ITEMNO</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["ITEMNO"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>PRODUCT_NAME</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_NAME"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>PRODUCT_SPC</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_SPC"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>cust_prdno</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["cust_prdno"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>INDEX_CODE</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["INDEX_CODE"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>product_code</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["product_code"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>PRODUCT_NAME1</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_NAME"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>in_many</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["in_many"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>OUT_MANY</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["OUT_MANY"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>sque_code</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["sque_code"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>plandoday</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["plandoday"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>squeday</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["squeday"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>overdate</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["overdate"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                        " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>CID</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["CID"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                             "  </workflowRequestTableFields> " +
+                        "  </weaver.workflow.webservices.WorkflowRequestTableRecord> ";
+                                }
+
+                            }
+                            string xml2 = "   </workflowRequestTableRecords> " +
+                                              "  </weaver.workflow.webservices.WorkflowDetailTableInfo> " +
+                                             " </workflowDetailTableInfos> " +
+
+                                             "</WorkflowRequestInfo> ";
+                            string xml = xml0 + xml1 + xml2;
+                            int b = 6175;//创建人
+                            string ab = wsx.doCreateWorkflowRequest(xml, b);
+                            int re = Convert.ToInt32(ab);
+                            if (re > 0)//成功
+                            {
+                                DateTime nowTime = DateTime.Now;
+                                string id = dt.Rows[i]["ID"].ToString();
+                                conn = ToolHelper.OpenRavoerp("middle");
+                                sql = " update STORAGE_DELAY_MAIN set status='1',SYNTIME=to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where id='"+id+"' ";
+                                cmd = new OracleCommand(sql, conn);
+                                int resultt = cmd.ExecuteNonQuery();
+                                ToolHelper.CloseSql(conn);
+                            }
+                        }
+                    }
+                    Thread.Sleep(120000);
+                }
+                catch (Exception ex)
+                {
+                    Thread.Sleep(120000);
+                }
+            }
+        }
 
     }
 }
