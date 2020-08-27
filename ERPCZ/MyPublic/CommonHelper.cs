@@ -31,6 +31,7 @@ namespace ERPCZ.MyPublic
                         for (int i = 0; i < num; i++)
                         {
                             string oano = dt.Rows[i]["sqdh"].ToString();
+                            oano = "R6-FKSQD2020080059";
                             erpPlatform.erpPlatform erp = new erpPlatform.erpPlatform();
                             string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
                                 "<body>" +

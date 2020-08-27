@@ -1263,7 +1263,7 @@ namespace OAService.MyPublic
         }
 
         public void getZCYCWorkflow()
-        {
+       {
             while (true)
             {
                 try
@@ -1284,7 +1284,7 @@ namespace OAService.MyPublic
                         {
                             WorkflowServiceXml.WorkflowServiceXml wsx = new WorkflowServiceXml.WorkflowServiceXml();
                             string xml0 = "<WorkflowRequestInfo> " +
-              "<requestName>R0-自产异常库存确认单</requestName> " +
+              "<requestName>R0-自产完工15天未出订单明细</requestName> " +
              " <requestLevel>0</requestLevel> " +
               "<workflowBaseInfo> " +
              " <workflowId>8641</workflowId> " +
@@ -1319,6 +1319,20 @@ namespace OAService.MyPublic
                   "      <isEdit>true</isEdit> " +
                       "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
+              "       <weaver.workflow.webservices.WorkflowRequestTableField> " +
+              "          <fieldName>CREATEDATE</fieldName> " +
+               "         <fieldValue>" + dt.Rows[i]["CREATEDATE"].ToString() + "</fieldValue> " +
+                "       <isView>true</isView> " +
+                  "      <isEdit>true</isEdit> " +
+                      "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+              "       <weaver.workflow.webservices.WorkflowRequestTableField> " +
+              "          <fieldName>GDRY</fieldName> " +
+               "         <fieldValue>" + dt.Rows[i]["GDRY"].ToString() + "</fieldValue> " +
+                "       <isView>true</isView> " +
+                  "      <isEdit>true</isEdit> " +
+                      "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
 
                    " </workflowRequestTableFields> " +
                  " </weaver.workflow.webservices.WorkflowRequestTableRecord> " +
@@ -1347,19 +1361,16 @@ namespace OAService.MyPublic
                             {
                                 for (int j = 0; j < nums; j++)
                                 {
+                                    string plandoday = dts.Rows[j]["plandoday"].ToString();
+                                    string plan = plandoday.Substring(0, plandoday.Length - 8);
+                                    string squeday = dts.Rows[j]["squeday"].ToString();
+                                    string squ = squeday.Substring(0, squeday.Length - 8);
                                     xml1 = xml1 + "  <weaver.workflow.webservices.WorkflowRequestTableRecord> " +
                      "     <recordOrder>0</recordOrder> " +
                       "    <workflowRequestTableFields> " +
                                         " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>COMPANYID</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["COMPANYID"].ToString() + "</fieldValue> " +
-                          "    <isView>true</isView> " +
-                           "   <isEdit>true</isEdit> " +
-                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
-
-                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>SCNO</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["SCNO"].ToString() + "</fieldValue> " +
+                        "      <fieldName>orderid</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["orderid"].ToString() + "</fieldValue> " +
                           "    <isView>true</isView> " +
                            "   <isEdit>true</isEdit> " +
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
@@ -1372,6 +1383,20 @@ namespace OAService.MyPublic
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                             " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>COMPANYID</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["COMPANYID"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
+                        "      <fieldName>ISPARTS</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["ISPARTS"].ToString() + "</fieldValue> " +
+                          "    <isView>true</isView> " +
+                           "   <isEdit>true</isEdit> " +
+                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
+
+                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
                         "      <fieldName>ITEMNO</fieldName> " +
                          "     <fieldValue>" + dts.Rows[j]["ITEMNO"].ToString() + "</fieldValue> " +
                           "    <isView>true</isView> " +
@@ -1379,15 +1404,15 @@ namespace OAService.MyPublic
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                             " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>PRODUCT_NAME</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_NAME"].ToString() + "</fieldValue> " +
+                        "      <fieldName>PARITEMNO</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["PARITEMNO"].ToString() + "</fieldValue> " +
                           "    <isView>true</isView> " +
                            "   <isEdit>true</isEdit> " +
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                             " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>PRODUCT_SPC</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_SPC"].ToString() + "</fieldValue> " +
+                        "      <fieldName>PRODUCT_NAME</fieldName> " +
+                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_NAME"].ToString() + "</fieldValue> " +
                           "    <isView>true</isView> " +
                            "   <isEdit>true</isEdit> " +
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
@@ -1407,20 +1432,6 @@ namespace OAService.MyPublic
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                             " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>product_code</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["product_code"].ToString() + "</fieldValue> " +
-                          "    <isView>true</isView> " +
-                           "   <isEdit>true</isEdit> " +
-                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
-
-                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>PRODUCT_NAME1</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["PRODUCT_NAME"].ToString() + "</fieldValue> " +
-                          "    <isView>true</isView> " +
-                           "   <isEdit>true</isEdit> " +
-                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
-
-                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
                         "      <fieldName>in_many</fieldName> " +
                          "     <fieldValue>" + dts.Rows[j]["in_many"].ToString() + "</fieldValue> " +
                           "    <isView>true</isView> " +
@@ -1435,22 +1446,15 @@ namespace OAService.MyPublic
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                             " <weaver.workflow.webservices.WorkflowRequestTableField> " +
-                        "      <fieldName>sque_code</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["sque_code"].ToString() + "</fieldValue> " +
-                          "    <isView>true</isView> " +
-                           "   <isEdit>true</isEdit> " +
-                            "</weaver.workflow.webservices.WorkflowRequestTableField> " +
-
-                            " <weaver.workflow.webservices.WorkflowRequestTableField> " +
                         "      <fieldName>plandoday</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["plandoday"].ToString() + "</fieldValue> " +
+                         "     <fieldValue>" + plan + "</fieldValue> " +
                           "    <isView>true</isView> " +
                            "   <isEdit>true</isEdit> " +
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                             " <weaver.workflow.webservices.WorkflowRequestTableField> " +
                         "      <fieldName>squeday</fieldName> " +
-                         "     <fieldValue>" + dts.Rows[j]["squeday"].ToString() + "</fieldValue> " +
+                         "     <fieldValue>" + squ + "</fieldValue> " +
                           "    <isView>true</isView> " +
                            "   <isEdit>true</isEdit> " +
                             "</weaver.workflow.webservices.WorkflowRequestTableField> " +
