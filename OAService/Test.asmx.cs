@@ -357,9 +357,9 @@ namespace OAService
                             {
                                 
                                 sql = " INSERT INTO in_storage_detial (PRODUCT_CODE,INDEX_CODE,ID_CODE,PCS,MANY,PRICE,WARE_UNIT,WAREHOUSE,RE_MARK,PUNIT,IN_MANY,MPSID,MPSINDEX,BILLID," +
-                                    " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO) " +
+                                    " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO,PH) " +
                                     " VALUES( '" + dta.Rows[i]["WLBH"].ToString() + "', '" + xh1 + "','" + id_code + "','1','" + dta.Rows[i]["RKSL"].ToString() + "','" + dta.Rows[i]["DJ"].ToString() + "','临时','20','OA','" + dta.Rows[i]["DWBH"].ToString() + "','" + dta.Rows[i]["RKSL"].ToString() + "','" + ydbh + "','" + dta.Rows[i]["YDXH"].ToString() + "',''," +
-                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "') ";
+                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
 

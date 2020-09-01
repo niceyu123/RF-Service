@@ -231,8 +231,8 @@ namespace KKMWLN.MyPublic
                 DateTime nowTime = DateTime.Now;
                 string h = Convert.ToString(nowTime.Hour);
                 string min = Convert.ToString(nowTime.Minute);
-                if(h=="22" && min == "00")
-                //if (true)
+                //if(h=="22" && min == "00")
+                if (true)
                 {
                     try
                     {
@@ -240,6 +240,7 @@ namespace KKMWLN.MyPublic
                         stockbill_query sq = new stockbill_query();
                         DateTime dt = DateTime.Now.AddDays(-1);
                         string ti = dt.ToString("yyyy-MM-dd") + " 22:00:00";
+                        //string ti = "2020-08-19 12:00:11";
                         DateTime dti = Convert.ToDateTime(ti);
                         string mt = ToolHelper.times(dti);
                         //string mt = times(DateTime.Now);
@@ -379,7 +380,8 @@ namespace KKMWLN.MyPublic
             DateTime nowTime = DateTime.Now;
             string h = Convert.ToString(nowTime.Hour);
             string min = Convert.ToString(nowTime.Minute);
-            if (h == "22" && min == "00")
+            //if (h == "22" && min == "00")
+            if (true)
             {
                 try
                 {
@@ -387,6 +389,7 @@ namespace KKMWLN.MyPublic
                     stockbill_query sq = new stockbill_query();
                     DateTime dt = DateTime.Now.AddDays(-1);
                     string ti = dt.ToString("yyyy-MM-dd") + " 22:00:00";
+                    //string ti = "2020-08-19 12:00:11";
                     DateTime dti = Convert.ToDateTime(ti);
                     string mt = ToolHelper.times(dti);
                     string t = ToolHelper.time();
@@ -468,20 +471,29 @@ namespace KKMWLN.MyPublic
                             //创建连接 参数为连接字符串
                             SqlConnection sqlConn = new SqlConnection(scsb.ToString());
                             sqlConn.Open();
-                            string sqlStr = " INSERT INTO FumaCRM8.dbo.WLN_WHRG (bill_date,bill_type,create_time,custom_code,custom_name,customer_nick," +
-                                "customer_nick_type,customer_nick_type_name,discount_fee,paid_fee,post_fee,pay_type,from_trade_no,inv_no,remark,sale_man," +
-                                "service_fee,shop_name,shop_nick,shop_source,storage_code,storage_name,sum_sale,tp_tid,detail_id,goods_name,nums,sku_name," +
-                                "sku_no,sku_prop1,sku_prop2,sum_cost,detail_sum_sale,unit,indexs,codedate,spec_code,stock_code) " +
-                                "VALUES ('" + bill_date + "','" + bill_type + "','" + create_time + "','" + custom_code + "','" + custom_name + "','" + customer_nick + "'," +
-                                "'" + customer_nick_type + "','" + customer_nick_type_name + "','" + discount_fee + "','" + paid_fee + "','" + post_fee + "','" + pay_type + "'," +
-                                "'" + from_trade_no + "','" + inv_no + "','" + remark + "','" + sale_man + "','" + service_fee + "','" + shop_name + "','" + shop_nick + "'," +
-                                "'" + shop_source + "','" + storage_code + "','" + storage_name + "','" + sum_sale + "','" + tp_tid + "','" + detail_id + "','" + goods_name + "'," +
-                                "'" + nums + "','" + sku_name + "','" + sku_no + "','" + sku_prop1 + "','" + sku_prop2 + "','" + sum_cost + "','" + detail_sum_sale + "'," +
-                                "'" + unit + "','" + indexs + "','" + DateTime.Now + "','" + spec_code + "','" + stock_code + "')";
-                            SqlCommand comm = new SqlCommand(sqlStr, sqlConn);//从数据库中查询                           
-                            int result = comm.ExecuteNonQuery();
+                            string sqlStr = " select * from WLN_WHRG where detail_id='" + detail_id + "' ";
+                            DataTable dta = new DataTable();
+                            SqlDataAdapter da = new SqlDataAdapter(sqlStr, sqlConn);//从数据库中查询
+                            da.Fill(dta);//将数据填充到DataSet
                             sqlConn.Close();//关闭连接
-
+                            int numn = dta.Rows.Count;
+                            if (numn == 0)
+                            {
+                                sqlConn.Open();
+                                sqlStr = " INSERT INTO FumaCRM8.dbo.WLN_WHRG (bill_date,bill_type,create_time,custom_code,custom_name,customer_nick," +
+                                   "customer_nick_type,customer_nick_type_name,discount_fee,paid_fee,post_fee,pay_type,from_trade_no,inv_no,remark,sale_man," +
+                                   "service_fee,shop_name,shop_nick,shop_source,storage_code,storage_name,sum_sale,tp_tid,detail_id,goods_name,nums,sku_name," +
+                                   "sku_no,sku_prop1,sku_prop2,sum_cost,detail_sum_sale,unit,indexs,codedate,spec_code,stock_code) " +
+                                   "VALUES ('" + bill_date + "','" + bill_type + "','" + create_time + "','" + custom_code + "','" + custom_name + "','" + customer_nick + "'," +
+                                   "'" + customer_nick_type + "','" + customer_nick_type_name + "','" + discount_fee + "','" + paid_fee + "','" + post_fee + "','" + pay_type + "'," +
+                                   "'" + from_trade_no + "','" + inv_no + "','" + remark + "','" + sale_man + "','" + service_fee + "','" + shop_name + "','" + shop_nick + "'," +
+                                   "'" + shop_source + "','" + storage_code + "','" + storage_name + "','" + sum_sale + "','" + tp_tid + "','" + detail_id + "','" + goods_name + "'," +
+                                   "'" + nums + "','" + sku_name + "','" + sku_no + "','" + sku_prop1 + "','" + sku_prop2 + "','" + sum_cost + "','" + detail_sum_sale + "'," +
+                                   "'" + unit + "','" + indexs + "','" + DateTime.Now + "','" + spec_code + "','" + stock_code + "')";
+                                SqlCommand comm = new SqlCommand(sqlStr, sqlConn);//从数据库中查询                           
+                                int result = comm.ExecuteNonQuery();
+                                sqlConn.Close();//关闭连接
+                            }
                         }
                     }
 

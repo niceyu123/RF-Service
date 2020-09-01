@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERPCZ", "ERPCZ\ERPCZ.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKMWLN", "KKMWLN\KKMWLN.csproj", "{3EF4D27E-4E65-48D3-A520-691EA7BBD2ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp3", "WindowsFormsApp3\WindowsFormsApp3.csproj", "{4C1736F6-C521-4436-B051-1B8FF24DECFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{3EF4D27E-4E65-48D3-A520-691EA7BBD2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EF4D27E-4E65-48D3-A520-691EA7BBD2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EF4D27E-4E65-48D3-A520-691EA7BBD2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C1736F6-C521-4436-B051-1B8FF24DECFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1736F6-C521-4436-B051-1B8FF24DECFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1736F6-C521-4436-B051-1B8FF24DECFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1736F6-C521-4436-B051-1B8FF24DECFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

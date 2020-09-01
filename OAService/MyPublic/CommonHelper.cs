@@ -1287,7 +1287,7 @@ namespace OAService.MyPublic
               "<requestName>R0-自产完工15天未出订单明细</requestName> " +
              " <requestLevel>0</requestLevel> " +
               "<workflowBaseInfo> " +
-             " <workflowId>8641</workflowId> " +
+             " <workflowId>8721</workflowId> " +
              " </workflowBaseInfo> " +
              //创建人
              " <creatorId>6175</creatorId> " +
@@ -1333,6 +1333,12 @@ namespace OAService.MyPublic
                   "      <isEdit>true</isEdit> " +
                       "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
+              "       <weaver.workflow.webservices.WorkflowRequestTableField> " +
+              "          <fieldName>AUDIT_DEPTID</fieldName> " +
+               "         <fieldValue>" + dt.Rows[i]["AUDIT_DEPTID"].ToString() + "</fieldValue> " +
+                "       <isView>true</isView> " +
+                  "      <isEdit>true</isEdit> " +
+                      "</weaver.workflow.webservices.WorkflowRequestTableField> " +
 
                    " </workflowRequestTableFields> " +
                  " </weaver.workflow.webservices.WorkflowRequestTableRecord> " +
