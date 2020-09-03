@@ -1022,5 +1022,108 @@ namespace OAService
                 return null;
             }
         }
+
+
+        [WebMethod]
+        public string SaveZZ(string manid,string fb,string date)
+        {
+            try
+            {
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                string sql = " select a.workcode,a.lastname,b.departmentname,c.jobtitlename from HRMRESOURCE a " +
+                    " left join hrmdepartment b on a.DEPARTMENTID=b.id" +
+                    " left join hrmjobtitles c on a.jobtitle=c.id" +
+                    " where a.id='" + manid + "' ";
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int num = dt.Rows.Count;
+                ToolHelper.CloseSql(conn);
+                if (num > 0)
+                {
+                    string workcode = dt.Rows[0]["WORKCODE"].ToString();
+                    string departmentname = dt.Rows[0]["departmentname"].ToString();
+                    string jobtitlename = dt.Rows[0]["jobtitlename"].ToString();
+
+                    conn = ToolHelper.OpenRavoerp(fb);
+                    myCommand = conn.CreateCommand();
+                    sql = " select post_id from post_tb where post_name='" + jobtitlename + "' ";
+                    cmd = new OracleCommand(sql, conn);
+                    da = new OracleDataAdapter(cmd);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    string post_id = "";
+                    int num1 = dt.Rows.Count;
+                    if (num1>0)
+                    {
+                        post_id= dt.Rows[0]["post_id"].ToString();
+                    }
+                    string companyid = "";
+                    string company = "";
+                    if (fb=="21")
+                    {
+                        companyid = "RAVO1";
+                        company = "";
+                    }else if (fb == "22")
+                    {
+                        companyid = "RAVO5";
+                        company = "";
+                    }
+                    else if (fb == "23")
+                    {
+                        companyid = "RAVO2";
+                        company = "";
+                    }
+                    else if (fb == "141")
+                    {
+                        companyid = "RAVO3";
+                        company = "";
+                    }
+                    else if (fb == "161")
+                    {
+                        companyid = "RAVO6";
+                        company = "";
+                    }
+                    sql = " select id_code from department where cn_name='"+ departmentname + "' and companyid='"+ companyid+"' ";
+                    cmd = new OracleCommand(sql, conn);
+                    da = new OracleDataAdapter(cmd);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    string id_code = "";
+                    int num2 = dt.Rows.Count;
+                    if (num2 > 0)
+                    {
+                        id_code = dt.Rows[0]["id_code"].ToString();
+                    }
+                    sql = " select * from MAN_TB_DPCHANGE where man_id='"+workcode+"' order by itm desc ";
+                    cmd = new OracleCommand(sql, conn);
+                    da = new OracleDataAdapter(cmd);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    int num3 = dt.Rows.Count;
+                    string itm = "1";
+                    if (num3>0)
+                    {
+                        string itms = dt.Rows[0]["itm"].ToString();
+                        itm = Convert.ToString(Convert.ToInt32(itms) + 1);
+                    }
+                    sql = " INSERT INTO MAN_TB_DPCHANGE (MAN_ID,ITM,TYPE,COMPANY,DEP,POST,REASON,DP_DD,COMPANY_NEW,DEP_NEW,POST_NEW) " +
+                        " VALUES ( '"+workcode+"','"+itm+"','4','"+company+"','"+ id_code + "','"+ post_id + "','转正','"+date+"','"+company+"','"+ departmentname+"','"+ jobtitlename + "') ";
+                    cmd = new OracleCommand(sql, conn);
+                    int result = cmd.ExecuteNonQuery();
+                    ToolHelper.CloseSql(conn);
+                }
+                return "成功";
+            }
+            catch (Exception ex)
+            {
+                ToolHelper.logger.Debug(ex.ToString());
+                return "失败";
+            }
+        }
+
+
     }
 }

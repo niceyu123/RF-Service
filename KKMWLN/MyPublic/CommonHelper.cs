@@ -203,7 +203,7 @@ namespace KKMWLN.MyPublic
                             {
                                 //打开连接
                                 sqlConn.Open();
-                                sqlStr = " update FumaCRM8.dbo.WLN_WHIN  set code='2',message='" + re.message + "',codetime='" + DateTime.Now + "'  where twhno='" + twhno + "' ";
+                                sqlStr = " update FumaCRM8.dbo.WLN_WHIN_MAIN  set code='2',message='" + re.message + "',codetime='" + DateTime.Now + "'  where twhno='" + twhno + "' ";
                                 SqlCommand comm = new SqlCommand(sqlStr, sqlConn);//从数据库中查询                           
                                 int result = comm.ExecuteNonQuery();
                                 sqlConn.Close();//关闭连接

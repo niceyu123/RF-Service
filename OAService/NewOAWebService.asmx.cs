@@ -4103,12 +4103,13 @@ namespace OAService
                                                 //以上为只有一天
                                                 else if (i != day)
                                                 {
-                                                    if (st1 < bt)
+
+                                                    if (st1 >= bt)
                                                     {
                                                         TimeSpan ts1 = xb - st1;
-                                                        double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
+                                                        double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 1);
                                                         TimeSpan ts2 = et - xe;
-                                                        double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                        double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 1);
                                                         x = x + d1 + d2;
                                                         //跨天分2条存储
                                                         string dayy = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
@@ -4139,68 +4140,135 @@ namespace OAService
                                                         {
                                                             SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), strDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
                                                         }
+
                                                     }
                                                     else
                                                     {
-                                                        //开始时间等于排班开始时间
-                                                        if (bt == st1)
+                                                        //TimeSpan ts1 = xb - bt;
+                                                        //double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
+                                                        //TimeSpan ts2 = et - xe;
+                                                        //double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                        //x = x + d1 + d2;
+                                                        TimeSpan ts2 = et - st1;
+                                                        double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 1);
+                                                        x = x + d2;
+                                                        DateTime aaa = Convert.ToDateTime(strDate).AddDays(1);
+                                                        string kssj = aaa.ToString("yyyy-MM-dd");
+                                                        string dayy = kssj + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
+                                                        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                        conn = ToolHelper.OpenRavoerp(type);
+                                                        cmd = new OracleCommand(sql, conn);
+                                                        da = new OracleDataAdapter(cmd);
+                                                        dt = new DataTable();
+                                                        da.Fill(dt);
+                                                        num = dt.Rows.Count;
+                                                        ToolHelper.CloseSql(conn);
+                                                        if (num == 0)
                                                         {
-                                                            x = x + t - r;
-                                                            var bbb = start.AddDays(1);
-                                                            string endDate = bbb.ToString("yyyy-MM-dd");
-                                                            string dayy = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
-                                                            sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
-                                                            conn = ToolHelper.OpenRavoerp(type);
-                                                            cmd = new OracleCommand(sql, conn);
-                                                            da = new OracleDataAdapter(cmd);
-                                                            dt = new DataTable();
-                                                            da.Fill(dt);
-                                                            num = dt.Rows.Count;
-                                                            ToolHelper.CloseSql(conn);
-                                                            if (num == 0)
-                                                            {
-                                                                SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(bt.Hour) + ":" + Convert.ToString(bt.Minute), endDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(t - r), Convert.ToString(r), oaNo);
-                                                            }
+                                                            SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute), strDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
                                                         }
-                                                        else
-                                                        {
-                                                            //需2段
-                                                            TimeSpan ts1 = xb - st1;
-                                                            double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
-                                                            TimeSpan ts2 = et - xe;
-                                                            double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
-                                                            x = x + d1 + d2;
-                                                            string dayy = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
-                                                            sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
-                                                            conn = ToolHelper.OpenRavoerp(type);
-                                                            cmd = new OracleCommand(sql, conn);
-                                                            da = new OracleDataAdapter(cmd);
-                                                            dt = new DataTable();
-                                                            da.Fill(dt);
-                                                            num = dt.Rows.Count;
-                                                            ToolHelper.CloseSql(conn);
-                                                            if (num == 0)
-                                                            {
-                                                                SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute), strDate + " " + Convert.ToString(xb.Hour) + ":" + Convert.ToString(xb.Minute), Convert.ToString(d1), "0", oaNo);
-                                                            }
-                                                            var bbb = start.AddDays(1);
-                                                            string endDate = bbb.ToString("yyyy-MM-dd");
-                                                            dayy = endDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute);
-                                                            sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
-                                                            conn = ToolHelper.OpenRavoerp(type);
-                                                            cmd = new OracleCommand(sql, conn);
-                                                            da = new OracleDataAdapter(cmd);
-                                                            dt = new DataTable();
-                                                            da.Fill(dt);
-                                                            num = dt.Rows.Count;
-                                                            ToolHelper.CloseSql(conn);
-                                                            if (num == 0)
-                                                            {
-                                                                SqlSaveHelper.SaveQJ(type, manid, qjlx, endDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), endDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
-                                                            }
-                                                        }
-
                                                     }
+
+
+
+                                                    //if (st1 < bt)
+                                                    //{
+                                                    //    TimeSpan ts1 = xb - st1;
+                                                    //    double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
+                                                    //    TimeSpan ts2 = et - xe;
+                                                    //    double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                    //    x = x + d1 + d2;
+                                                    //    //跨天分2条存储
+                                                    //    string dayy = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
+                                                    //    sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                    //    conn = ToolHelper.OpenRavoerp(type);
+                                                    //    cmd = new OracleCommand(sql, conn);
+                                                    //    da = new OracleDataAdapter(cmd);
+                                                    //    dt = new DataTable();
+                                                    //    da.Fill(dt);
+                                                    //    num = dt.Rows.Count;
+                                                    //    ToolHelper.CloseSql(conn);
+                                                    //    if (num == 0)
+                                                    //    {
+                                                    //        SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute), strDate + " " + Convert.ToString(xb.Hour) + ":" + Convert.ToString(xb.Minute), Convert.ToString(d1), "0", oaNo);
+                                                    //    }
+                                                    //    DateTime aaa = Convert.ToDateTime(strDate).AddDays(1);
+                                                    //    string kssj = aaa.ToString("yyyy-MM-dd");
+                                                    //    dayy = kssj + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
+                                                    //    sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                    //    conn = ToolHelper.OpenRavoerp(type);
+                                                    //    cmd = new OracleCommand(sql, conn);
+                                                    //    da = new OracleDataAdapter(cmd);
+                                                    //    dt = new DataTable();
+                                                    //    da.Fill(dt);
+                                                    //    num = dt.Rows.Count;
+                                                    //    ToolHelper.CloseSql(conn);
+                                                    //    if (num == 0)
+                                                    //    {
+                                                    //        SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), strDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
+                                                    //    }
+                                                    //}
+                                                    //else
+                                                    //{
+                                                    //    //开始时间等于排班开始时间
+                                                    //    if (bt == st1)
+                                                    //    {
+                                                    //        x = x + t - r;
+                                                    //        var bbb = start.AddDays(1);
+                                                    //        string endDate = bbb.ToString("yyyy-MM-dd");
+                                                    //        string dayy = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
+                                                    //        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                    //        conn = ToolHelper.OpenRavoerp(type);
+                                                    //        cmd = new OracleCommand(sql, conn);
+                                                    //        da = new OracleDataAdapter(cmd);
+                                                    //        dt = new DataTable();
+                                                    //        da.Fill(dt);
+                                                    //        num = dt.Rows.Count;
+                                                    //        ToolHelper.CloseSql(conn);
+                                                    //        if (num == 0)
+                                                    //        {
+                                                    //            SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(bt.Hour) + ":" + Convert.ToString(bt.Minute), endDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(t - r), Convert.ToString(r), oaNo);
+                                                    //        }
+                                                    //    }
+                                                    //    else
+                                                    //    {
+                                                    //        //需2段
+                                                    //        TimeSpan ts1 = xb - st1;
+                                                    //        double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
+                                                    //        TimeSpan ts2 = et - xe;
+                                                    //        double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                    //        x = x + d1 + d2;
+                                                    //        string dayy = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
+                                                    //        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                    //        conn = ToolHelper.OpenRavoerp(type);
+                                                    //        cmd = new OracleCommand(sql, conn);
+                                                    //        da = new OracleDataAdapter(cmd);
+                                                    //        dt = new DataTable();
+                                                    //        da.Fill(dt);
+                                                    //        num = dt.Rows.Count;
+                                                    //        ToolHelper.CloseSql(conn);
+                                                    //        if (num == 0)
+                                                    //        {
+                                                    //            SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute), strDate + " " + Convert.ToString(xb.Hour) + ":" + Convert.ToString(xb.Minute), Convert.ToString(d1), "0", oaNo);
+                                                    //        }
+                                                    //        var bbb = start.AddDays(1);
+                                                    //        string endDate = bbb.ToString("yyyy-MM-dd");
+                                                    //        dayy = endDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute);
+                                                    //        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                    //        conn = ToolHelper.OpenRavoerp(type);
+                                                    //        cmd = new OracleCommand(sql, conn);
+                                                    //        da = new OracleDataAdapter(cmd);
+                                                    //        dt = new DataTable();
+                                                    //        da.Fill(dt);
+                                                    //        num = dt.Rows.Count;
+                                                    //        ToolHelper.CloseSql(conn);
+                                                    //        if (num == 0)
+                                                    //        {
+                                                    //            SqlSaveHelper.SaveQJ(type, manid, qjlx, endDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), endDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
+                                                    //        }
+                                                    //    }
+
+                                                    //}
                                                 }
                                             }
                                             else
