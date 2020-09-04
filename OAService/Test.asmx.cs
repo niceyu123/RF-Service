@@ -1065,26 +1065,26 @@ namespace OAService
                     if (fb=="21")
                     {
                         companyid = "RAVO1";
-                        company = "";
+                        company = "3";
                     }else if (fb == "22")
                     {
                         companyid = "RAVO5";
-                        company = "";
+                        company = "1";
                     }
                     else if (fb == "23")
                     {
                         companyid = "RAVO2";
-                        company = "";
+                        company = "2";
                     }
                     else if (fb == "141")
                     {
                         companyid = "RAVO3";
                         company = "";
                     }
-                    else if (fb == "161")
+                    else if (fb == "4")
                     {
                         companyid = "RAVO6";
-                        company = "";
+                        company = "5";
                     }
                     sql = " select id_code from department where cn_name='"+ departmentname + "' and companyid='"+ companyid+"' ";
                     cmd = new OracleCommand(sql, conn);
@@ -1110,7 +1110,7 @@ namespace OAService
                         itm = Convert.ToString(Convert.ToInt32(itms) + 1);
                     }
                     sql = " INSERT INTO MAN_TB_DPCHANGE (MAN_ID,ITM,TYPE,COMPANY,DEP,POST,REASON,DP_DD,COMPANY_NEW,DEP_NEW,POST_NEW) " +
-                        " VALUES ( '"+workcode+"','"+itm+"','4','"+company+"','"+ id_code + "','"+ post_id + "','转正','"+date+"','"+company+"','"+ departmentname+"','"+ jobtitlename + "') ";
+                        " VALUES ( '"+workcode+"','"+itm+"','4','"+company+"','"+ id_code + "','"+ post_id + "','转正',to_date('" + date+" 00:00:00" + "','yyyy-mm-dd hh24:mi:ss'),'" + company+"','"+ departmentname+"','"+ jobtitlename + "') ";
                     cmd = new OracleCommand(sql, conn);
                     int result = cmd.ExecuteNonQuery();
                     ToolHelper.CloseSql(conn);
