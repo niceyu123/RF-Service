@@ -773,5 +773,39 @@ namespace ERPCZ
             }
         }
 
+        [WebMethod]
+        public string ERP_THESAMEYEARRECEIPTQUERY()
+        {
+            try
+            {
+                erpPlatform.erpPlatform erp = new erpPlatform.erpPlatform();
+                string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+                    "<body>" +
+                    "<head>" +
+                    "<erpSysCode>ERP001</erpSysCode>" +
+                    "<custNo>0000082767</custNo>" +
+                    "<tradeName> ERP_THESAMEYEARRECEIPTQUERY</tradeName>" +
+                    "</head>" +
+                    "<map>" +
+                    "<bankAcc>总笔数</bankAcc>" +
+                    "<beginDate>2020-03-01</beginDate>" +
+                    "<endDate>2020-09-27</endDate >" +
+                    "<certCode></certCode>" +
+                    "<critType></critType>" +
+                    "</map>" +
+                    "</body>";
+                string xmls = ToolHelper.encrypt(xml);//加密
+                string re = erp.serverErpXml(xmls);//传输 接收
+                string bb = ToolHelper.decrypt(re);//解密
+                return bb;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+
+
+        }
+
     }
 }

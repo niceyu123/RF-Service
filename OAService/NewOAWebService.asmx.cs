@@ -2382,6 +2382,19 @@ namespace OAService
                                                                     {
                                                                         SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute), strDate + " " + Convert.ToString(js.Hour) + ":" + Convert.ToString(js.Minute), Convert.ToString(d1+t1), "0", oaNo);
                                                                     }
+
+                                                                    sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                                    conn = ToolHelper.OpenRavoerp(type);
+                                                                    cmd = new OracleCommand(sql, conn);
+                                                                    da = new OracleDataAdapter(cmd);
+                                                                    dt = new DataTable();
+                                                                    da.Fill(dt);
+                                                                    num = dt.Rows.Count;
+                                                                    ToolHelper.CloseSql(conn);
+                                                                    if (num == 0)
+                                                                    {
+                                                                        SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(bt1.Hour) + ":" + Convert.ToString(bt1.Minute), strDate + " " + Convert.ToString(et1.Hour) + ":" + Convert.ToString(et1.Minute), Convert.ToString(t1), "0", oaNo);
+                                                                    }
                                                                 }
                                                                 else if (ks <= xb)
                                                                 {
@@ -2602,7 +2615,7 @@ namespace OAService
                                                                 TimeSpan ts1 = xb - bt2;
                                                                 double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                                 x = x + d1 + t1;
-                                                                string dayy = kssj + " " + Convert.ToString(bt2.Hour) + ":" + Convert.ToString(bt2.Minute);
+                                                                string dayy = kssj + " " + Convert.ToString(bt1.Hour) + ":" + Convert.ToString(bt1.Minute);
                                                                 sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                                 conn = ToolHelper.OpenRavoerp(type);
                                                                 cmd = new OracleCommand(sql, conn);
@@ -2613,7 +2626,7 @@ namespace OAService
                                                                 ToolHelper.CloseSql(conn);
                                                                 if (num == 0)
                                                                 {
-                                                                    SqlSaveHelper.SaveQJ(type, manid, qjlx, kssj + " " + Convert.ToString(bt2.Hour) + ":" + Convert.ToString(bt2.Minute), kssj + " " + Convert.ToString(js.Hour) + ":" + Convert.ToString(js.Minute), Convert.ToString(d1+t1), "0", oaNo);
+                                                                    SqlSaveHelper.SaveQJ(type, manid, qjlx, kssj + " " + Convert.ToString(bt1.Hour) + ":" + Convert.ToString(bt1.Minute), kssj + " " + Convert.ToString(js.Hour) + ":" + Convert.ToString(js.Minute), Convert.ToString(d1+t1), "0", oaNo);
                                                                 }
                                                             }
                                                             else
@@ -4128,7 +4141,7 @@ namespace OAService
                                                         DateTime aaa = Convert.ToDateTime(strDate).AddDays(1);
                                                         string kssj = aaa.ToString("yyyy-MM-dd");
                                                         dayy = kssj + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
-                                                        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + kssj + "','yyyy-mm-dd hh24:mi:ss') ";
                                                         conn = ToolHelper.OpenRavoerp(type);
                                                         cmd = new OracleCommand(sql, conn);
                                                         da = new OracleDataAdapter(cmd);
@@ -4138,7 +4151,7 @@ namespace OAService
                                                         ToolHelper.CloseSql(conn);
                                                         if (num == 0)
                                                         {
-                                                            SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), strDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
+                                                            SqlSaveHelper.SaveQJ(type, manid, qjlx, kssj + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), kssj + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
                                                         }
 
                                                     }
@@ -4155,7 +4168,8 @@ namespace OAService
                                                         DateTime aaa = Convert.ToDateTime(strDate).AddDays(1);
                                                         string kssj = aaa.ToString("yyyy-MM-dd");
                                                         string dayy = kssj + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
-                                                        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                        string daay = strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
+                                                        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + daay + "','yyyy-mm-dd hh24:mi:ss') ";
                                                         conn = ToolHelper.OpenRavoerp(type);
                                                         cmd = new OracleCommand(sql, conn);
                                                         da = new OracleDataAdapter(cmd);

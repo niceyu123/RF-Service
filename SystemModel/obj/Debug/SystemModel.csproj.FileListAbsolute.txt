@@ -4,3 +4,9 @@ C:\Users\user\source\repos\OAService\SystemModel\obj\Debug\SystemModel.csprojAss
 C:\Users\user\source\repos\OAService\SystemModel\obj\Debug\SystemModel.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\OAService\SystemModel\obj\Debug\SystemModel.dll
 C:\Users\user\source\repos\OAService\SystemModel\obj\Debug\SystemModel.pdb
+E:\Code\OAService\SystemModel\bin\Debug\SystemModel.dll
+E:\Code\OAService\SystemModel\bin\Debug\SystemModel.pdb
+E:\Code\OAService\SystemModel\obj\Debug\SystemModel.csprojAssemblyReference.cache
+E:\Code\OAService\SystemModel\obj\Debug\SystemModel.csproj.CoreCompileInputs.cache
+E:\Code\OAService\SystemModel\obj\Debug\SystemModel.dll
+E:\Code\OAService\SystemModel\obj\Debug\SystemModel.pdb

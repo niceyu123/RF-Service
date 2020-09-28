@@ -525,9 +525,9 @@ namespace OAService
                             {
 
                                 sql = " INSERT INTO in_storage_detial (PRODUCT_CODE,INDEX_CODE,ID_CODE,PCS,MANY,PRICE,WARE_UNIT,WAREHOUSE,RE_MARK,PUNIT,IN_MANY,MPSID,MPSINDEX,BILLID," +
-                                    " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO) " +
+                                    " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO,PH) " +
                                     " VALUES( '" + dta.Rows[i]["WLBH1"].ToString() + "', '" + xh1 + "','" + id_code + "','1','" + dta.Rows[i]["RKSL"].ToString() + "','" + dta.Rows[i]["DJ"].ToString() + "','临时','20','OA','" + dta.Rows[i]["DWBH"].ToString() + "','" + dta.Rows[i]["RKSL"].ToString() + "','" + ydbh + "','" + dta.Rows[i]["YDXH"].ToString() + "',''," +
-                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "') ";
+                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
 
@@ -688,9 +688,9 @@ namespace OAService
                             {
 
                                 sql = " INSERT INTO in_storage_detial (PRODUCT_CODE,INDEX_CODE,ID_CODE,PCS,MANY,PRICE,WARE_UNIT,WAREHOUSE,RE_MARK,PUNIT,IN_MANY,MPSID,MPSINDEX,BILLID," +
-                                    " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO) " +
+                                    " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO,PH) " +
                                     " VALUES( '" + dta.Rows[i]["WLBH5"].ToString() + "', '" + xh1 + "','" + id_code + "','1','" + dta.Rows[i]["RKSL"].ToString() + "','" + dta.Rows[i]["DJ"].ToString() + "','临时','20','OA','" + dta.Rows[i]["DWBH"].ToString() + "','" + dta.Rows[i]["RKSL"].ToString() + "','" + ydbh + "','" + dta.Rows[i]["YDXH"].ToString() + "',''," +
-                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "') ";
+                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
 
@@ -1023,7 +1023,13 @@ namespace OAService
             }
         }
 
-
+        /// <summary>
+        /// 转正单
+        /// </summary>
+        /// <param name="manid"></param>
+        /// <param name="fb"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
         [WebMethod]
         public string SaveZZ(string manid,string fb,string date)
         {
@@ -1047,7 +1053,7 @@ namespace OAService
                     string departmentname = dt.Rows[0]["departmentname"].ToString();
                     string jobtitlename = dt.Rows[0]["jobtitlename"].ToString();
 
-                    conn = ToolHelper.OpenRavoerp(fb);
+                    conn = ToolHelper.OpenRavoerp("24");
                     myCommand = conn.CreateCommand();
                     sql = " select post_id from post_tb where post_name='" + jobtitlename + "' ";
                     cmd = new OracleCommand(sql, conn);
@@ -1113,6 +1119,9 @@ namespace OAService
                         " VALUES ( '"+workcode+"','"+itm+"','4','"+company+"','"+ id_code + "','"+ post_id + "','转正',to_date('" + date+" 00:00:00" + "','yyyy-mm-dd hh24:mi:ss'),'" + company+"','"+ departmentname+"','"+ jobtitlename + "') ";
                     cmd = new OracleCommand(sql, conn);
                     int result = cmd.ExecuteNonQuery();
+                    sql = "update MAN_TB set EDITDAY=to_date('" + Convert.ToString(DateTime.Now) + "','yyyy-mm-dd hh24:mi:ss')  where MAN_ID='" + workcode + "'";
+                    cmd = new OracleCommand(sql, conn);
+                    result = cmd.ExecuteNonQuery();
                     ToolHelper.CloseSql(conn);
                 }
                 return "成功";
@@ -1124,6 +1133,34 @@ namespace OAService
             }
         }
 
-
+        [WebMethod]
+        public string GetTX(string gh, string lch)
+        {
+            try
+            {
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                string sql = " select * from FORMTABLE_MAIN_160 where TXRGH='"+gh+"' and jbsqdlc='"+lch+ "' and lcbh is not null ";
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int num = dt.Rows.Count;
+                ToolHelper.CloseSql(conn);
+                if (num==0)
+                {
+                    return "1";
+                }
+                else
+                {
+                    return "0";
+                }
+            }
+            catch (Exception ex)
+            {
+                return "0";
+                throw;
+            }
+        }
     }
 }

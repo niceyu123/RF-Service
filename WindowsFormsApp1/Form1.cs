@@ -4685,5 +4685,44 @@ namespace WindowsFormsApp1
 
             }
         }
+
+        private void Button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //构造连接字符串
+                SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
+                scsb.DataSource = "172.16.11.67";
+                scsb.InitialCatalog = "SCMDB";
+                scsb.UserID = "sa";
+                scsb.Password = "Sa123456";
+
+                //创建连接 参数为连接字符串
+                SqlConnection sqlConn = new SqlConnection(scsb.ToString());
+                //打开连接
+                sqlConn.Open();
+                //需要执行的SQL语句
+                String sqlStr = "select * from [SCMDB].[dbo].[CostomerMeala]";
+                DataSet ds = new DataSet();
+                SqlDataAdapter adp = new SqlDataAdapter(sqlStr, sqlConn);
+                adp.Fill(ds);
+                DataTable dt = new DataTable();
+                dt = ds.Tables[0];
+                sqlConn.Close();
+
+                FastReport.Report report = new FastReport.Report();
+                string filename = @"C:\Users\user\Desktop\客餐申请单.frx";
+                ds.Tables[0].TableName = "CostomerMeala";//数据源名称
+                report.Load(filename);
+                report.RegisterData(ds);
+                report.Show();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

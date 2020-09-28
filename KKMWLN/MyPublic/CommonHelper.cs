@@ -214,12 +214,12 @@ namespace KKMWLN.MyPublic
 
 
                     }
-                    Thread.Sleep(100000);
+                    Thread.Sleep(10000);
                 }
                 catch (Exception ex)
                 {
                     ToolHelper.logger.Debug(ex.ToString());
-                    Thread.Sleep(100000);
+                    Thread.Sleep(10000);
                 }
             }
         }
@@ -236,134 +236,19 @@ namespace KKMWLN.MyPublic
                 {
                     try
                     {
-                        //前一天的晚上10点
-                        stockbill_query sq = new stockbill_query();
-                        DateTime dt = DateTime.Now.AddDays(-1);
-                        string ti = dt.ToString("yyyy-MM-dd") + " 22:00:00";
-                        //string ti = "2020-08-19 12:00:11";
-                        DateTime dti = Convert.ToDateTime(ti);
-                        string mt = ToolHelper.times(dti);
-                        //string mt = times(DateTime.Now);
-                        sq.modify_time = mt;
-                        sq.page = "1";
-                        sq.limit = "100";
-                        string json = new JavaScriptSerializer().Serialize(sq);
-                        string urlcode = ToolHelper.UrlEncode(json);
-                        string t = ToolHelper.time();
-                        //t = "1558952035";
-                        string post = secret + "_app=" + key + "&_s=&_t=" + t + "&limit=" + sq.limit + "&modify_time=" + sq.modify_time + "&page=" + sq.page + secret;
-                        string m = ToolHelper.EncryptString(post);
-                        //var client = new RestClient("https://open-api.hupun.com/api/erp/stock/out/stockbill/query");
-                        var client = new RestClient("https://open-api.hupun.com/api/erp/sale/stock/out/query");
+                        int page = 0;
 
-                        client.Timeout = -1;
-                        var request = new RestRequest(Method.POST);
-                        request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
-                        request.AddParameter("_app", key);
-                        request.AddParameter("_s", "");
-                        request.AddParameter("_sign", m);
-                        request.AddParameter("_t", t);
-                        request.AddParameter("limit", sq.limit);
-                        request.AddParameter("modify_time", sq.modify_time);
-                        request.AddParameter("page", sq.page);
-
-                        IRestResponse response = client.Execute(request);
-                        string str = response.Content;
-                        out_query re = new JavaScriptSerializer().Deserialize<out_query>(str);
-                        string mess = re.message;
-                        int code = re.code;
-                        if (code == 0)
+                        int a = 1;
+                        for (int i = 0; i < 999999; i++)
                         {
-                            int num = re.data.Count;
-                            //int num = re.data[0].details.Count;
-                            for (int i = 0; i < num; i++)
+                            page = page + 1;
+                            a = Stockbill(page);
+                            if (a <= 0)
                             {
-                                string stock_code = re.data[i].stock_code;
-                                string bd = re.data[i].bill_date;
-                                long b = Convert.ToInt64(bd);
-                                DateTime bill_date1 = ToolHelper.StampToDatetime(b);
-                                string bill_date = Convert.ToString(bill_date1);
-                                string bill_type = re.data[i].bill_type;
-                                string country = re.data[i].country;
-                                string ct = re.data[i].create_time;
-                                long c = Convert.ToInt64(ct);
-                                DateTime create_time = ToolHelper.StampToDatetime(c);
-                                //string create_time = re.data[i].create_time;
-                                string custom_code = re.data[i].custom_code;
-                                string custom_name = re.data[i].custom_name;
-                                string customer_nick = re.data[i].customer_nick;
-                                string customer_nick_type = re.data[i].customer_nick_type;
-                                string customer_nick_type_name = re.data[i].customer_nick_type_name;
-                                string discount_fee = re.data[i].discount_fee;
-                                string from_trade_no = re.data[i].from_trade_no;
-                                string inv_no = re.data[i].inv_no;
-                                string paid_fee = re.data[i].paid_fee;
-                                string pay_type = re.data[i].pay_type;
-                                string post_fee = re.data[i].post_fee;
-                                string remark = re.data[i].remark;
-                                string sale_man = re.data[i].sale_man;
-                                string service_fee = re.data[i].service_fee;
-                                string shop_name = re.data[i].shop_name;
-                                string shop_nick = re.data[i].shop_nick;
-                                string shop_source = re.data[i].shop_source;
-                                string storage_code = re.data[i].storage_code;
-                                string storage_name = re.data[i].storage_name;
-                                string sum_sale = re.data[i].sum_sale;
-                                string tp_tid = re.data[i].tp_tid;
-
-                                string detail_id = re.data[i].details[0].detail_id;
-                                string discount_fee1 = re.data[i].details[0].discount_fee;
-                                string goods_name = re.data[i].details[0].goods_name;
-                                string nums = re.data[i].details[0].nums;
-                                string sku_name = re.data[i].details[0].sku_name;
-                                string sku_no = re.data[i].details[0].sku_no;
-                                string sku_prop1 = re.data[i].details[0].sku_prop1;
-                                string sku_prop2 = re.data[i].details[0].sku_prop2;
-                                string sum_cost = re.data[i].details[0].sum_cost;
-                                string detail_sum_sale = re.data[i].details[0].sum_sale;
-                                string unit = re.data[i].details[0].unit;
-                                string indexs = "";
-                                string spec_code = re.data[i].details[0].spec_code;
-
-                                SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
-                                scsb.DataSource = "172.16.11.9";
-                                scsb.InitialCatalog = "FumaCRM8";
-                                scsb.UserID = "sa";
-                                scsb.Password = "abc_123";
-                                //创建连接 参数为连接字符串
-                                SqlConnection sqlConn = new SqlConnection(scsb.ToString());
-                                sqlConn.Open();
-                                string sqlStr = " select * from WLN_SALESWHOUT where detail_id='"+ detail_id + "' ";
-                                DataTable dta = new DataTable();
-                                SqlDataAdapter da = new SqlDataAdapter(sqlStr, sqlConn);//从数据库中查询
-                                da.Fill(dta);//将数据填充到DataSet
-                                sqlConn.Close();//关闭连接
-                                int numn = dta.Rows.Count;
-                                if (numn == 0)
-                                {
-                                    sqlConn.Open();
-                                    sqlStr = " INSERT INTO FumaCRM8.dbo.WLN_SALESWHOUT (bill_date,bill_type,create_time,custom_code,custom_name,customer_nick," +
-                                    "customer_nick_type,customer_nick_type_name,discount_fee,paid_fee,post_fee,pay_type,from_trade_no,inv_no,remark,sale_man," +
-                                    "service_fee,shop_name,shop_nick,shop_source,storage_code,storage_name,sum_sale,tp_tid,detail_id,goods_name,nums,sku_name," +
-                                    "sku_no,sku_prop1,sku_prop2,sum_cost,detail_sum_sale,unit,indexs,codedate,spec_code,stock_code) " +
-                                    "VALUES ('" + bill_date + "','" + bill_type + "','" + create_time + "','" + custom_code + "','" + custom_name + "','" + customer_nick + "'," +
-                                    "'" + customer_nick_type + "','" + customer_nick_type_name + "','" + discount_fee + "','" + paid_fee + "','" + post_fee + "','" + pay_type + "'," +
-                                    "'" + from_trade_no + "','" + inv_no + "','" + remark + "','" + sale_man + "','" + service_fee + "','" + shop_name + "','" + shop_nick + "'," +
-                                    "'" + shop_source + "','" + storage_code + "','" + storage_name + "','" + sum_sale + "','" + tp_tid + "','" + detail_id + "','" + goods_name + "'," +
-                                    "'" + nums + "','" + sku_name + "','" + sku_no + "','" + sku_prop1 + "','" + sku_prop2 + "','" + sum_cost + "','" + detail_sum_sale + "'," +
-                                    "'" + unit + "','" + indexs + "','" + DateTime.Now + "','" + spec_code + "','" + stock_code + "')";
-                                    SqlCommand comm = new SqlCommand(sqlStr, sqlConn);//从数据库中查询                           
-                                    int result = comm.ExecuteNonQuery();
-                                    sqlConn.Close();//关闭连接
-                                }
-
+                                break;
                             }
                         }
-                        else
-                        {
-                            //记录错误信息
-
-                        }
+                        
                         Thread.Sleep(100000);
                     }
                     catch (Exception ex)
@@ -374,6 +259,162 @@ namespace KKMWLN.MyPublic
                 }
             }
         }
+        //出库子流程
+        public static int Stockbill(int page)
+        {
+            string secret = "5cf249cebe8c45eb6254b55e11f9e944";
+            string key = "3723429465";
+            try
+            {
+                //前一天的晚上10点
+                stockbill_query sq = new stockbill_query();
+                //Random ran = new Random();
+                //int RandKey = ran.Next(0, 28);
+                DateTime dt = DateTime.Now.AddDays(-5);
+                string ti = dt.ToString("yyyy-MM-dd") + " 23:59:59";
+                //string ti = "2020-09-05 23:50:11";
+                DateTime dti = Convert.ToDateTime(ti);
+                string mt = ToolHelper.times(dti);
+                //string mt = times(DateTime.Now);
+                sq.modify_time = mt;
+                sq.page = Convert.ToString(page);
+                sq.limit = "200";
+                string json = new JavaScriptSerializer().Serialize(sq);
+                string urlcode = ToolHelper.UrlEncode(json);
+                string t = ToolHelper.time();
+                //t = "1558952035";
+                string post = secret + "_app=" + key + "&_s=&_t=" + t + "&limit=" + sq.limit + "&modify_time=" + sq.modify_time + "&page=" + sq.page + secret;
+                string m = ToolHelper.EncryptString(post);
+                //var client = new RestClient("https://open-api.hupun.com/api/erp/stock/out/stockbill/query");
+                var client = new RestClient("https://open-api.hupun.com/api/erp/sale/stock/out/query");
+
+                client.Timeout = -1;
+                var request = new RestRequest(Method.POST);
+                request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+                request.AddParameter("_app", key);
+                request.AddParameter("_s", "");
+                request.AddParameter("_sign", m);
+                request.AddParameter("_t", t);
+                request.AddParameter("limit", sq.limit);
+                request.AddParameter("modify_time", sq.modify_time);
+                request.AddParameter("page", sq.page);
+
+                IRestResponse response = client.Execute(request);
+                string str = response.Content;
+                out_query re = new JavaScriptSerializer().Deserialize<out_query>(str);
+                int datacount = re.data.Count;
+                string mess = re.message;
+                int code = re.code;
+                if (code == 0)
+                {
+                    int num = re.data.Count;
+                    //int num = re.data[0].details.Count;
+                    for (int i = 0; i < num; i++)
+                    {
+                        //if (i==153)
+                        //{
+
+                        //}
+                        string stock_code = re.data[i].stock_code;
+                        string bd = re.data[i].bill_date;
+                        long b = Convert.ToInt64(bd);
+                        DateTime bill_date1 = ToolHelper.StampToDatetime(b);
+                        string bill_date = Convert.ToString(bill_date1);
+                        string bill_type = re.data[i].bill_type;
+                        string country = re.data[i].country;
+                        string ct = re.data[i].create_time;
+                        long c = Convert.ToInt64(ct);
+                        DateTime create_time = ToolHelper.StampToDatetime(c);
+                        //string create_time = re.data[i].create_time;
+                        string custom_code = re.data[i].custom_code;
+                        string custom_name = re.data[i].custom_name;
+                        string customer_nick = re.data[i].customer_nick;
+                        string customer_nick_type = re.data[i].customer_nick_type;
+                        string customer_nick_type_name = re.data[i].customer_nick_type_name;
+                        string discount_fee = re.data[i].discount_fee;
+                        string from_trade_no = re.data[i].from_trade_no;
+                        string inv_no = re.data[i].inv_no;
+                        string paid_fee = re.data[i].paid_fee;
+                        string pay_type = re.data[i].pay_type;
+                        string post_fee = re.data[i].post_fee;
+                        string remark = re.data[i].remark;
+                        string sale_man = re.data[i].sale_man;
+                        string service_fee = re.data[i].service_fee;
+                        string shop_name = re.data[i].shop_name;
+                        string shop_nick = re.data[i].shop_nick;
+                        string shop_source = re.data[i].shop_source;
+                        string storage_code = re.data[i].storage_code;
+                        string storage_name = re.data[i].storage_name;
+                        string sum_sale = re.data[i].sum_sale;
+                        string tp_tid = re.data[i].tp_tid;
+                        int n = re.data[i].details.Count;
+                        for (int j = 0; j < n; j++)
+                        {
+                            string detail_id = re.data[i].details[j].detail_id;
+                            string discount_fee1 = re.data[i].details[j].discount_fee;
+                            string goods_name = re.data[i].details[j].goods_name;
+                            string nums = re.data[i].details[j].nums;
+                            string sku_name = re.data[i].details[j].sku_name;
+                            string sku_no = re.data[i].details[j].sku_no;
+                            string sku_prop1 = re.data[i].details[j].sku_prop1;
+                            string sku_prop2 = re.data[i].details[j].sku_prop2;
+                            string sum_cost = re.data[i].details[j].sum_cost;
+                            string detail_sum_sale = re.data[i].details[j].sum_sale;
+                            string unit = re.data[i].details[j].unit;
+                            string indexs = "";
+                            string spec_code = re.data[i].details[j].spec_code;
+                            SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
+                            scsb.DataSource = "172.16.11.9";
+                            scsb.InitialCatalog = "FumaCRM8";
+                            scsb.UserID = "sa";
+                            scsb.Password = "abc_123";
+                            //创建连接 参数为连接字符串
+                            SqlConnection sqlConn = new SqlConnection(scsb.ToString());
+                            sqlConn.Open();
+                            string sqlStr = " select * from WLN_SALESWHOUT where detail_id='" + detail_id + "' ";
+                            DataTable dta = new DataTable();
+                            SqlDataAdapter da = new SqlDataAdapter(sqlStr, sqlConn);//从数据库中查询
+                            da.Fill(dta);//将数据填充到DataSet
+                            sqlConn.Close();//关闭连接
+                            int numn = dta.Rows.Count;
+                            if (numn == 0)
+                            {
+                                sqlConn.Open();
+                                sqlStr = " INSERT INTO FumaCRM8.dbo.WLN_SALESWHOUT (bill_date,bill_type,create_time,custom_code,custom_name,customer_nick," +
+                                "customer_nick_type,customer_nick_type_name,discount_fee,paid_fee,post_fee,pay_type,from_trade_no,inv_no,remark,sale_man," +
+                                "service_fee,shop_name,shop_nick,shop_source,storage_code,storage_name,sum_sale,tp_tid,detail_id,goods_name,nums,sku_name," +
+                                "sku_no,sku_prop1,sku_prop2,sum_cost,detail_sum_sale,unit,indexs,codedate,spec_code,stock_code) " +
+                                "VALUES ('" + bill_date + "','" + bill_type + "','" + create_time + "','" + custom_code + "','" + custom_name.Replace("'", "''") + "','" + customer_nick.Replace("'", "''") + "'," +
+                                "'" + customer_nick_type + "','" + customer_nick_type_name + "','" + discount_fee + "','" + paid_fee + "','" + post_fee + "','" + pay_type + "'," +
+                                "'" + from_trade_no + "','" + inv_no + "','" + remark + "','" + sale_man + "','" + service_fee + "','" + shop_name + "','" + shop_nick + "'," +
+                                "'" + shop_source + "','" + storage_code + "','" + storage_name + "','" + sum_sale + "','" + tp_tid + "','" + detail_id + "','" + goods_name + "'," +
+                                "'" + nums + "','" + sku_name + "','" + sku_no + "','" + sku_prop1 + "','" + sku_prop2 + "','" + sum_cost + "','" + detail_sum_sale + "'," +
+                                "'" + unit + "','" + indexs + "','" + DateTime.Now + "','" + spec_code + "','" + stock_code + "')";
+                                SqlCommand comm = new SqlCommand(sqlStr, sqlConn);//从数据库中查询                           
+                                int result = comm.ExecuteNonQuery();
+                                sqlConn.Close();//关闭连接
+                            }
+                        }
+
+
+                    }
+                }
+                else
+                {
+                    //记录错误信息
+
+                }
+                return datacount;
+
+            }
+            catch (Exception ex)
+            {
+                ToolHelper.logger.Debug(ex.ToString());
+                return 0;
+            }
+        }
+
+
         //退货
         public void Stock_in_query()
         {
@@ -388,8 +429,8 @@ namespace KKMWLN.MyPublic
                     //前一天的晚上10点
                     stockbill_query sq = new stockbill_query();
                     DateTime dt = DateTime.Now.AddDays(-1);
-                    string ti = dt.ToString("yyyy-MM-dd") + " 22:00:00";
-                    //string ti = "2020-08-19 12:00:11";
+                    //string ti = dt.ToString("yyyy-MM-dd") + " 22:00:00";
+                    string ti = "2020-09-05 12:00:11";
                     DateTime dti = Convert.ToDateTime(ti);
                     string mt = ToolHelper.times(dti);
                     string t = ToolHelper.time();

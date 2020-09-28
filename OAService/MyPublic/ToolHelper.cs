@@ -52,7 +52,7 @@ namespace OAService.MyPublic
             {
                 connString = "User ID=ravo;Password=Ravo2020;Data Source=(DESCRIPTION = (ADDRESS_LIST= (ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.11.64)(PORT = 1521))) (CONNECT_DATA = (SERVICE_NAME = RAVO_SJJC)))";
             }
-            else if (type == "24")//汇隆
+            else if (type == "24")//
             {
                 connString = "User ID=ravo0;Password=loginserver;Data Source=(DESCRIPTION = (ADDRESS_LIST= (ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.11.113)(PORT = 1521))) (CONNECT_DATA = (SERVICE_NAME = ravoerp)))";
             }
