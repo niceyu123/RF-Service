@@ -359,7 +359,7 @@ namespace OAService
                                 sql = " INSERT INTO in_storage_detial (PRODUCT_CODE,INDEX_CODE,ID_CODE,PCS,MANY,PRICE,WARE_UNIT,WAREHOUSE,RE_MARK,PUNIT,IN_MANY,MPSID,MPSINDEX,BILLID," +
                                     " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO,PH) " +
                                     " VALUES( '" + dta.Rows[i]["WLBH"].ToString() + "', '" + xh1 + "','" + id_code + "','1','" + dta.Rows[i]["RKSL"].ToString() + "','" + dta.Rows[i]["DJ"].ToString() + "','临时','20','OA','" + dta.Rows[i]["DWBH"].ToString() + "','" + dta.Rows[i]["RKSL"].ToString() + "','" + ydbh + "','" + dta.Rows[i]["YDXH"].ToString() + "',''," +
-                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
+                                    " '','" + fid + "','1','"+user+"','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
 
@@ -527,7 +527,7 @@ namespace OAService
                                 sql = " INSERT INTO in_storage_detial (PRODUCT_CODE,INDEX_CODE,ID_CODE,PCS,MANY,PRICE,WARE_UNIT,WAREHOUSE,RE_MARK,PUNIT,IN_MANY,MPSID,MPSINDEX,BILLID," +
                                     " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO,PH) " +
                                     " VALUES( '" + dta.Rows[i]["WLBH1"].ToString() + "', '" + xh1 + "','" + id_code + "','1','" + dta.Rows[i]["RKSL"].ToString() + "','" + dta.Rows[i]["DJ"].ToString() + "','临时','20','OA','" + dta.Rows[i]["DWBH"].ToString() + "','" + dta.Rows[i]["RKSL"].ToString() + "','" + ydbh + "','" + dta.Rows[i]["YDXH"].ToString() + "',''," +
-                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
+                                    " '','" + fid + "','1','"+user+"','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
 
@@ -690,7 +690,7 @@ namespace OAService
                                 sql = " INSERT INTO in_storage_detial (PRODUCT_CODE,INDEX_CODE,ID_CODE,PCS,MANY,PRICE,WARE_UNIT,WAREHOUSE,RE_MARK,PUNIT,IN_MANY,MPSID,MPSINDEX,BILLID," +
                                     " BILLINDEX,FID,FSOURCE,FUSERID,TAX_RTO,TAX,AMTN,OANO,PH) " +
                                     " VALUES( '" + dta.Rows[i]["WLBH5"].ToString() + "', '" + xh1 + "','" + id_code + "','1','" + dta.Rows[i]["RKSL"].ToString() + "','" + dta.Rows[i]["DJ"].ToString() + "','临时','20','OA','" + dta.Rows[i]["DWBH"].ToString() + "','" + dta.Rows[i]["RKSL"].ToString() + "','" + ydbh + "','" + dta.Rows[i]["YDXH"].ToString() + "',''," +
-                                    " '','" + fid + "','1','1','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
+                                    " '','" + fid + "','1','"+user+"','" + dta.Rows[i]["SL"].ToString() + "','" + dta.Rows[i]["SE"].ToString() + "','" + dta.Rows[i]["WSBWB"].ToString() + "','" + rk.oano + "','NONE') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
 
@@ -1163,5 +1163,40 @@ namespace OAService
                 throw;
             }
         }
+        /// <summary>
+        /// 人员档案属性变更申请单
+        /// </summary>
+        /// <param name="oano"></param>
+        /// <returns></returns>
+        [WebMethod]
+        public string SendRYDA(string oano)
+        {
+            try
+            {
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                string sql = " select * from formtable_main_474 a left join formtable_main_474_DT1 b on a.id=b.mainid where lcbh='"+oano+"' ";
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int num = dt.Rows.Count;
+                ToolHelper.CloseSql(conn);
+                if (num>0)
+                {
+                    for (int i = 0; i < num; i++)
+                    {
+
+                    }
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
     }
 }
