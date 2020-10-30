@@ -33,5 +33,16 @@ namespace ERPCZ.Properties {
                 return ((string)(this["ERPCZ_erpPlatform_erpPlatform"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.31.11:8090/BisOutPlatform/services/erpPlatform.erpPlatformHttpSoap" +
+            "11Endpoint/")]
+        public string ERPCZ_erpPlatform1_erpPlatform {
+            get {
+                return ((string)(this["ERPCZ_erpPlatform1_erpPlatform"]));
+            }
+        }
     }
 }

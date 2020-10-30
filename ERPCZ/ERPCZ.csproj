@@ -168,6 +168,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Web References\erpPlatform1\erpPlatform.wsdl" />
+    <Content Include="Web References\erpPlatform1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web References\erpPlatform\erpPlatform.wsdl" />
     <None Include="Web References\erpPlatform\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -203,6 +208,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Web References\erpPlatform1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\erpPlatform\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +236,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>ERPCZ_erpPlatform_erpPlatform</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.31.11:8090/BisOutPlatform/services/erpPlatform%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\erpPlatform1\</RelPath>
+      <UpdateFromURL>http://192.168.31.11:8090/BisOutPlatform/services/erpPlatform%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ERPCZ_erpPlatform1_erpPlatform</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>

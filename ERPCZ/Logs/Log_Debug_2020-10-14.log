@@ -1,0 +1,5 @@
+2020-10-14 11:36:48.5503 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R6-FKSQD2020100084","skzh":"2002022519100013567","skdw":"广东中家产品认证有限公司","fkje":"20500.00","skyh":"工行珠海市北岭支行","dw":"ys","oano":"R6-FKSQD2020100084"}
+2020-10-14 11:38:12.6097 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?>
+<body><head><erpSysCode>ERP001</erpSysCode><custNo>0000070887</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>2</retCode><retMsg>erp报文重复上送，上送失败验证签名失败</retMsg><signData></signData></head></body>
+2020-10-14 11:38:12.6097 ERPCZ.NBCZWebService.TRANSFER zt2
+2020-10-14 11:38:28.3542 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R6-FKSQD20201000844","skzh":"2002022519100013567","skdw":"广东中家产品认证有限公司","fkje":"20500.00","skyh":"工行珠海市北岭支行","dw":"ys","oano":"R6-FKSQD2020100084"}

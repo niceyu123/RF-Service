@@ -1,0 +1,3 @@
+2020-10-09 16:13:12.2059 OAService.Test.SaveBGCKaa 23办公用品领用(出库)单测试{"BGCKInfoc":[{"oano":"R0-BGYPLY1602231041215","sqr":"3931","sqbm":"128","sqrq":"2020-10-09 16:10:28","xh":0,"zs":1,"wlid":"BG0386","xqsl":"4.00","dwid":"18","cid":"606489"}]}
+2020-10-09 16:13:12.8206 OAService.Test.SaveBGCKaa 办公用品领用(出库)单SQL4 select * from out_storage_detial where oano='R0-BGYPLY1602231041215' and product_code ='BG0386'
+2020-10-09 16:21:42.4176 OAService.Test.SaveBGCKaa 23办公用品领用(出库)单测试{"BGCKInfoc":[{"oano":"R0-BGYPLY1602231041215","sqr":"3931","sqbm":"128","sqrq":"2020-10-09 16:10:28","xh":0,"zs":1,"wlid":"BG0386","xqsl":"4.00","dwid":"18","cid":"606489"}]}

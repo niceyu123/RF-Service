@@ -263,7 +263,7 @@ namespace OAService
             }
         }
         /// <summary>
-        /// 办公用品入库
+        /// 办公用品入库 制单人 部门 供应商 
         /// </summary>
         /// <param name="time"></param>
         /// <returns></returns>
@@ -329,7 +329,7 @@ namespace OAService
 
 
                     //查询OA明细表数据
-                    sql = " select B.* from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.MAINID where a.lcbh='" + rk.oano + "' ";
+                    sql = " select A.dwid,B.* from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.MAINID where a.lcbh='" + rk.oano + "' ";
                     cmd = new OracleCommand(sql, conn1);
                     da = new OracleDataAdapter(cmd);
                     DataTable dta = new DataTable();
@@ -856,6 +856,7 @@ namespace OAService
                                     " VALUES( '" + id_code + "','" + cka.BGCKInfoc[i].wlid + "'," + i + 1 + ",1, '" + cka.BGCKInfoc[i].xqsl + "',0,'临时','20',null,'" + cka.BGCKInfoc[i].dwid + "','" + cka.BGCKInfoc[i].xqsl + "'," + fid + ",'" + cka.BGCKInfoc[i].oano + "',0,'" + cka.BGCKInfoc[i].cid + "') ";
                                 cmd = new OracleCommand(sql, conn);
                                 result = cmd.ExecuteNonQuery();
+
                             }
                         }
                         else

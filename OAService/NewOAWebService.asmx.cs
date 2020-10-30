@@ -7159,24 +7159,11 @@ namespace OAService
                                                         da.Fill(dt);
                                                         num = dt.Rows.Count;
                                                         ToolHelper.CloseSql(conn);
-                                                        if (num == 0)
-                                                        {
-                                                            SqlSaveHelper.SaveTX(type, manid, qjlx, strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute), strDate + " " + Convert.ToString(xb.Hour) + ":" + Convert.ToString(xb.Minute), Convert.ToString(d1), "0", oaNo);
-                                                        }
                                                         DateTime aaa = Convert.ToDateTime(strDate).AddDays(1);
                                                         string kssj = aaa.ToString("yyyy-MM-dd");
-                                                        dayy = kssj + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute);
-                                                        sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
-                                                        conn = ToolHelper.OpenRavoerp(type);
-                                                        cmd = new OracleCommand(sql, conn);
-                                                        da = new OracleDataAdapter(cmd);
-                                                        dt = new DataTable();
-                                                        da.Fill(dt);
-                                                        num = dt.Rows.Count;
-                                                        ToolHelper.CloseSql(conn);
                                                         if (num == 0)
                                                         {
-                                                            SqlSaveHelper.SaveTX(type, manid, qjlx, strDate + " " + Convert.ToString(xe.Hour) + ":" + Convert.ToString(xe.Minute), strDate + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d2), "0", oaNo);
+                                                            SqlSaveHelper.SaveTX(type, manid, qjlx, strDate + " " + Convert.ToString(st1.Hour) + ":" + Convert.ToString(st1.Minute), kssj + " " + Convert.ToString(et.Hour) + ":" + Convert.ToString(et.Minute), Convert.ToString(d1+d2), "0", oaNo);
                                                         }
                                                     }
                                                     else
@@ -7564,12 +7551,12 @@ namespace OAService
                     //ToolHelper.CloseSql(conn);
                     ////查找考勤编号
                     //conn = ToolHelper.OpenRavoerp("oa");
-                    string sql = " select loginid,subcompanyid1 from HrmResource where id=" + ccr;
+                    string sql = " select workcode,subcompanyid1 from HrmResource where id=" + ccr;
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    string manid = dt.Rows[0]["loginid"].ToString();
+                    string manid = dt.Rows[0]["workcode"].ToString();
                     //type= dt.Rows[0]["subcompanyid1"].ToString();
                     if (type != null)
                     {
@@ -13275,14 +13262,14 @@ namespace OAService
                         dt = new DataTable();
                         da.Fill(dt);
                         string user = dt.Rows[0]["ID_CODE"].ToString();
+                        string department= dt.Rows[0]["DEPARTMENT"].ToString();
 
-
-                        //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')
+                        //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')0
                         sql = " INSERT INTO RCPYHEAD (RCPYID,BEGINDAY,PLANPAYDAY,LIFECODE,COMPANY,BZ,HL,USERID,TAX,TAXRATE,MANY,RE_MARK,JD,CHECKER,CHECKDAY,INVOICEID," +
                             " COST,SENDDATE,FDEPT,FBILLMANY,FID,FNOTE,FPLANPAYDAY,BILLTYPE,ZHANG_ID,OANO) " +
                             " VALUES ( '" + id_code + "',to_date('" + yf.sqrq + "','yyyy-mm-dd hh24:mi:ss'),to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'4','"+yf.dwid+"'," +
                             " 'RMB','"+yf.hl+"','"+user+"','"+yf.kslb+"','"+yf.sl+"','"+yf.je+"','"+yf.zy+ "','-1','1',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'"+yf.fph+"'," +
-                            " '"+yf.qtfy+ "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'00','0','"+fid+"','"+yf.hxyq+ "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss')," +
+                            " '"+yf.qtfy+ "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'"+ department + "','0','"+fid+"','"+yf.hxyq+ "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss')," +
                             " '98','"+yf.lzfs+"','"+yf.oano+"')";
                         cmd = new OracleCommand(sql, conn);
                         int result = cmd.ExecuteNonQuery();
@@ -13391,13 +13378,14 @@ namespace OAService
                         dt = new DataTable();
                         da.Fill(dt);
                         string user = dt.Rows[0]["ID_CODE"].ToString();
+                        string department = dt.Rows[0]["DEPARTMENT"].ToString();
 
                         //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')
                         sql = " INSERT INTO RCPYHEAD (RCPYID,BEGINDAY,PLANPAYDAY,LIFECODE,COMPANY,BZ,HL,USERID,TAX,TAXRATE,MANY,RE_MARK,JD,CHECKER,CHECKDAY,INVOICEID," +
                             " COST,SENDDATE,FDEPT,FBILLMANY,FID,FNOTE,FPLANPAYDAY,BILLTYPE,ZHANG_ID,OANO) " +
                             " VALUES ( '" + id_code + "',to_date('" + yf.sqrq + "','yyyy-mm-dd hh24:mi:ss'),to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'4','" + yf.dwid + "'," +
                             " 'RMB','" + yf.hl + "','"+user+"','" + yf.kslb + "','" + yf.sl + "','" + yf.je + "','" + yf.zy + "','-1','1',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'" + yf.fph + "'," +
-                            " '" + yf.qtfy + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'00','0','" + fid + "','" + yf.hxyq + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss')," +
+                            " '" + yf.qtfy + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'"+ department + "','0','" + fid + "','" + yf.hxyq + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss')," +
                             " '98','" + yf.lzfs + "','" + yf.oano + "')";
                         cmd = new OracleCommand(sql, conn);
                         int result = cmd.ExecuteNonQuery();
@@ -13509,12 +13497,14 @@ namespace OAService
                         dt = new DataTable();
                         da.Fill(dt);
                         string user = dt.Rows[0]["ID_CODE"].ToString();
+                        string department = dt.Rows[0]["DEPARTMENT"].ToString();
+
                         //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')
                         sql = " INSERT INTO RCPYHEAD (RCPYID,BEGINDAY,PLANPAYDAY,LIFECODE,COMPANY,BZ,HL,USERID,TAX,TAXRATE,MANY,RE_MARK,JD,CHECKER,CHECKDAY,INVOICEID," +
                             " COST,SENDDATE,FDEPT,FBILLMANY,FID,FNOTE,FPLANPAYDAY,BILLTYPE,ZHANG_ID,OANO) " +
                             " VALUES ( '" + id_code + "',to_date('" + yf.sqrq + "','yyyy-mm-dd hh24:mi:ss'),to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'4','" + yf.dwid + "'," +
                             " 'RMB','" + yf.hl + "','"+user+"','" + yf.kslb + "','" + yf.sl + "','" + yf.je + "','" + yf.zy + "','-1','1',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'" + yf.fph + "'," +
-                            " '" + yf.qtfy + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'00','0','" + fid + "','" + yf.hxyq + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss')," +
+                            " '" + yf.qtfy + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss'),'"+ department + "','0','" + fid + "','" + yf.hxyq + "',to_date('" + yf.fkrq + "','yyyy-mm-dd hh24:mi:ss')," +
                             " '98','" + yf.lzfs + "','" + yf.oano + "')";
                         cmd = new OracleCommand(sql, conn);
                         int result = cmd.ExecuteNonQuery();

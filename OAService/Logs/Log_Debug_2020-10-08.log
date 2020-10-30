@@ -1,0 +1,7 @@
+2020-10-08 11:45:40.3419 OAService.NewOAWebService.SaveTXTime System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“OracleConnection”。
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteReader(Boolean requery, Boolean fillRequest, CommandBehavior behavior)
+   在 Oracle.ManagedDataAccess.Client.OracleDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 OAService.NewOAWebService.SaveTXTime(String time) 位置 E:\Code\OAService\OAService\NewOAWebService.asmx.cs:行号 4738

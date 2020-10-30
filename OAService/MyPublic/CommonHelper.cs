@@ -213,64 +213,6 @@ namespace OAService.MyPublic
                                 string message = dt.Rows[i]["MESSAGE"].ToString();
                                 string qywxid = dt.Rows[i]["QYWXID"].ToString();
 
-                                conn = ToolHelper.OpenRavoerp(type);
-                                sql = " select userid from WX_ID  where mobile='" + phone + "'";
-                                cmd = new OracleCommand(sql, conn);
-                                da = new OracleDataAdapter(cmd);
-                                DataTable dt1 = new DataTable();
-                                da.Fill(dt1);
-                                ToolHelper.CloseSql(conn);
-                                int num1 = dt1.Rows.Count;
-                                if (num1 > 0)
-                                {
-                                    userid = dt1.Rows[0]["userid"].ToString();
-                                    send = QYWeixinHelper.SendText(userid, message);
-                                    if (send == "0")
-                                    {
-                                        DateTime nowTime = DateTime.Now;
-                                        conn = ToolHelper.OpenRavoerp(type);
-                                        sql = "update WX_MESSAGES set SEND='1',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
-                                        cmd = new OracleCommand(sql, conn);
-                                        //da = new OracleDataAdapter(cmd);
-                                        int result = cmd.ExecuteNonQuery();
-                                        //return result;
-                                        ToolHelper.CloseSql(conn);
-                                    }
-                                    else if (send == "40008")
-                                    {
-                                        DateTime nowTime = DateTime.Now;
-                                        conn = ToolHelper.OpenRavoerp(type);
-                                        sql = "update WX_MESSAGES set SEND='40008',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
-                                        cmd = new OracleCommand(sql, conn);
-                                        //da = new OracleDataAdapter(cmd);
-                                        int result = cmd.ExecuteNonQuery();
-                                        //return result;
-                                        ToolHelper.CloseSql(conn);
-                                    }
-                                    else
-                                    {
-                                        DateTime nowTime = DateTime.Now;
-                                        conn = ToolHelper.OpenRavoerp(type);
-                                        sql = "update WX_MESSAGES set SEND='2',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
-                                        cmd = new OracleCommand(sql, conn);
-                                        //da = new OracleDataAdapter(cmd);
-                                        int result = cmd.ExecuteNonQuery();
-                                        //return result;
-                                        ToolHelper.CloseSql(conn);
-                                    }
-                                }
-                                else
-                                {
-                                    DateTime nowTime = DateTime.Now;
-                                    conn = ToolHelper.OpenRavoerp(type);
-                                    sql = "update WX_MESSAGES set SEND='3',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
-                                    cmd = new OracleCommand(sql, conn);
-                                    //da = new OracleDataAdapter(cmd);
-                                    int result = cmd.ExecuteNonQuery();
-                                    //return result;
-                                    ToolHelper.CloseSql(conn);
-                                }
-
                                 //有企业微信ID的
                                 if (qywxid != null && qywxid != string.Empty)
                                 {
@@ -310,6 +252,69 @@ namespace OAService.MyPublic
                                         ToolHelper.CloseSql(conn);
                                     }
                                 }
+                                else
+                                {
+                                    conn = ToolHelper.OpenRavoerp(type);
+                                    sql = " select userid from WX_ID  where mobile='" + phone + "'";
+                                    cmd = new OracleCommand(sql, conn);
+                                    da = new OracleDataAdapter(cmd);
+                                    DataTable dt1 = new DataTable();
+                                    da.Fill(dt1);
+                                    ToolHelper.CloseSql(conn);
+                                    int num1 = dt1.Rows.Count;
+                                    if (num1 > 0)
+                                    {
+                                        userid = dt1.Rows[0]["userid"].ToString();
+                                        send = QYWeixinHelper.SendText(userid, message);
+                                        if (send == "0")
+                                        {
+                                            DateTime nowTime = DateTime.Now;
+                                            conn = ToolHelper.OpenRavoerp(type);
+                                            sql = "update WX_MESSAGES set SEND='1',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
+                                            cmd = new OracleCommand(sql, conn);
+                                            //da = new OracleDataAdapter(cmd);
+                                            int result = cmd.ExecuteNonQuery();
+                                            //return result;
+                                            ToolHelper.CloseSql(conn);
+                                        }
+                                        else if (send == "40008")
+                                        {
+                                            DateTime nowTime = DateTime.Now;
+                                            conn = ToolHelper.OpenRavoerp(type);
+                                            sql = "update WX_MESSAGES set SEND='40008',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
+                                            cmd = new OracleCommand(sql, conn);
+                                            //da = new OracleDataAdapter(cmd);
+                                            int result = cmd.ExecuteNonQuery();
+                                            //return result;
+                                            ToolHelper.CloseSql(conn);
+                                        }
+                                        else
+                                        {
+                                            DateTime nowTime = DateTime.Now;
+                                            conn = ToolHelper.OpenRavoerp(type);
+                                            sql = "update WX_MESSAGES set SEND='2',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
+                                            cmd = new OracleCommand(sql, conn);
+                                            //da = new OracleDataAdapter(cmd);
+                                            int result = cmd.ExecuteNonQuery();
+                                            //return result;
+                                            ToolHelper.CloseSql(conn);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        DateTime nowTime = DateTime.Now;
+                                        conn = ToolHelper.OpenRavoerp(type);
+                                        sql = "update WX_MESSAGES set SEND='3',SENDTIME= to_date('" + nowTime + "','yyyy-mm-dd hh24:mi:ss') where ID='" + id + "'";
+                                        cmd = new OracleCommand(sql, conn);
+                                        //da = new OracleDataAdapter(cmd);
+                                        int result = cmd.ExecuteNonQuery();
+                                        //return result;
+                                        ToolHelper.CloseSql(conn);
+                                    }
+                                }
+
+
+
 
                             }
                         }
@@ -1353,8 +1358,9 @@ namespace OAService.MyPublic
                             string oaid = dt.Rows[i]["OAID"].ToString();
                             string createDate= dt.Rows[i]["CREATEDATE"].ToString();
                             string companyname = dt.Rows[i]["COMPANYNAME"].ToString();
+                            string mfid = dt.Rows[i]["MFID"].ToString();
                             conn = ToolHelper.OpenRavoerp("middle");
-                            sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and creatdate like to_date('" + createDate + "','yyyy-mm-dd hh24:mi:ss') and companyname='"+ companyname + "' ";
+                            sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and mfid='"+mfid+"' and companyname='"+ companyname + "' ";
                             //sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and creatdate > to_date('2020-08-19','yyyy-mm-dd') ";
                             cmd = new OracleCommand(sql, conn);
                             da = new OracleDataAdapter(cmd);

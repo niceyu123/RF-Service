@@ -778,18 +778,37 @@ namespace ERPCZ
         {
             try
             {
-                erpPlatform.erpPlatform erp = new erpPlatform.erpPlatform();
+                erpPlatform1.erpPlatform erp = new erpPlatform1.erpPlatform();
+
+                //string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+                //+ "<body>"
+                //+ "<head>"
+                //+ "<erpSysCode>ERP001</erpSysCode>"
+                //+ "<custNo>0000082075</custNo>"
+                //+ "<tradeName>ERP_QUERYACCLIST</tradeName>"
+                //+ "</head>"
+                //+ "<map>"
+                //+ "<queryCustNo>0000082075</queryCustNo>"
+                //+ "</map>"
+                //+ "</body>";
+                //string xmls = ToolHelper.encrypt(xml);//加密
+                //string re = erp.serverErpXml(xmls);//传输 接收
+                //string bb = ToolHelper.decrypt(re);//解密
+
+
+
+
                 string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
                     "<body>" +
                     "<head>" +
                     "<erpSysCode>ERP001</erpSysCode>" +
-                    "<custNo>0000082767</custNo>" +
+                    "<custNo>9000000281</custNo>" +
                     "<tradeName> ERP_THESAMEYEARRECEIPTQUERY</tradeName>" +
                     "</head>" +
                     "<map>" +
-                    "<bankAcc>总笔数</bankAcc>" +
-                    "<beginDate>2020-03-01</beginDate>" +
-                    "<endDate>2020-09-27</endDate >" +
+                    "<bankAcc>77070122000005346</bankAcc>" +
+                    "<beginDate>2020-09-01</beginDate>" +
+                    "<endDate>2020-12-20</endDate >" +
                     "<certCode></certCode>" +
                     "<critType></critType>" +
                     "</map>" +
@@ -803,8 +822,65 @@ namespace ERPCZ
             {
                 return null;
             }
+        }
 
-
+        [WebMethod]
+        public string ERP_OLDRECEIPTDETAILQUERY()
+        {
+            try
+            {
+                erpPlatform1.erpPlatform erp = new erpPlatform1.erpPlatform();
+                string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+                    "<body>" +
+                    "<head>" +
+                    "<erpSysCode>ERP001</erpSysCode>" +
+                    "<custNo>0000082075</custNo>" +
+                    "<tradeName> ERP_OLDRECEIPTDETAILQUERY </tradeName>" +
+                    "</head>" +
+                    "<map>" +
+                    "<bankAcc>75200122000010790</bankAcc>" +
+                    "<beginDate>2020-03-01</beginDate>" +
+                    "<endDate>2020-09-27</endDate >" +
+                    "<pagesize>100</pagesize>" +
+                    "<pageNum>1</pageNum>" +
+                    "</map>" +
+                    "</body>";
+                string xmls = ToolHelper.encrypt(xml);//加密
+                string re = erp.serverErpXml(xmls);//传输 接收
+                string bb = ToolHelper.decrypt(re);//解密
+                return bb;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        [WebMethod]
+        public string ERP_RECEIPTDETAILSTATEQUERY()
+        {
+            try
+            {
+                erpPlatform1.erpPlatform erp = new erpPlatform1.erpPlatform();
+                string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+                    "<body>" +
+                    "<head>" +
+                    "<erpSysCode>ERP001</erpSysCode>" +
+                    "<custNo>9000000281</custNo>" +
+                    "<tradeName> ERP_RECEIPTDETAILSTATEQUERY </tradeName>" +
+                    "</head>" +
+                    "<map>" +
+                    "<serialNo>2CB56D7C4BA54DFE6</serialNo>" +
+                    "</map>" +
+                    "</body>";
+                string xmls = ToolHelper.encrypt(xml);//加密
+                string re = erp.serverErpXml(xmls);//传输 接收
+                string bb = ToolHelper.decrypt(re);//解密
+                return bb;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
     }
