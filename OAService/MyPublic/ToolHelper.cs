@@ -283,5 +283,43 @@ namespace OAService.MyPublic
                 return null;
             }
         }
+
+        public static string GetCompany(string comid)
+        {
+            try
+            {
+                string id = "";
+                if (comid == "24")
+                {
+                    id = "RAVO0";
+                }
+                else if (comid == "21")
+                {
+                    id = "RAVO1";
+                }
+                else if (comid == "23")
+                {
+                    id = "RAVO2";
+                }
+                else if (comid == "141")
+                {
+                    id = "RAVO3";
+                }
+                else if (comid == "22")
+                {
+                    id = "RAVO5";
+                }
+                else if (comid == "161")
+                {
+                    id = "RAVO6";
+                }
+                return id;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
     }
 }

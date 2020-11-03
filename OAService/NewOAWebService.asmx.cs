@@ -4713,9 +4713,9 @@ namespace OAService
                 TimeSpan ts = ee - ss;
                 var day = Math.Ceiling((decimal)ts.TotalDays);
                 double x = 0;
-                OracleConnection conn = ToolHelper.OpenRavoerp(type);
-                if (conn != null)
-                {
+
+                //if (conn != null)
+                //{
                     //string sql = " select subcompanyid1 from hrmdepartment@ECOLOGY where id='" + dptID + "'";
                     //OracleCommand cmd = new OracleCommand(sql, conn);
                     //OracleDataAdapter da = new OracleDataAdapter(cmd);
@@ -4727,6 +4727,7 @@ namespace OAService
                     {
                         for (int i = 0; i < day + 1; i++)
                         {
+                            OracleConnection conn = ToolHelper.OpenRavoerp(type);
                             //conn = ToolHelper.OpenRavoerp(type);
                             string startday = start.AddDays(i).ToString("yyyyMMdd");
                             if (conn != null)
@@ -7500,7 +7501,7 @@ namespace OAService
                             }
                         }
                     }
-                }
+                //}
 
                 double total = x;
                 string z = Convert.ToString(total);

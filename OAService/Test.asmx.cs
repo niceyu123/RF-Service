@@ -1182,10 +1182,32 @@ namespace OAService
                 da.Fill(dt);
                 int num = dt.Rows.Count;
                 ToolHelper.CloseSql(conn);
-                if (num>0)
+                if (num > 0)
                 {
                     for (int i = 0; i < num; i++)
                     {
+                        string id_code = dt.Rows[i]["yggh"].ToString();
+                        string xxzgs = dt.Rows[i]["xxzgs"].ToString();
+                        string xz = ToolHelper.GetCompany(xxzgs);
+
+                        string xbzgs = dt.Rows[i]["xbzgs"].ToString();
+                        string bz= ToolHelper.GetCompany(xbzgs);
+
+                        string xkqgs = dt.Rows[i]["xkqgs"].ToString();
+                        string kq = ToolHelper.GetCompany(xkqgs);
+
+                        string xjtbbfl = dt.Rows[i]["xjtbbfl"].ToString();
+                        string xfyft = dt.Rows[i]["xfyft"].ToString();
+                        string sxrq= dt.Rows[i]["sxrq"].ToString();
+
+                        conn = ToolHelper.OpenRavoerp("24");
+                        myCommand = conn.CreateCommand();
+                        sql = "update man_tb set gs_bz='"+bz+"',gs_xz='"+xz+"',gs_kq='"+kq+"',jt_type='"+ xjtbbfl + "',is_ft='"+ xfyft + "'" +
+                            " where man_id='" + id_code + "'";
+                        ToolHelper.logger.Debug(sql);
+                        cmd = new OracleCommand(sql, conn);
+                        int result = cmd.ExecuteNonQuery();
+                        ToolHelper.CloseSql(conn);
 
                     }
                 }
@@ -1194,6 +1216,7 @@ namespace OAService
             }
             catch (Exception ex)
             {
+                ToolHelper.logger.Debug(ex.ToString());
                 return null;
             }
         }
