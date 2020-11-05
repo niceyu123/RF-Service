@@ -2645,7 +2645,20 @@ namespace OAService
                                                                 ToolHelper.CloseSql(conn);
                                                                 if (num == 0)
                                                                 {
-                                                                    SqlSaveHelper.SaveQJ(type, manid, qjlx, kssj + " " + Convert.ToString(bt2.Hour) + ":" + Convert.ToString(bt2.Minute), kssj + " " + Convert.ToString(js.Hour) + ":" + Convert.ToString(js.Minute), Convert.ToString(d1+t1), "0", oaNo);
+                                                                    SqlSaveHelper.SaveQJ(type, manid, qjlx, kssj + " " + Convert.ToString(bt2.Hour) + ":" + Convert.ToString(bt2.Minute), kssj + " " + Convert.ToString(js.Hour) + ":" + Convert.ToString(js.Minute), Convert.ToString(d1), "0", oaNo);
+                                                                }
+                                                                dayy = kssj + " " + Convert.ToString(bt1.Hour) + ":" + Convert.ToString(bt1.Minute);
+                                                                sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
+                                                                conn = ToolHelper.OpenRavoerp(type);
+                                                                cmd = new OracleCommand(sql, conn);
+                                                                da = new OracleDataAdapter(cmd);
+                                                                dt = new DataTable();
+                                                                da.Fill(dt);
+                                                                num = dt.Rows.Count;
+                                                                ToolHelper.CloseSql(conn);
+                                                                if (num == 0)
+                                                                {
+                                                                    SqlSaveHelper.SaveQJ(type, manid, qjlx, kssj + " " + Convert.ToString(bt1.Hour) + ":" + Convert.ToString(bt1.Minute), kssj + " " + Convert.ToString(et1.Hour) + ":" + Convert.ToString(et1.Minute), Convert.ToString(t1), "0", oaNo);
                                                                 }
                                                             }
 

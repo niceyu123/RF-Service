@@ -1519,6 +1519,92 @@ namespace OAService.MyPublic
                 }
             }
         }
+        /// <summary>
+        /// 根据生效日期同步人员档案归属
+        /// </summary>
+        public void getRYDAWorkflow()
+        {
+            while (true)
+            {
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                OracleTransaction transaction;
+                transaction = conn.BeginTransaction(IsolationLevel.ReadCommitted);//开启本地事务
+                myCommand.Transaction = transaction;//为挂起的本地事务分配事务对象
+
+                OracleConnection conn1 = ToolHelper.OpenRavoerp("24");
+                OracleCommand myCommand1 = conn1.CreateCommand();
+                OracleTransaction transaction1;
+                transaction1 = conn1.BeginTransaction(IsolationLevel.ReadCommitted);
+                myCommand1.Transaction = transaction1;
+                try
+                {
+                    DateTime nowTime = DateTime.Now;
+                    string nt = nowTime.ToString("yyyy-MM-dd");
+                    //取出已归档 状态未同步 生效日期小于当前日期 的流程id
+                    string sql = " select * from workflow_requestbase where requestid in (select requestid from formtable_main_474 where zt='0' and sxrq<'"+nt+"') and currentnodetype='3' ";
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    int num = dt.Rows.Count;
+                    if (num != 0)
+                    {
+                        for (int i = 0; i < num; i++)
+                        {
+                            string requestid = dt.Rows[i]["requestid"].ToString();
+                            sql = "select * from formtable_main_474 a left join formtable_main_474_DT1 b on a.id=b.mainid where a.requestid='"+ requestid + "' ";
+                            cmd = new OracleCommand(sql, conn);
+                            da = new OracleDataAdapter(cmd);
+                            DataTable dta = new DataTable();
+                            da.Fill(dta);
+                            int nums = dta.Rows.Count;
+                            for (int j = 0; j < nums; j++)
+                            {
+                                string id_code = dta.Rows[j]["yggh"].ToString();
+                                string xxzgs = dta.Rows[j]["xxzgs"].ToString();
+                                string xz = ToolHelper.GetCompany(xxzgs);
+
+                                string xbzgs = dta.Rows[j]["xbzgs"].ToString();
+                                string bz = ToolHelper.GetCompany(xbzgs);
+
+                                string xkqgs = dta.Rows[j]["xkqgs"].ToString();
+                                string kq = ToolHelper.GetCompany(xkqgs);
+
+                                string xjtbbfl = dta.Rows[j]["xjtbbfl"].ToString();
+                                string xfyft = dta.Rows[j]["xfyft"].ToString();
+
+                                sql = "update man_tb set gs_bz='" + bz + "',gs_xz='" + xz + "',gs_kq='" + kq + "',jt_type='" + xjtbbfl + "',is_ft='" + xfyft + "'" +
+                            " where man_id='" + id_code + "'";
+                                cmd = new OracleCommand(sql, conn1);
+                                int result1 = cmd.ExecuteNonQuery();
+
+                            }
+                            sql = "update formtable_main_474 set zt='1' where requestid='" + requestid + "' ";
+                            cmd = new OracleCommand(sql, conn);
+                            int result2 = cmd.ExecuteNonQuery();
+                        }
+
+                    }
+
+                    transaction.Commit();
+                    transaction1.Commit();
+                    ToolHelper.CloseSql(conn);
+                    ToolHelper.CloseSql(conn1);
+                    Thread.Sleep(120000);
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    transaction1.Rollback();
+                    ToolHelper.CloseSql(conn);
+                    ToolHelper.CloseSql(conn1);
+                    ToolHelper.logger.Debug(ex.ToString());
+                    Thread.Sleep(120000);
+                }
+            }
+        }
+
 
     }
 }

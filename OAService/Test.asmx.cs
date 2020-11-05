@@ -1198,10 +1198,12 @@ namespace OAService
 
                         string xjtbbfl = dt.Rows[i]["xjtbbfl"].ToString();
                         string xfyft = dt.Rows[i]["xfyft"].ToString();
-                        string sxrq= dt.Rows[i]["sxrq"].ToString();
+                        string sxrq= dt.Rows[i]["sxrq"].ToString();//生效日期
+
 
                         conn = ToolHelper.OpenRavoerp("24");
                         myCommand = conn.CreateCommand();
+                        
                         sql = "update man_tb set gs_bz='"+bz+"',gs_xz='"+xz+"',gs_kq='"+kq+"',jt_type='"+ xjtbbfl + "',is_ft='"+ xfyft + "'" +
                             " where man_id='" + id_code + "'";
                         ToolHelper.logger.Debug(sql);

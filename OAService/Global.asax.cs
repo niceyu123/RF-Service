@@ -76,6 +76,10 @@ namespace OAService
                 Thread getZCYCWorkflow = new Thread(new ThreadStart(new CommonHelper().getZCYCWorkflow));
                 getZCYCWorkflow.IsBackground = true;
                 getZCYCWorkflow.Start();
+                //定时同步人员档案编制
+                Thread getRYDAWorkflow = new Thread(new ThreadStart(new CommonHelper().getRYDAWorkflow));
+                getRYDAWorkflow.IsBackground = true;
+                getRYDAWorkflow.Start();
 
             }
             catch (Exception a)
