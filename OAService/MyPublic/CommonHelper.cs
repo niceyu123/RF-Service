@@ -1604,6 +1604,96 @@ namespace OAService.MyPublic
                 }
             }
         }
+        /// <summary>
+        /// 同步车辆信息
+        /// </summary>
+        public void getCLWorkflow()
+        {
+            while (true)
+            {
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                OracleTransaction transaction;
+                transaction = conn.BeginTransaction(IsolationLevel.ReadCommitted);//开启本地事务
+                myCommand.Transaction = transaction;//为挂起的本地事务分配事务对象
+
+           
+                try
+                {
+                    DateTime nowTime = DateTime.Now;
+                    string nt = nowTime.ToString("yyyy-MM-dd");
+                    //取出已归档 状态未同步 的流程id
+                    string sql = " select * from workflow_requestbase where requestid in (select requestid from formtable_main_476 where tbbz='0') and currentnodetype='3' ";
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    int num = dt.Rows.Count;
+                    if (num != 0)
+                    {
+                        for (int i = 0; i < num; i++)
+                        {
+                            string requestid = dt.Rows[i]["requestid"].ToString();
+                            sql = "select * from formtable_main_476 where requestid='" + requestid + "' ";
+                            cmd = new OracleCommand(sql, conn);
+                            da = new OracleDataAdapter(cmd);
+                            DataTable dta = new DataTable();
+                            da.Fill(dta);
+                            int nums = dta.Rows.Count;
+                            string sqr = dta.Rows[i]["sqr"].ToString();
+                            string clhp = dta.Rows[i]["clhp"].ToString();
+                            string clhp2 = dta.Rows[i]["clhp2"].ToString();
+                            string cph = "";
+                            if (clhp2=="" || clhp2==null)
+                            {
+                                cph = clhp;
+                            }
+                            else
+                            {
+                                cph = clhp + ";" + clhp2;
+                            }
+                            //先查询自定义表是否有车牌信息
+                            sql = "select id,Field158 from Cus_Fielddata where scopeid =-1 and id='"+sqr+"' ";
+                            cmd = new OracleCommand(sql, conn);
+                            da = new OracleDataAdapter(cmd);
+                            DataTable dts = new DataTable();
+                            da.Fill(dts);
+                            string cl= dts.Rows[i]["Field158"].ToString();
+                            string cphs = "";
+                            if(cl=="" || cl == null)
+                            {
+                                cphs = cph;
+                            }
+                            else
+                            {
+                                cphs = cl + ";" + cph;
+                            }
+                            sql = "update Cus_Fielddata set Field158='"+cphs+ "' where scopeid =-1 and id='" + sqr + "' ";
+                            cmd = new OracleCommand(sql, conn);
+                            int result2 = cmd.ExecuteNonQuery();
+
+                            sql = "update formtable_main_476 set tbbz='1' where requestid='" + requestid + "' ";
+                            cmd = new OracleCommand(sql, conn);
+                            int result3 = cmd.ExecuteNonQuery();
+
+                        }
+
+                    }
+
+                    transaction.Commit();
+                    ToolHelper.CloseSql(conn);
+                    Thread.Sleep(120000);
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    ToolHelper.CloseSql(conn);
+                    ToolHelper.logger.Debug(ex.ToString());
+                    Thread.Sleep(120000);
+                }
+            }
+        }
+
 
 
     }

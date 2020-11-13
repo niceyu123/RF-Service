@@ -80,6 +80,10 @@ namespace OAService
                 Thread getRYDAWorkflow = new Thread(new ThreadStart(new CommonHelper().getRYDAWorkflow));
                 getRYDAWorkflow.IsBackground = true;
                 getRYDAWorkflow.Start();
+                //定时同步车牌信息
+                Thread getCLWorkflow = new Thread(new ThreadStart(new CommonHelper().getCLWorkflow));
+                getCLWorkflow.IsBackground = true;
+                getCLWorkflow.Start();
 
             }
             catch (Exception a)
