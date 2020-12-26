@@ -1360,7 +1360,13 @@ namespace OAService.MyPublic
                             string companyname = dt.Rows[i]["COMPANYNAME"].ToString();
                             string mfid = dt.Rows[i]["MFID"].ToString();
                             conn = ToolHelper.OpenRavoerp("middle");
-                            sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and mfid='"+mfid+"' and companyname='"+ companyname + "' ";
+                            sql = " SELECT sales_man,max( product_code ) product_code,sum( in_many ) in_many,sum( out_many ) out_many,orderid,max( cid )cid," +
+                                "max( plandoday ) plandoday,max( squeday ) squeday,max( overdate ) overdate,oaid,companyid,max( creatdate )creatdate,scno," +
+                                "max( hf_cust_no ) hf_cust_no,max( cust_prdno ) cust_prdno,max( product_spc ) product_spc,max( index_code ) index_code," +
+                                "max( product_name ) product_name,itemno,companyname,departmentid,isparts,max( paritemno ) paritemno,max( pfinishdate ) " +
+                                "pfinishdate,gdry,audit_deptid,mfid FROM storage_delay WHERE oaid = '"+oaid+"' AND mfid = '"+mfid+"' " +
+                                "AND companyname = '"+ companyname + "' GROUP BY sales_man,orderid,oaid,companyid,scno,itemno,companyname," +
+                                "departmentid,isparts,gdry,audit_deptid,mfid ";
                             //sql = " select * from STORAGE_DELAY where oaid='" + oaid + "' and creatdate > to_date('2020-08-19','yyyy-mm-dd') ";
                             cmd = new OracleCommand(sql, conn);
                             da = new OracleDataAdapter(cmd);
@@ -1515,6 +1521,7 @@ namespace OAService.MyPublic
                 }
                 catch (Exception ex)
                 {
+                    ToolHelper.logger.Debug(ex.ToString());
                     Thread.Sleep(120000);
                 }
             }
@@ -1542,7 +1549,7 @@ namespace OAService.MyPublic
                     DateTime nowTime = DateTime.Now;
                     string nt = nowTime.ToString("yyyy-MM-dd");
                     //取出已归档 状态未同步 生效日期小于当前日期 的流程id
-                    string sql = " select * from workflow_requestbase where requestid in (select requestid from formtable_main_474 where zt='0' and sxrq<'"+nt+"') and currentnodetype='3' ";
+                    string sql = " select * from workflow_requestbase where requestid in (select requestid from formtable_main_474 where zt='0' and sxrq<='"+nt+"') and currentnodetype='3' ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -1574,7 +1581,7 @@ namespace OAService.MyPublic
                                 string xjtbbfl = dta.Rows[j]["xjtbbfl"].ToString();
                                 string xfyft = dta.Rows[j]["xfyft"].ToString();
 
-                                sql = "update man_tb set gs_bz='" + bz + "',gs_xz='" + xz + "',gs_kq='" + kq + "',jt_type='" + xjtbbfl + "',is_ft='" + xfyft + "'" +
+                                sql = "update man_tb set gs_bz='" + xz + "',gs_xz='" + bz + "',gs_kq='" + kq + "',jt_type='" + xjtbbfl + "',is_ft='" + xfyft + "'" +
                             " where man_id='" + id_code + "'";
                                 cmd = new OracleCommand(sql, conn1);
                                 int result1 = cmd.ExecuteNonQuery();
@@ -1640,9 +1647,9 @@ namespace OAService.MyPublic
                             DataTable dta = new DataTable();
                             da.Fill(dta);
                             int nums = dta.Rows.Count;
-                            string sqr = dta.Rows[i]["sqr"].ToString();
-                            string clhp = dta.Rows[i]["clhp"].ToString();
-                            string clhp2 = dta.Rows[i]["clhp2"].ToString();
+                            string clhp = dta.Rows[0]["clhp"].ToString();
+                            string sqr = dta.Rows[0]["sqr"].ToString();
+                            string clhp2 = dta.Rows[0]["clhp2"].ToString();
                             string cph = "";
                             if (clhp2=="" || clhp2==null)
                             {
@@ -1658,7 +1665,7 @@ namespace OAService.MyPublic
                             da = new OracleDataAdapter(cmd);
                             DataTable dts = new DataTable();
                             da.Fill(dts);
-                            string cl= dts.Rows[i]["Field158"].ToString();
+                            string cl= dts.Rows[0]["Field158"].ToString();
                             string cphs = "";
                             if(cl=="" || cl == null)
                             {

@@ -2750,7 +2750,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - bt1;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2768,7 +2768,7 @@ namespace OAService
                                                         else if (js <= bt2)
                                                         {
                                                             x = x + t1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2788,7 +2788,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - bt2;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1 + t1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2806,7 +2806,7 @@ namespace OAService
                                                         else if (js < bt3)
                                                         {
                                                             x = x + t1 + t2;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2824,7 +2824,7 @@ namespace OAService
                                                         else
                                                         {
                                                             x = x + t1 + t2 + t3;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2847,7 +2847,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - ks;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2865,7 +2865,7 @@ namespace OAService
                                                         else if (js <= bt2)
                                                         {
                                                             x = x + t1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2887,7 +2887,7 @@ namespace OAService
                                                             TimeSpan ts2 = et1 - ks;
                                                             double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
                                                             x = x + d1 + d2;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2907,7 +2907,7 @@ namespace OAService
                                                             TimeSpan ts1 = et1 - ks;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1 + t2 + t3;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2925,7 +2925,7 @@ namespace OAService
                                                         else
                                                         {
                                                             x = x + t1 + t2 + t3;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2949,7 +2949,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - bt2;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2967,7 +2967,7 @@ namespace OAService
                                                         else if (js <= bt3)
                                                         {
                                                             x = x + t2;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -2987,7 +2987,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - bt3;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1 + t2;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3005,7 +3005,7 @@ namespace OAService
                                                         else
                                                         {
                                                             x = x + t2 + t3;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3028,7 +3028,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - ks;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3048,7 +3048,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - ks;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3070,7 +3070,7 @@ namespace OAService
                                                             TimeSpan ts2 = js - bt3;
                                                             double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
                                                             x = x + d1 + d2;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3092,7 +3092,7 @@ namespace OAService
                                                             TimeSpan ts2 = js - bt3;
                                                             double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
                                                             x = x + d1 + d2;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3110,7 +3110,7 @@ namespace OAService
                                                         else
                                                         {
                                                             x = x + t2 + t3;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3131,7 +3131,7 @@ namespace OAService
                                                         if (js <= bt3)
                                                         {
                                                             x = x + 0;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3151,7 +3151,7 @@ namespace OAService
                                                             TimeSpan ts1 = js - bt3;
                                                             double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                             x = x + d1;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3169,7 +3169,7 @@ namespace OAService
                                                         else
                                                         {
                                                             x = x + t3;
-                                                            x = ToolHelper.LeaveTimeTotal(x);
+                                                            //x = ToolHelper.LeaveTimeTotal(x);
                                                             string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                             sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                             conn = ToolHelper.OpenRavoerp(type);
@@ -3190,7 +3190,7 @@ namespace OAService
                                                         TimeSpan ts1 = js - bt3;
                                                         double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
                                                         x = x + d1;
-                                                        x = ToolHelper.LeaveTimeTotal(x);
+                                                        //x = ToolHelper.LeaveTimeTotal(x);
                                                         string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                         sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                         conn = ToolHelper.OpenRavoerp(type);
@@ -3208,7 +3208,7 @@ namespace OAService
                                                     else
                                                     {
                                                         x = x + 0;
-                                                        x = ToolHelper.LeaveTimeTotal(x);
+                                                        //x = ToolHelper.LeaveTimeTotal(x);
                                                         string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                         sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                         conn = ToolHelper.OpenRavoerp(type);

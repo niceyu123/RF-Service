@@ -1,0 +1,12 @@
+2020-12-03 16:28:15.9242 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R6-FKSQD2020110101","skzh":"11004664139701","skdw":"中国检验认证集团广东有限公司","fkje":"7500.00","skyh":"平安银行广州分行营业部","dw":"ys","oano":"R6-FKSQD2020110101"}
+2020-12-03 16:28:31.6696 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?>
+<body><head><erpSysCode>ERP001</erpSysCode><custNo>0000070887</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>2</retCode><retMsg>erp报文重复上送，上送失败验证签名失败</retMsg><signData></signData></head></body>
+2020-12-03 16:28:31.6696 ERPCZ.NBCZWebService.TRANSFER zt2
+2020-12-03 16:28:43.1453 ERPCZ.NBCZWebService.TRANSFER message{"sqdh":"R6-FKSQD20201101011","skzh":"11004664139701","skdw":"中国检验认证集团广东有限公司","fkje":"7500.00","skyh":"平安银行广州分行营业部","dw":"ys","oano":"R6-FKSQD2020110101"}
+2020-12-03 16:29:00.1933 ERPCZ.NBCZWebService.TRANSFER messages<?xml version="1.0" encoding="UTF-8"?>
+<body><head><erpSysCode>ERP001</erpSysCode><custNo>0000070887</custNo><tradeName>ERP_TRANSFER</tradeName><retCode>0</retCode><retMsg>交易成功</retMsg><signData></signData></head><map><billCode>2020120300429737</billCode></map></body>
+2020-12-03 16:29:00.2083 ERPCZ.NBCZWebService.TRANSFER zt0
+2020-12-03 16:29:00.2083 ERPCZ.NBCZWebService.TRANSFER dsf2020120300429737
+2020-12-03 16:29:00.2083 ERPCZ.NBCZWebService.TRANSFER 123
+2020-12-03 16:29:00.2083 ERPCZ.NBCZWebService.TRANSFER sql update formtable_main_418 set BILLCODE='2020120300429737' where sqdh='R6-FKSQD20201101011'
+2020-12-03 16:29:00.2212 ERPCZ.NBCZWebService.TRANSFER int0

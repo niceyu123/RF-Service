@@ -28,13 +28,14 @@ namespace OAService
         {
             if (a == "a")
             {
+                ToolHelper.logger.Debug("a");
                 return "AAA";
             }
             else
             {
+                ToolHelper.logger.Debug("b");
                 return "Hello World";
             }
-
         }
         /// <summary>
         /// 测试
@@ -395,7 +396,7 @@ namespace OAService
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
 
-                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh='" + dta.Rows[i]["WLBH"].ToString() + "'";
+                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh='" + dta.Rows[i]["WLBH"].ToString() + "'   and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' "; 
                                 cmd = new OracleCommand(sql, conn1);
                                 da = new OracleDataAdapter(cmd);
                                 dt = new DataTable();
@@ -558,7 +559,7 @@ namespace OAService
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
 
-                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh1='" + dta.Rows[i]["WLBH1"].ToString() + "'";
+                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh1='" + dta.Rows[i]["WLBH1"].ToString() + "'   and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' "; 
                                 cmd = new OracleCommand(sql, conn1);
                                 da = new OracleDataAdapter(cmd);
                                 dt = new DataTable();
@@ -701,7 +702,7 @@ namespace OAService
                                 da.Fill(dt);
                                 string cgdh = dt.Rows[0]["CGDH"].ToString();
 
-                                sql = " select * from FORMTABLE_MAIN_330_DT1  where cgdh='" + cgdh + "' and bh5='" + dta.Rows[i]["WLBH5"].ToString() + "'";
+                                sql = " select * from FORMTABLE_MAIN_330_DT1  where cgdh='" + cgdh + "' and bh5='" + dta.Rows[i]["WLBH5"].ToString() + "'  and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' ";
                                 //sql = " select A.lcbh,B.* from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='"+rk.oano+"' and B.wlbh='"+rk.wlbh+"'";
                                 cmd = new OracleCommand(sql, conn1);
                                 da = new OracleDataAdapter(cmd);
@@ -1009,8 +1010,10 @@ namespace OAService
                         string cid = dt.Rows[i]["cid"].ToString();
                         string memo = dt.Rows[i]["memo"].ToString();
                         string companyid= dt.Rows[i]["companyid"].ToString();
+                        string orderid = dt.Rows[i]["orderid"].ToString();
+                        string ITEMNO = dt.Rows[i]["ITEMNO"].ToString();
                         conn = ToolHelper.OpenRavoerp("middle");
-                        sql = " update STORAGE_DELAY set memo='" + memo + "' where cid='" + cid + "' and companyid='"+ companyid + "' ";
+                        sql = " update STORAGE_DELAY set memo='" + memo + "' where companyid='"+ companyid + "' and orderid='"+ orderid + "' and ITEMNO='"+ ITEMNO + "' ";
                         cmd = new OracleCommand(sql, conn);
                         int resultt = cmd.ExecuteNonQuery();
                         ToolHelper.CloseSql(conn);
