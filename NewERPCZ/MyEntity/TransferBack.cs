@@ -5,7 +5,7 @@ using System.Web;
 
 namespace NewERPCZ.MyEntity
 {
-    public class TransferDtl
+    public class transferDtls
     {
         /// <summary>
         /// 

@@ -157,6 +157,7 @@
     <Compile Include="MyPublic\OADptHelper.cs" />
     <Compile Include="MyPublic\OAServiceHelper.cs" />
     <Compile Include="MyPublic\OracleManager.cs" />
+    <Compile Include="MyPublic\OracleManager0.cs" />
     <Compile Include="MyPublic\OracleManager1.cs" />
     <Compile Include="MyPublic\OracleManager3.cs" />
     <Compile Include="MyPublic\OracleManager5.cs" />

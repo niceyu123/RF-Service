@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Web;
@@ -220,29 +221,40 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_480 ";//未添加 查证状态不为0的
+                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where b.fkcg is null or b.fkcg != '0' order by b.id ";//未添加 查证状态不为0的
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     int num = dt.Rows.Count;
                     ToolHelper.CloseSql(conn);
+
                     if (num > 0)
                     {
                         for (int i = 0; i < num; i++)
                         {
-                            string lcbh = dt.Rows[i]["lcbh"].ToString();
-
-                            string dataJson = "{\"Data\":{\"batchSerialNo\":\"" + lcbh + "\",\"serialNo\":[],\"custId\":\"0000156566\"}}";
-                            string res = NbcbSDK.send("", "batchTransfer", "queryBatchTransferResult", dataJson);
+                            string requestid = dt.Rows[i]["requestid"].ToString();
+                            string mid = dt.Rows[i]["id"].ToString();
+                            string ano = "HF_GYSFK"+ requestid;//主
+                            string bno = "GYSFK"+ requestid+mid;//子
+                            bool pass = NbcbSDK.init(path, configName, privateKey);
+                            string res = "";
+                            if (pass)
+                            {
+                                string dataJson = "{\"Data\":{\"batchSerialNo\":\"" + ano + "\",\"serialNo\":[" + bno + "],\"custId\":\"" + custId + "\"}}";
+                                res = NbcbSDK.send("", "batchTransfer", "queryBatchTransferResult", dataJson);
+                            }
                             Back bk = new JavaScriptSerializer().Deserialize<Back>(res);
-                            //以下未处理
-                            string code = bk.Data.transferDtl.status;
-                            conn = ToolHelper.OpenRavoerp("oa");
-                            sql = "update FORMTABLE_MAIN_480_DT1 set FKCG='" + code + "' where sqdh='" + oano + "'";
-                            cmd = new OracleCommand(sql, conn);
-                            int result = cmd.ExecuteNonQuery();
-                            ToolHelper.CloseSql(conn);
+                            string successNum = bk.Data.successNum;
+                            if (successNum=="1")
+                            {
+                                conn = ToolHelper.OpenRavoerp("oa");
+                                sql = "update FORMTABLE_MAIN_480_DT1 set FKCG='0' where id='" + mid + "'";
+                                cmd = new OracleCommand(sql, conn);
+                                int result = cmd.ExecuteNonQuery();
+                                ToolHelper.CloseSql(conn);
+                            }
+
                         }
                     }
                     Thread.Sleep(60000);
@@ -264,23 +276,27 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_480_DT1 where fkcg = '0' ";//在明细表中查询付款状态为0的
+                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where b.fkcg = '0' order by b.id  "; 
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     int num = dt.Rows.Count;
                     ToolHelper.CloseSql(conn);
-                    if (num > 0)
+                    if (num > 0) 
                     {
                         for (int i = 0; i < num; i++)
                         {
-                            string prno = dt.Rows[i]["prno"].ToString();
+                            string requestid = dt.Rows[i]["requestid"].ToString();
+                            string mid = dt.Rows[i]["id"].ToString();
+                            string ano = "HF_GYSFK" + requestid;//主
+                            string bno = "GYSFK" + requestid + mid;//子
+
                             bool pass = NbcbSDK.init(path, configName, privateKey);
                             string res = "";
                             if (pass)
                             {
-                                string dataJson = "{\"Data\":{\"custId\":\"" + custId + "\",\"queryFlag\":\"3\",\"serialNo\":\"" + prno + "\",\"accountSet\":[]}}";
+                                string dataJson = "{\"Data\":{\"custId\":\"" + custId + "\",\"queryFlag\":\"3\",\"serialNo\":\"" + bno + "\",\"accountSet\":[]}}";
                                 res = NbcbSDK.send("", "accInfo ", "queryReceipt", dataJson);
                             }
                             Back bk = new JavaScriptSerializer().Deserialize<Back>(res);
@@ -289,7 +305,7 @@ namespace NewERPCZ.MyPublic
                             {
                                 string downloadNo = bk.Data.downloadNo;
                                 conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_480_DT1 set xzbh='" + downloadNo + "' where prno='" + prno + "'";
+                                sql = "update FORMTABLE_MAIN_480_DT1 set xzbh='" + downloadNo + "' where id='" + mid + "'";
                                 cmd = new OracleCommand(sql, conn);
                                 int result = cmd.ExecuteNonQuery();
                                 ToolHelper.CloseSql(conn);
@@ -327,7 +343,7 @@ namespace NewERPCZ.MyPublic
                     {
                         for (int i = 0; i < num; i++)
                         {
-                            string prno = dt.Rows[i]["prno"].ToString();
+                            string id = dt.Rows[i]["ID"].ToString();
                             string downloadNo = dt.Rows[i]["xzbh"].ToString();
                             bool pass = NbcbSDK.init(path, configName, privateKey);
                             string res = "";
@@ -341,7 +357,7 @@ namespace NewERPCZ.MyPublic
                             if (downloadUrl != null)
                             {
                                 conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_480_DT1 set sdxzdz='" + downloadUrl + "' where prno='" + prno + "'";
+                                sql = "update FORMTABLE_MAIN_480_DT1 set sdxzdz='" + downloadUrl + "' where id='" + id + "'";
                                 cmd = new OracleCommand(sql, conn);
                                 int result = cmd.ExecuteNonQuery();
                                 ToolHelper.CloseSql(conn);
@@ -368,7 +384,7 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_480_DT1 where and sdxzdz is not null ";
+                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where sdxzdz is not null ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -379,15 +395,77 @@ namespace NewERPCZ.MyPublic
                     {
                         for (int i = 0; i < num; i++)
                         {
-                            string prno = dt.Rows[i]["prno"].ToString();
+                            string requestid = dt.Rows[i]["requestid"].ToString();
+                            string mid = dt.Rows[i]["id"].ToString();
+                            string ano = "HF_GYSFK" + requestid;//主
+                            string bno = "GYSFK" + requestid + mid;//子
                             string downloadUrl = dt.Rows[i]["sdxzdz"].ToString();
-                            string path = ToolHelper.HttpDownloadFile(downloadUrl, prno);
+                            string path = ToolHelper.HttpDownloadFile(downloadUrl, bno);
                             if (path != null)
                             {
                                 conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_480_DT1 set nwxzdz='" + path + "' where prno='" + prno + "'";
+                                sql = "update FORMTABLE_MAIN_480_DT1 set nwxzdz='" + path + "' where id='" + mid + "'";
                                 cmd = new OracleCommand(sql, conn);
                                 int result = cmd.ExecuteNonQuery();
+                                ToolHelper.CloseSql(conn);
+                            }
+                        }
+                    }
+                    Thread.Sleep(60000);
+                }
+                catch (Exception ex)
+                {
+                    ToolHelper.logger.Debug("错误" + ex.ToString());
+                    Thread.Sleep(60000);
+                    throw;
+                }
+            }
+        }
+        //未完成 同步孚盟数据库
+        public void SvaeURL()
+        {
+            while (true)
+            {
+                try
+                {
+                    OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                    OracleCommand myCommand = conn.CreateCommand();
+                    string sql = " select * from FORMTABLE_MAIN_480_DT1  where tbsd is null and nwxzdz is not null ";
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    int num = dt.Rows.Count;
+                    ToolHelper.CloseSql(conn);
+                    if (num > 0)
+                    {
+                        for (int i = 0; i < num; i++)
+                        {
+                            string fid = dt.Rows[i]["SOURCEFORMFID"].ToString();
+                            string pid = dt.Rows[i]["PROVFID"].ToString();
+                            string dz = dt.Rows[i]["nwxzdz"].ToString();
+                            string id = dt.Rows[i]["ID"].ToString();
+
+                            SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
+                            scsb.DataSource = "172.16.11.6,1800";
+                            scsb.InitialCatalog = "FumaCRM8";
+                            scsb.UserID = "sa";
+                            scsb.Password = "abc_123";
+                            //创建连接 参数为连接字符串
+                            SqlConnection sqlConn = new SqlConnection(scsb.ToString());
+                            sqlConn.Open();
+                            string sqlStr = " update FumaCRM8.dbo.faPRWriteOFFdtltot set nwxzdz='" + dz+"' where ProvFID='"+pid+"' and FID='"+fid+"' ";
+                            SqlCommand comm = new SqlCommand(sqlStr, sqlConn);//从数据库中查询                           
+                            int result = comm.ExecuteNonQuery();
+                            sqlConn.Close();//关闭连接
+
+
+                            if (result>0)
+                            {
+                                conn = ToolHelper.OpenRavoerp("oa");
+                                sql = "update FORMTABLE_MAIN_480_DT1 set TBSD='0' where id='" + id + "'";
+                                cmd = new OracleCommand(sql, conn);
+                                int results = cmd.ExecuteNonQuery();
                                 ToolHelper.CloseSql(conn);
                             }
                         }

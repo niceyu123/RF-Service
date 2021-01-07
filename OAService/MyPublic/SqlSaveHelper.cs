@@ -69,6 +69,12 @@ namespace OAService.MyPublic
                 OracleManager6.Instance.CallProc(a, b, c, d, e, f, g);
                 OracleManager6.Instance.CloseDb();
             }
+            else if (type == "24")
+            {
+                OracleManager0.Instance.OpenDb();
+                OracleManager0.Instance.CallProc(a, b, c, d, e, f, g);
+                OracleManager0.Instance.CloseDb();
+            }
         }
         /// <summary>
         /// 调休
@@ -104,6 +110,12 @@ namespace OAService.MyPublic
                 OracleManager6.Instance.OpenDb();
                 OracleManager6.Instance.CallProcTX(a, b, c, d, e, f, g);
                 OracleManager6.Instance.CloseDb();
+            }
+            else if (type == "24")
+            {
+                OracleManager0.Instance.OpenDb();
+                OracleManager0.Instance.CallProcTX(a, b, c, d, e, f, g);
+                OracleManager0.Instance.CloseDb();
             }
         }
         /// <summary>
@@ -141,6 +153,12 @@ namespace OAService.MyPublic
                 OracleManager6.Instance.CallProcCC(a, b, c, d, e, f, g);
                 OracleManager6.Instance.CloseDb();
             }
+            else if (type == "24")
+            {
+                OracleManager0.Instance.OpenDb();
+                OracleManager0.Instance.CallProcCC(a, b, c, d, e, f, g);
+                OracleManager0.Instance.CloseDb();
+            }
         }
         /// <summary>
         /// 加班
@@ -176,6 +194,12 @@ namespace OAService.MyPublic
                 OracleManager6.Instance.OpenDb();
                 OracleManager6.Instance.CallProcOT(a, b, c, d, e, f);
                 OracleManager6.Instance.CloseDb();
+            }
+            else if (type == "24")
+            {
+                OracleManager0.Instance.OpenDb();
+                OracleManager0.Instance.CallProcOT(a, b, c, d, e, f);
+                OracleManager0.Instance.CloseDb();
             }
         }
     }

@@ -1,0 +1,7 @@
+2021-01-07 13:07:48.4528 OAService.Test.SaveBGCKaa 23办公用品领用(出库)单测试{"oano":"R0-BGYPLY1609995184323","sqr":"3931","sqbm":"128","sqrq":"2021-01-07 12:51:10","xh":0,"zs":1,"wlid":"BG0386","xqsl":"1.00","dwid":"18","cid":"606489"}
+2021-01-07 13:08:02.0105 OAService.Test.SaveBGCKaa 办公用品领用(出库)单错误:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OAService.Test.SaveBGCKaa(String time, String type) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 804
+2021-01-07 13:08:07.3552 OAService.Test.SaveBGCKaa 23办公用品领用(出库)单测试{"oano":"R0-BGYPLY1609995184323","sqr":"3931","sqbm":"128","sqrq":"2021-01-07 12:51:10","xh":0,"zs":1,"wlid":"BG0386","xqsl":"1.00","dwid":"18","cid":"606489"}
+2021-01-07 13:11:58.3186 OAService.Test.SaveBGCKaa 办公用品领用(出库)单错误:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OAService.Test.SaveBGCKaa(String time, String type) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 804
+2021-01-07 13:12:07.8591 OAService.Test.SaveBGCKaa 23办公用品领用(出库)单测试{"BGCKInfoc":[{"oano":"R0-BGYPLY1609995184323","sqr":"3931","sqbm":"128","sqrq":"2021-01-07 12:51:10","xh":0,"zs":1,"wlid":"BG0386","xqsl":"1.00","dwid":"18","cid":"606489"}]}

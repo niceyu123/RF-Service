@@ -1,0 +1,510 @@
+2020-12-31 14:07:15.2263 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:08:19.4776 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:09:46.0651 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:10:24.9518 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:13:16.9585 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:13:59.6260 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:14:37.0100 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:15:10.6689 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:16:02.3593 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:16:54.6357 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:17:24.6464 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:17:54.6585 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:18:24.6708 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:19:01.8053 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:19:31.8206 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:20:01.8326 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:20:37.1647 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:21:07.1783 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:21:37.2401 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:22:07.2549 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:22:37.2664 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:23:07.2758 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:23:37.2859 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:24:07.3000 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:24:37.3117 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:25:07.3218 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:25:37.3331 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:26:07.3446 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:26:37.3594 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:27:07.3690 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:27:37.3798 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:28:07.4208 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:28:37.4322 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:29:07.4446 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:29:37.4533 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:30:07.4699 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:30:37.4801 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:38:01.4613 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:38:31.5113 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:39:01.5246 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:39:31.5354 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:39:52.8048 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:40:22.8455 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:40:52.8573 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:41:22.8693 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:41:52.8822 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:42:22.8949 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:42:52.9058 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:43:22.9150 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:43:52.9280 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:44:22.9448 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:44:52.9566 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:45:22.9682 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:45:52.9784 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:46:22.9902 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:46:53.0005 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:47:23.0102 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:47:53.0218 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:48:23.0315 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:48:53.0410 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:49:23.0519 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:49:53.0736 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:50:23.1527 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:50:53.1649 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:51:23.1763 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:51:53.1873 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:52:23.2031 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:52:53.2129 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:53:23.2249 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:53:53.2377 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:54:23.2494 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:54:53.2641 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:55:23.2805 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:55:53.2902 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:56:23.3034 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:56:53.3174 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:57:23.3297 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:57:53.3394 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:58:23.3538 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:58:53.3649 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:59:23.3759 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 14:59:53.4212 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 15:00:23.4307 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 15:00:53.4415 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67
+2020-12-31 15:01:23.4592 OAService.MyPublic.ToolHelper.OpenRavoerp Oracle.ManagedDataAccess.Client.OracleException (0xFFFFFC0C): 池式连接请求超时
+   在 OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, String affinityInstanceName, Boolean bForceMatch)
+   在 OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword)
+   在 Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   在 OAService.MyPublic.ToolHelper.OpenRavoerp(String type) 位置 E:\Code\OAService\OAService\MyPublic\ToolHelper.cs:行号 67

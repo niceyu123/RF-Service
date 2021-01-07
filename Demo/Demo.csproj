@@ -52,6 +52,9 @@
     <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\packages\NPOI.2.4.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\SystemDAL\bin\Debug\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="Spire.Common, Version=10.5.7.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\Spire.XLS.10.5.7\lib\net40\Spire.Common.dll</HintPath>
     </Reference>
@@ -106,6 +109,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OAService\OAService.csproj">
+      <Project>{CD868E22-5DD7-4B9B-829F-70D84C55087D}</Project>
+      <Name>OAService</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

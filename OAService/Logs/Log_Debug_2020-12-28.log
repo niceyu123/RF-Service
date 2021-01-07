@@ -1,0 +1,17 @@
+2020-12-28 14:47:52.1676 OAService.NewOAWebService.SaveBGYF 2020-12-28 14:46:05.1371 OAService.NewOAWebService.SaveBGYF {"oano":"R0-BGCG2020120045","sqr":"691","sqrq":"2020-12-22","kslb":"2","sl":"0.13","lzfs":"3","hl":"1.00","je":"4077.00","qtfy":"0.00","fph":"10900025","zy":"","fkrq":"2020-12-22","dwid":"S0386","hxyq":"","ydxh":"","ydh":"R0-BGYPRK2020100165","wlbh":"BG0142","ggxh":"0.5mm，黑色","dw":"PCS","sl1":"24.00","bz":"","kxsm":"","wlmc":"856","je1":"18.00","rkdh":"CGRK20-07690","se":"2.07","wsbwb":"15.93","xh":9,"dwidd":"02","gh":"2000531","dj":"0.75"}
+2020-12-28 14:47:52.6343 OAService.NewOAWebService.SaveBGYF 错误System.ArgumentException: 无效的 JSON 基元: 2020-12-28。
+   在 System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   在 System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   在 System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   在 System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   在 System.Web.Script.Serialization.JavaScriptSerializer.Deserialize[T](String input)
+   在 OAService.NewOAWebService.SaveBGYF(String time) 位置 E:\Code\OAService\OAService\NewOAWebService.asmx.cs:行号 13243
+2020-12-28 14:48:01.8906 OAService.NewOAWebService.SaveBGYF 2020-12-28 14:46:05.1371 OAService.NewOAWebService.SaveBGYF {"oano":"R0-BGCG2020120045","sqr":"691","sqrq":"2020-12-22","kslb":"2","sl":"0.13","lzfs":"3","hl":"1.00","je":"4077.00","qtfy":"0.00","fph":"10900025","zy":"","fkrq":"2020-12-22","dwid":"S0386","hxyq":"","ydxh":"","ydh":"R0-BGYPRK2020100165","wlbh":"BG0142","ggxh":"0.5mm，黑色","dw":"PCS","sl1":"24.00","bz":"","kxsm":"","wlmc":"856","je1":"18.00","rkdh":"CGRK20-07690","se":"2.07","wsbwb":"15.93","xh":9,"dwidd":"02","gh":"2000531","dj":"0.75"}
+2020-12-28 14:48:02.6974 OAService.NewOAWebService.SaveBGYF 错误System.ArgumentException: 无效的 JSON 基元: 2020-12-28。
+   在 System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   在 System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   在 System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   在 System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   在 System.Web.Script.Serialization.JavaScriptSerializer.Deserialize[T](String input)
+   在 OAService.NewOAWebService.SaveBGYF(String time) 位置 E:\Code\OAService\OAService\NewOAWebService.asmx.cs:行号 13243
+2020-12-28 14:49:17.4096 OAService.NewOAWebService.SaveBGYF {"oano":"R0-BGCG2020120045","sqr":"691","sqrq":"2020-12-22","kslb":"2","sl":"0.13","lzfs":"3","hl":"1.00","je":"4077.00","qtfy":"0.00","fph":"10900025","zy":"","fkrq":"2020-12-22","dwid":"S0386","hxyq":"","ydxh":"","ydh":"R0-BGYPRK2020100165","wlbh":"BG0142","ggxh":"0.5mm，黑色","dw":"PCS","sl1":"24.00","bz":"","kxsm":"","wlmc":"856","je1":"18.00","rkdh":"CGRK20-07690","se":"2.07","wsbwb":"15.93","xh":9,"dwidd":"02","gh":"2000531","dj":"0.75"}

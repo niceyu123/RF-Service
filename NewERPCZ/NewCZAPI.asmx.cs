@@ -176,7 +176,7 @@ namespace NewERPCZ
                 string res = "";
                 if (pass)
                 {
-                    string dataJson = "{\"Data\":{\"serialNo\":\""+ fk.oano+ "\",\"corpCode\":\""+ corpCode + "\",\"rcvAcc\":\""+fk.skzh+"\",\"payAcc\":\""+ payAcc + "\",\"rcvBankName\":\""+fk.skyh+"\",\"rcvBankNo\":\"\",\"rcvName\":\""+fk.skdw+"\",\"purpose\":\"转账\",\"remark\":\"\",\"difBank\":\"0\",\"areaSign\":\"1\",\"amt\":\""+fk.fkje+"\",\"isForIndividual\":\"0\",\"custId\":\"" + custId + "\"}}";
+                    string dataJson = "{\"Data\":{\"serialNo\":\""+ fk.oano+ "\",\"corpCode\":\""+ corpCode + "\",\"rcvAcc\":\""+fk.skzh+"\",\"payAcc\":\""+ payAcc + "\",\"rcvBankName\":\""+fk.skyh+"\",\"rcvBankNo\":\"\",\"rcvName\":\""+fk.skdw+"\",\"purpose\":\"转账\",\"remark\":\""+ fk.oano + "\",\"difBank\":\"0\",\"areaSign\":\"1\",\"amt\":\""+fk.fkje+"\",\"isForIndividual\":\"0\",\"custId\":\"" + custId + "\"}}";
                     res = NbcbSDK.send("", "singleTransfer  ", "singleTransfer", dataJson);
                 }
                 Back bk = new JavaScriptSerializer().Deserialize<Back>(res);
@@ -270,8 +270,26 @@ namespace NewERPCZ
                     ToolHelper.CloseSql(conn);
                     if (num > 0)
                     {
+                        string companyname = dt.Rows[0]["RealProvName"].ToString();
+                        string payAcc = "";
+                        string corpCode = "";
+                        if (companyname.IndexOf("瑞孚工业") > 0)
+                        {
+                            corpCode = "1000";
+                            payAcc = "30010122000464108";
+                        } else if (companyname.IndexOf("隆威婴儿") > 0)
+                        {
+                            corpCode = "1001";
+                            payAcc = "32010122000076927";
+                        }
+                        else if (companyname.IndexOf("汇隆") > 0)
+                        {
+                            corpCode = "1003";
+                            payAcc = "32010122000204640";
+                        }
                         string id = dt.Rows[0]["id"].ToString();
-
+                        string requestid = dt.Rows[0]["requestid"].ToString();
+                        string bno = "HF-GYSFK" + requestid;
                         conn = ToolHelper.OpenRavoerp("oa");
                         myCommand = conn.CreateCommand();
                         sql = "  SELECT a.*,b.* FROM FORMTABLE_MAIN_480_DT1 a," +
@@ -283,25 +301,31 @@ namespace NewERPCZ
                         int nums = dts.Rows.Count;
                         ToolHelper.CloseSql(conn);
                         string total = dts.Rows[0]["total"].ToString();
-                        string daa = "{\"Data\":{\"batchSerialNo\":\"" + id + "\",\"businessCode\":\"nis_smart_expense\",\"custId\":\"" + custId + "\",\"totalNumber\":\"" + num + "\",\"showFlag\":\"1\",\"totalAmt\":\"" + total + "\",\"transferDtls\":[";
+                        string daa = "{\"Data\":{\"batchSerialNo\":\"" + bno + "\",\"businessCode\":\"nis_smart_expense\",\"custId\":\"" + custId + "\",\"totalNumber\":\"" + num + "\",\"showFlag\":\"1\",\"totalAmt\":\"" + total + "\",\"transferDtls\":[";
                         string data = "";
                         for (int i = 0; i < nums; i++)
                         {
-                            string dtlSerialNo= dts.Rows[i]["prno"].ToString();
+                            string dtlSerialNo= "GYSFK"+requestid +dts.Rows[i]["id"].ToString();
                             string amt= dts.Rows[i]["realcheckedamt"].ToString();
-                            data += "{\"dtlSerialNo\":\""+ dtlSerialNo + "\",\"payAcc\":\"77010122000031318\",\"rcvAcc\":\"6214180000000101280\",\"corpCode\":\"1000\",\"rcvBank\":\"宁波银行股份有限公司总行营业部\",\"rcvBankCode\":\"\",\"rcvName\":\"330226198412200795\",\"isTellRcv\":\"0\",\"amt\":\""+amt+"\",\"difBank\":\"0\",\"areaSign\":\"1\",\"purpose\":\"转账\",\"remark\":\"\",\"isForIndividual\":\"0\",\"showFlag\":\"1\"},";
+                            string rcvAcc= dts.Rows[i]["accountno"].ToString();
+                            string rcvBank = dts.Rows[i]["bankfullname"].ToString();
+                            string rcvName = dts.Rows[i]["provname"].ToString();
+                            data += "{\"dtlSerialNo\":\""+ dtlSerialNo + "\",\"payAcc\":\""+ payAcc + "\",\"rcvAcc\":\""+rcvAcc+"\",\"corpCode\":\""+ corpCode + "\",\"rcvBank\":\""+ rcvBank + "\",\"rcvBankCode\":\"\",\"rcvName\":\""+ rcvName + "\",\"isTellRcv\":\"0\",\"amt\":\"" + amt+"\",\"difBank\":\"0\",\"areaSign\":\"1\",\"purpose\":\"转账\",\"remark\":\"\",\"isForIndividual\":\"0\",\"showFlag\":\"1\"},";
 
                         }
+                        data = data.Substring(0, data.Length - 1);//去除最后一位
                         string ta = "]}}";
                         string dataJson = daa + data + ta;
                         res = NbcbSDK.send("", "batchTransfer", "batchTransfer", dataJson);
                     }
                     //res = "";
                 }
+                ToolHelper.logger.Debug(res);
                 return res;
             }
             catch (Exception e)
             {
+                ToolHelper.logger.Debug("错误" + e.ToString());
                 return null;
             }
         }
