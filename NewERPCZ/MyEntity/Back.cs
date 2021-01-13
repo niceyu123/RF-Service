@@ -38,10 +38,13 @@ namespace NewERPCZ.MyEntity
         public string transState { get; set; }
         public Failures failures { get; set; }
         public string processAmt { get; set; }
+        public string processNum { get; set; }
         public string successAmt { get; set; }
         public string failAmt { get; set; }
+        public string failNum { get; set; }
         public string successNum { get; set; }
-        public TransferDtls transferDtls { get; set; }
+        public string batchSerialNo { get; set; }
+        public List<TransferDtl> transferDtls { get; set; }
     }
     public class TransferDtls
     {

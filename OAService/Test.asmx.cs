@@ -937,7 +937,7 @@ namespace OAService
                 {
                     re = no + "000";
                 }
-
+                ToolHelper.CloseSql(conn);
                 return re;
             }
             catch (Exception e)
@@ -945,7 +945,47 @@ namespace OAService
                 return null;
             }
         }
+        [WebMethod]
+        public string GetXmNo()
+        {
+            try
+            {
+                string year = Convert.ToString(DateTime.Now.Year);
+                string y= year.Substring(year.Length - 2, 2);
+                string no = "IT-XM" + y;
 
+                OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                OracleCommand myCommand = conn.CreateCommand();
+                string sql = " select * from FORMTABLE_MAIN_473 order by id desc ";
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                int num = dt.Rows.Count;
+                string bh = "";
+                string n = "";
+                string re = "";
+                if (num != 0)
+                {
+                    bh = dt.Rows[0]["xmbh"].ToString();
+                    n = bh.Substring(bh.Length - 3);
+                    int n1 = Convert.ToInt32(n)+1;
+                    string n2 = Convert.ToString(n1);
+                    string n3 = n2.PadLeft(3, '0');
+                    re = no + n3;
+                }
+                else
+                {
+                    re = no + "000";
+                }
+                ToolHelper.CloseSql(conn);
+                return re;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
         [WebMethod]
         public string GetGZSP(string gh,string fb)
         {

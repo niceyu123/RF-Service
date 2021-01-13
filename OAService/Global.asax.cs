@@ -24,7 +24,10 @@ namespace OAService
                 //System.Threading.TimerCallback timerdelegate = new System.Threading.TimerCallback(timerCall);
                 //int IntervalTime = 60000;
                 //stateTimer = new System.Threading.Timer(timerdelegate, autoEvent, 0, IntervalTime);
-
+                ////OA同步短号
+                //Thread getMob = new Thread(new ThreadStart(new CommonHelper().getMob));
+                //getMob.IsBackground = true;
+                //getMob.Start();
                 //推送消息
                 //Thread sendMessage = new Thread(new ThreadStart(new CommonHelper().SendMessage));
                 //sendMessage.IsBackground = true;

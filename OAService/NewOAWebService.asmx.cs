@@ -19416,7 +19416,7 @@ namespace OAService
                         da.Fill(dt);
                         string fid = dt.Rows[0]["FID"].ToString();
 
-                        conn = ToolHelper.OpenRavoerp("23");
+                        //conn = ToolHelper.OpenRavoerp("23");
                         sql = " select fno from PUR_REQBILL order by fno desc ";
                         cmd = new OracleCommand(sql, conn);
                         da = new OracleDataAdapter(cmd);
@@ -19429,9 +19429,24 @@ namespace OAService
                         string d = fnos.Substring(0, fnos.Length - 4);
                         string fno = d + c;
 
-                        string department = "00";
+                        //conn = ToolHelper.OpenRavoerp("23");
+                        sql = " select * from sys_user where fid='" + qg.sqrgh + "' ";
+                        cmd = new OracleCommand(sql, conn);
+                        da = new OracleDataAdapter(cmd);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        int row = dt.Rows.Count;
+                        string user = "0";
+                        string dept = "0";
+                        if (row > 0)
+                        {
+                             user = dt.Rows[0]["ID_CODE"].ToString();
+                             dept = dt.Rows[0]["department"].ToString();
+                        }
+                        
+                        string department = dept;
                         string name = "系统管理员";
-                        string idCode = "1";
+                        string idCode = user;
                         //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')
                         conn = ToolHelper.OpenRavoerp("23");
                         sql = " INSERT INTO PUR_REQBILL(WRITE_DAY,LIFE_CODE, RE_MARK, SYS_USER ,DEPARTMENT,CHECKMAN,CHECKDAY,FNO,FID,SQ_DD,SAL_NO,BIL_TYPE,EST_DD,CLS_ID,OANO) " +
@@ -19572,10 +19587,25 @@ namespace OAService
                         string c = Convert.ToString(b).PadLeft(4, '0');
                         string d = fnos.Substring(0, fnos.Length - 4);
                         string fno = d + c;
+                        ToolHelper.CloseSql(conn);
 
-                        string department = "00";
+                        conn = ToolHelper.OpenRavoerp("21");
+                        sql = " select * from sys_user where fid='" + qg.sqrgh + "' ";
+                        cmd = new OracleCommand(sql, conn);
+                        da = new OracleDataAdapter(cmd);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        int row = dt.Rows.Count;
+                        string user = "0";
+                        string dept = "0";
+                        if (row > 0)
+                        {
+                            user = dt.Rows[0]["ID_CODE"].ToString();
+                            dept = dt.Rows[0]["department"].ToString();
+                        }
+                        string department = dept;
                         string name = "系统管理员";
-                        string idCode = "1";
+                        string idCode = user;
                         //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')
                         conn = ToolHelper.OpenRavoerp("21");
                         sql = " INSERT INTO PUR_REQBILL(WRITE_DAY,LIFE_CODE, RE_MARK, SYS_USER ,DEPARTMENT,CHECKMAN,CHECKDAY,FNO,FID,SQ_DD,SAL_NO,BIL_TYPE,EST_DD,CLS_ID,OANO) " +
@@ -19716,14 +19746,31 @@ namespace OAService
                         string c = Convert.ToString(b).PadLeft(4, '0');
                         string d = fnos.Substring(0, fnos.Length - 4);
                         string fno = d + c;
+                        ToolHelper.CloseSql(conn);
 
-                        string department = "00";
+
+                        conn = ToolHelper.OpenRavoerp("22");
+                        sql = " select * from sys_user where fid='" + qg.sqrgh + "' ";
+                        cmd = new OracleCommand(sql, conn);
+                        da = new OracleDataAdapter(cmd);
+                        dt = new DataTable();
+                        da.Fill(dt);
+                        int row = dt.Rows.Count;
+                        string user = "0";
+                        string dept = "0";
+                        if (row > 0)
+                        {
+                            user = dt.Rows[0]["ID_CODE"].ToString();
+                            dept = dt.Rows[0]["department"].ToString();
+                        }
+
+                        string department = dept;
                         string name = "系统管理员";
-                        string idCode = "1";
+                        string idCode = user;
                         //添加主表 to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss')
                         conn = ToolHelper.OpenRavoerp("22");
                         sql = " INSERT INTO PUR_REQBILL(WRITE_DAY,LIFE_CODE, RE_MARK, SYS_USER ,DEPARTMENT,CHECKMAN,CHECKDAY,FNO,FID,SQ_DD,SAL_NO,BIL_TYPE,EST_DD,CLS_ID,OANO) " +
-                            " VALUES(to_date('" + qg.sqrq + "','yyyy-mm-dd hh24:mi:ss'),4,'" + qg.remark + "','" + idCode + "','" + department + "','2770',to_date('" + qg.qrrq + "','yyyy-mm-dd hh24:mi:ss'),'" + fno + "'," +
+                            " VALUES(to_date('" + qg.sqrq + "','yyyy-mm-dd hh24:mi:ss'),4,'" + qg.remark + "','" + idCode + "','" + department + "','2282',to_date('" + qg.qrrq + "','yyyy-mm-dd hh24:mi:ss'),'" + fno + "'," +
                             "'" + fid + "',to_date('" + qg.sqrq + "','yyyy-mm-dd hh24:mi:ss'),'" + name + "',9,to_date('" + qg.yjrq + "','yyyy-mm-dd hh24:mi:ss'),'F','" + qg.oano + "') ";
                         cmd = new OracleCommand(sql, conn);
                         int result = cmd.ExecuteNonQuery();

@@ -1701,7 +1701,58 @@ namespace OAService.MyPublic
             }
         }
 
+        public void getMob()
+        {
+            while (true)
+            {
+                try
+                {
+                    OracleConnection conn = ToolHelper.OpenRavoerp("oa");
+                    OracleCommand myCommand = conn.CreateCommand();
+                    string sql = " select * from formtable_main_130 where tbzt is null or tbzt='' ";
+                    OracleCommand cmd = new OracleCommand(sql, conn);
+                    OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    int num = dt.Rows.Count;
+                    if (num != 0)
+                    {
+                        for (int i = 0; i < num; i++)
+                        {
+                            string xnh = dt.Rows[i]["xnh"].ToString();
+                            if (xnh== "668195")
+                            {
 
+                            }
+                            string mid = dt.Rows[i]["id"].ToString();
+                            if (xnh != null || xnh != "")
+                            {
+                                string xm = dt.Rows[i]["xm"].ToString();
+                                sql = "update Cus_Fielddata set Field44 = '" + xnh + "' where id = '" + xm + "'";
+                                cmd = new OracleCommand(sql, conn);
+                                int result = cmd.ExecuteNonQuery();
+                                if (result > 0)
+                                {
+                                    sql = "update formtable_main_130 set tbzt='1' where id ='" + mid + "' ";
+                                    cmd = new OracleCommand(sql, conn);
+                                    int result2 = cmd.ExecuteNonQuery();
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    ToolHelper.CloseSql(conn);
+                    Thread.Sleep(120000);
+                }
+                catch (Exception ex)
+                {
+                    ToolHelper.logger.Debug(ex.ToString());
+                    Thread.Sleep(120000);
+                }
+            }
+        }
 
     }
 }

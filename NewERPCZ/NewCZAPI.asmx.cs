@@ -164,7 +164,7 @@ namespace NewERPCZ
                     else if (fk.dw == "hl")
                     {
                         corpCode = "1003";
-                        payAcc = "32010122000204640";
+                        payAcc = "30010122001158585";
                     }
                     else if (fk.dw == "ys")
                     {
@@ -270,7 +270,7 @@ namespace NewERPCZ
                     ToolHelper.CloseSql(conn);
                     if (num > 0)
                     {
-                        string companyname = dt.Rows[0]["RealProvName"].ToString();
+                        string companyname = dt.Rows[0]["CompanyName"].ToString();
                         string payAcc = "";
                         string corpCode = "";
                         if (companyname.IndexOf("瑞孚工业") > 0)
@@ -285,7 +285,7 @@ namespace NewERPCZ
                         else if (companyname.IndexOf("汇隆") > 0)
                         {
                             corpCode = "1003";
-                            payAcc = "32010122000204640";
+                            payAcc = "30010122001158585";
                         }
                         string id = dt.Rows[0]["id"].ToString();
                         string requestid = dt.Rows[0]["requestid"].ToString();
@@ -301,7 +301,7 @@ namespace NewERPCZ
                         int nums = dts.Rows.Count;
                         ToolHelper.CloseSql(conn);
                         string total = dts.Rows[0]["total"].ToString();
-                        string daa = "{\"Data\":{\"batchSerialNo\":\"" + bno + "\",\"businessCode\":\"nis_smart_expense\",\"custId\":\"" + custId + "\",\"totalNumber\":\"" + num + "\",\"showFlag\":\"1\",\"totalAmt\":\"" + total + "\",\"transferDtls\":[";
+                        string daa = "{\"Data\":{\"batchSerialNo\":\"" + bno + "\",\"businessCode\":\"nis_smart_expense\",\"custId\":\"" + custId + "\",\"totalNumber\":\"" + nums + "\",\"showFlag\":\"1\",\"totalAmt\":\"" + total + "\",\"transferDtls\":[";
                         string data = "";
                         for (int i = 0; i < nums; i++)
                         {
@@ -309,7 +309,7 @@ namespace NewERPCZ
                             string amt= dts.Rows[i]["realcheckedamt"].ToString();
                             string rcvAcc= dts.Rows[i]["accountno"].ToString();
                             string rcvBank = dts.Rows[i]["bankfullname"].ToString();
-                            string rcvName = dts.Rows[i]["provname"].ToString();
+                            string rcvName = dts.Rows[i]["realprovname"].ToString();
                             data += "{\"dtlSerialNo\":\""+ dtlSerialNo + "\",\"payAcc\":\""+ payAcc + "\",\"rcvAcc\":\""+rcvAcc+"\",\"corpCode\":\""+ corpCode + "\",\"rcvBank\":\""+ rcvBank + "\",\"rcvBankCode\":\"\",\"rcvName\":\""+ rcvName + "\",\"isTellRcv\":\"0\",\"amt\":\"" + amt+"\",\"difBank\":\"0\",\"areaSign\":\"1\",\"purpose\":\"转账\",\"remark\":\"\",\"isForIndividual\":\"0\",\"showFlag\":\"1\"},";
 
                         }
@@ -334,7 +334,7 @@ namespace NewERPCZ
         /// </summary>
         /// <returns></returns>
         [WebMethod]
-        public string QueryBatchTransferResult()
+        public string QueryBatchTransferResult(string no)
         {
             try
             {
@@ -342,7 +342,7 @@ namespace NewERPCZ
                 string res = "";
                 if (pass)
                 {
-                    string dataJson = "{\"Data\":{\"batchSerialNo\":\"00552501077001\",\"serialNo\":[],\"custId\":\"0000156566\"}}";
+                    string dataJson = "{\"Data\":{\"batchSerialNo\":\""+no+"\",\"serialNo\":[],\"custId\":\""+custId+"\"}}";
                     res = NbcbSDK.send("", "batchTransfer", "queryBatchTransferResult", dataJson);
                 }
                 return res;

@@ -28,7 +28,9 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and fkcg is null or sqrq >='2020-12-22' and fkcg != '0' ";
+                    string sql = " select requestid from workflow_requestbase where requestid in (select requestid from " +
+                        " FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and fkcg is null or sqrq >='2020-12-22' and fkcg != '0') " +
+                        " and currentnodetype='3' ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -127,7 +129,7 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and xzbh is not null ";
+                    string sql = " select * from FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and xzbh is not null and sdxzdz is null ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -178,7 +180,7 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and sdxzdz is not null ";
+                    string sql = " select * from FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and sdxzdz is not null and nwxzdz is null ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -221,7 +223,11 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where b.fkcg is null or b.fkcg != '0' order by b.id ";//未添加 查证状态不为0的
+                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid " +
+                        " where a.requestid in(select requestid from workflow_requestbase where requestid in (select a.requestid from FORMTABLE_MAIN_480 a " +
+                        " left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid " +
+                        " where (b.fkcg is null or b.fkcg != '0') and (a.COMPANYNAME like '%汇隆%' or a.COMPANYNAME like '%工业%' or a.COMPANYNAME like '%隆威%') " +
+                        " ) and currentnodetype='3') order by b.id ";//未添加 查证状态不为0的
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -235,26 +241,57 @@ namespace NewERPCZ.MyPublic
                         {
                             string requestid = dt.Rows[i]["requestid"].ToString();
                             string mid = dt.Rows[i]["id"].ToString();
-                            string ano = "HF_GYSFK"+ requestid;//主
-                            string bno = "GYSFK"+ requestid+mid;//子
+                            string ano = "HF-GYSFK" + requestid;//主
+                            string bno = "GYSFK" + requestid + mid;//子
+                            string cno = "GYSFK" + requestid;
                             bool pass = NbcbSDK.init(path, configName, privateKey);
                             string res = "";
                             if (pass)
                             {
-                                string dataJson = "{\"Data\":{\"batchSerialNo\":\"" + ano + "\",\"serialNo\":[" + bno + "],\"custId\":\"" + custId + "\"}}";
+                                string dataJson = "{\"Data\":{\"batchSerialNo\":\"" + ano + "\",\"serialNo\":[\"" + bno + "\"],\"custId\":\"" + custId + "\"}}";
                                 res = NbcbSDK.send("", "batchTransfer", "queryBatchTransferResult", dataJson);
                             }
                             Back bk = new JavaScriptSerializer().Deserialize<Back>(res);
-                            string successNum = bk.Data.successNum;
-                            if (successNum=="1")
+                            string success = bk.Data.successNum;
+                            if (success != "")
                             {
-                                conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_480_DT1 set FKCG='0' where id='" + mid + "'";
-                                cmd = new OracleCommand(sql, conn);
-                                int result = cmd.ExecuteNonQuery();
-                                ToolHelper.CloseSql(conn);
-                            }
+                                int successNum = Convert.ToInt32(success);
+                                if (successNum >= 1)
+                                {
+                                    for (int j = 0; j < bk.Data.transferDtls.Count; j++)
+                                    {
 
+                                        string status = bk.Data.transferDtls[j].status;
+                                        if (status == "0")
+                                        {
+                                            string mmid = bk.Data.transferDtls[j].serialNo;
+                                            string newid = mmid.Replace(cno, "");
+                                            conn = ToolHelper.OpenRavoerp("oa");
+                                            sql = "update FORMTABLE_MAIN_480_DT1 set FKCG='0' where id='" + newid + "'";
+                                            cmd = new OracleCommand(sql, conn);
+                                            int result = cmd.ExecuteNonQuery();
+                                            ToolHelper.CloseSql(conn);
+                                        }
+
+                                    }
+                                }
+                                else
+                                {
+                                    for (int j = 0; j < bk.Data.transferDtls.Count; j++)
+                                    {
+
+                                        string status = bk.Data.transferDtls[j].status;
+                                        string mmid = bk.Data.transferDtls[j].serialNo;
+                                        string newid = mmid.Replace(cno, "");
+                                        conn = ToolHelper.OpenRavoerp("oa");
+                                        sql = "update FORMTABLE_MAIN_480_DT1 set fkcg='" + status + "' where id='" + newid + "'";
+                                        cmd = new OracleCommand(sql, conn);
+                                        int result = cmd.ExecuteNonQuery();
+                                        ToolHelper.CloseSql(conn);
+
+                                    }
+                                }
+                            }
                         }
                     }
                     Thread.Sleep(60000);
@@ -332,7 +369,7 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select * from FORMTABLE_MAIN_480_DT1 where xzbh is not null ";
+                    string sql = " select * from FORMTABLE_MAIN_480_DT1 where xzbh is not null and fkcg='0' and sdxzdz is null ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -384,7 +421,7 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where sdxzdz is not null ";
+                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where sdxzdz is not null and nwxzdz is null ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
