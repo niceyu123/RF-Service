@@ -1,0 +1,31 @@
+2021-01-22 09:53:09.9733 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}
+2021-01-22 09:54:05.8289 OAService.Test.SaveBGRK5 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK5(String time) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 711
+2021-01-22 09:54:05.8429 OAService.Test.SaveBGRK5 false
+2021-01-22 09:54:10.8922 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}
+2021-01-22 09:54:31.6137 OAService.Test.SaveBGRK5 办公用品入库单错误:System.IndexOutOfRangeException: 在位置 0 处没有任何行。
+   在 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   在 System.Data.DataRowCollection.get_Item(Int32 index)
+   在 OAService.Test.SaveBGRK5(String time) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 711
+2021-01-22 09:54:31.6218 OAService.Test.SaveBGRK5 false
+2021-01-22 09:54:36.3252 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}
+2021-01-22 10:24:58.0933 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}
+2021-01-22 10:26:33.8715 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}
+2021-01-22 10:27:08.0582 OAService.Test.SaveBGRK5 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x00000388): ORA-00904: "YCGSL1": 标识符无效
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 OAService.Test.SaveBGRK5(String time) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 723
+2021-01-22 10:27:08.0821 OAService.Test.SaveBGRK5 false
+2021-01-22 10:27:17.8508 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}
+2021-01-22 10:27:19.9568 OAService.Test.SaveBGRK5 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x00000388): ORA-00904: "YCGSL1": 标识符无效
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 OAService.Test.SaveBGRK5(String time) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 723
+2021-01-22 10:27:19.9568 OAService.Test.SaveBGRK5 false
+2021-01-22 10:28:54.9813 OAService.Test.SaveBGRK5 办公用品入库单{"oano":"R5-BGYPRK2021010129","sqr":"9830","zdrq":"2021-01-21","cgy":"9830","kslb":"2","lzfs":"3","remark":"","sl":"0.01","zs":5,"gh":"512000","dw":"S0343"}

@@ -28,7 +28,7 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select requestid from workflow_requestbase where requestid in (select requestid from " +
+                    string sql = " select * from workflow_requestbase where requestid in (select requestid from " +
                         " FORMTABLE_MAIN_418 where sqrq >='2020-12-22' and fkcg is null or sqrq >='2020-12-22' and fkcg != '0') " +
                         " and currentnodetype='3' ";
                     OracleCommand cmd = new OracleCommand(sql, conn);
@@ -41,7 +41,7 @@ namespace NewERPCZ.MyPublic
                     {
                         for (int i = 0; i < num; i++)
                         {
-                            string oano = dt.Rows[i]["sqdh"].ToString();
+                            string oano = dt.Rows[i]["requestmark"].ToString();
                             bool pass = NbcbSDK.init(path, configName, privateKey);
                             string res = "";
                             if (pass)
@@ -193,14 +193,17 @@ namespace NewERPCZ.MyPublic
                         {
                             string oano = dt.Rows[i]["sqdh"].ToString();
                             string downloadUrl = dt.Rows[i]["sdxzdz"].ToString();
-                            string path = ToolHelper.HttpDownloadFile(downloadUrl,oano);
-                            if (path != null)
+                            if (downloadUrl != "null")
                             {
-                                conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_418 set nwxzdz='" + path + "' where sqdh='" + oano + "'";
-                                cmd = new OracleCommand(sql, conn);
-                                int result = cmd.ExecuteNonQuery();
-                                ToolHelper.CloseSql(conn);
+                                string path = ToolHelper.HttpDownloadFile(downloadUrl, oano);
+                                if (path != null)
+                                {
+                                    conn = ToolHelper.OpenRavoerp("oa");
+                                    sql = "update FORMTABLE_MAIN_418 set nwxzdz='" + path + "' where sqdh='" + oano + "'";
+                                    cmd = new OracleCommand(sql, conn);
+                                    int result = cmd.ExecuteNonQuery();
+                                    ToolHelper.CloseSql(conn);
+                                }
                             }
                         }
                     }
@@ -437,14 +440,17 @@ namespace NewERPCZ.MyPublic
                             string ano = "HF_GYSFK" + requestid;//主
                             string bno = "GYSFK" + requestid + mid;//子
                             string downloadUrl = dt.Rows[i]["sdxzdz"].ToString();
-                            string path = ToolHelper.HttpDownloadFile(downloadUrl, bno);
-                            if (path != null)
+                            if (downloadUrl != "null")
                             {
-                                conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_480_DT1 set nwxzdz='" + path + "' where id='" + mid + "'";
-                                cmd = new OracleCommand(sql, conn);
-                                int result = cmd.ExecuteNonQuery();
-                                ToolHelper.CloseSql(conn);
+                                string path = ToolHelper.HttpDownloadFile(downloadUrl, bno);
+                                if (path != null)
+                                {
+                                    conn = ToolHelper.OpenRavoerp("oa");
+                                    sql = "update FORMTABLE_MAIN_480_DT1 set nwxzdz='" + path + "' where id='" + mid + "'";
+                                    cmd = new OracleCommand(sql, conn);
+                                    int result = cmd.ExecuteNonQuery();
+                                    ToolHelper.CloseSql(conn);
+                                }
                             }
                         }
                     }

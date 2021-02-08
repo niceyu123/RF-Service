@@ -154,6 +154,9 @@
     <Compile Include="MyEntity\UserInfo.cs" />
     <Compile Include="MyPublic\CommonHelper.cs" />
     <Compile Include="MyPublic\Excel.cs" />
+    <Compile Include="MyPublic\KQHelper.cs" />
+    <Compile Include="MyPublic\KQleave.cs" />
+    <Compile Include="MyPublic\KQtxcc.cs" />
     <Compile Include="MyPublic\OADptHelper.cs" />
     <Compile Include="MyPublic\OAServiceHelper.cs" />
     <Compile Include="MyPublic\OracleManager.cs" />

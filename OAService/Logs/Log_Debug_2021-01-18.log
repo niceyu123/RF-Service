@@ -1,0 +1,9 @@
+2021-01-18 15:24:55.7816 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2021010044","sqr":"346","zdrq":"2021-01-15","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":1,"gh":"1003154","dw":"S0659"}
+2021-01-18 15:33:30.0993 OAService.Test.SaveBGRK1 办公用品入库单错误:Oracle.ManagedDataAccess.Client.OracleException (0x00000578): ORA-01400: 无法将 NULL 插入 ("RAVO1"."IN_STORAGE_DETIAL"."PUNIT")
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   在 OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int32 lobPrefetchSize, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, Boolean isFromEF)
+   在 Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   在 OAService.Test.SaveBGRK1(String time) 位置 E:\Code\OAService\OAService\Test.asmx.cs:行号 533
+2021-01-18 15:33:30.1521 OAService.Test.SaveBGRK1 false
+2021-01-18 15:33:37.6977 OAService.Test.SaveBGRK1 办公用品入库单{"oano":"R1-BGYPRK2021010044","sqr":"346","zdrq":"2021-01-15","cgy":"346","kslb":"2","lzfs":"3","remark":"","sl":"0.13","zs":1,"gh":"1003154","dw":"S0659"}

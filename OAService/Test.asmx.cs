@@ -372,7 +372,7 @@ namespace OAService
                                 string cgdh = dt.Rows[0]["CGDH"].ToString();
 
                                 sql = " select * from FORMTABLE_MAIN_330_DT1  where cgdh='" + cgdh + "' and bh='" + dta.Rows[i]["WLBH"].ToString() + "'";
-                                ToolHelper.logger.Debug("办公用品入库单sql:" + sql);
+                                
                                 //sql = " select A.lcbh,B.* from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='"+rk.oano+"' and B.wlbh='"+rk.wlbh+"'";
                                 cmd = new OracleCommand(sql, conn1);
                                 da = new OracleDataAdapter(cmd);
@@ -380,28 +380,28 @@ namespace OAService
                                 da.Fill(dt);
                                 string id = dt.Rows[0]["ID"].ToString();
                                 string ycgsl = dt.Rows[0]["YCGSL"].ToString();
-                                ToolHelper.logger.Debug("办公用品入库单ycgsl:" + ycgsl);
+                                
                                 if (ycgsl == null)
                                 {
                                     ycgsl = "0";
                                 }
                                 int aa = Convert.ToInt32(Convert.ToDouble(dta.Rows[i]["RKSL"].ToString()));
-                                ToolHelper.logger.Debug("办公用品入库单aa:" + aa.ToString());
+                                
                                 int number = aa + Convert.ToInt32(ycgsl);
-                                ToolHelper.logger.Debug("办公用品入库单number:" + number.ToString());
+                                
                                 string n = Convert.ToString(number);
                                 sql = "update FORMTABLE_MAIN_330_DT1 set ycgsl='" + n + "'  where id='" + id + "'";
-                                ToolHelper.logger.Debug("办公用品入库单SQL:" + sql);
+                                
                                 //sql = "update FORMTABLE_MAIN_349_DT1 set rkdh='"+ id_code + "',xh='"+ xh1 + "',ycgsl='" + n + "'  where id='" + id + "'";
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
 
-                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh='" + dta.Rows[i]["WLBH"].ToString() + "'   and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' "; 
-                                cmd = new OracleCommand(sql, conn1);
-                                da = new OracleDataAdapter(cmd);
-                                dt = new DataTable();
-                                da.Fill(dt);
-                                string ida = dt.Rows[0]["ID"].ToString();
+                                //sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh='" + dta.Rows[i]["WLBH"].ToString() + "'   and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' "; 
+                                //cmd = new OracleCommand(sql, conn1);
+                                //da = new OracleDataAdapter(cmd);
+                                //dt = new DataTable();
+                                //da.Fill(dt);
+                                string ida = dta.Rows[i]["ID"].ToString();
                                 sql = "update FORMTABLE_MAIN_349_DT1 set rkdh='" + id_code + "'  where id='" + ida + "'";
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
@@ -559,12 +559,12 @@ namespace OAService
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
 
-                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh1='" + dta.Rows[i]["WLBH1"].ToString() + "'   and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' "; 
-                                cmd = new OracleCommand(sql, conn1);
-                                da = new OracleDataAdapter(cmd);
-                                dt = new DataTable();
-                                da.Fill(dt);
-                                string ida = dt.Rows[0]["ID"].ToString();
+                                //sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh1='" + dta.Rows[i]["WLBH1"].ToString() + "'   and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' "; 
+                                //cmd = new OracleCommand(sql, conn1);
+                                //da = new OracleDataAdapter(cmd);
+                                //dt = new DataTable();
+                                //da.Fill(dt);
+                                string ida = dta.Rows[i]["ID"].ToString();
                                 sql = "update FORMTABLE_MAIN_349_DT1 set rkdh='" + id_code + "'  where id='" + ida + "'";
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
@@ -702,7 +702,7 @@ namespace OAService
                                 da.Fill(dt);
                                 string cgdh = dt.Rows[0]["CGDH"].ToString();
 
-                                sql = " select * from FORMTABLE_MAIN_330_DT1  where cgdh='" + cgdh + "' and bh5='" + dta.Rows[i]["WLBH5"].ToString() + "'  and xqsl='" + dta.Rows[i]["xqsl"].ToString() + "' ";
+                                sql = " select * from FORMTABLE_MAIN_330_DT1  where cgdh='" + cgdh + "' and bh5='" + dta.Rows[i]["WLBH5"].ToString() + "'  and xqsl1='" + dta.Rows[i]["xqsl"].ToString() + "' ";
                                 //sql = " select A.lcbh,B.* from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='"+rk.oano+"' and B.wlbh='"+rk.wlbh+"'";
                                 cmd = new OracleCommand(sql, conn1);
                                 da = new OracleDataAdapter(cmd);
@@ -722,12 +722,12 @@ namespace OAService
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
 
-                                sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh5='" + dta.Rows[i]["WLBH5"].ToString() + "'";
-                                cmd = new OracleCommand(sql, conn1);
-                                da = new OracleDataAdapter(cmd);
-                                dt = new DataTable();
-                                da.Fill(dt);
-                                string ida = dt.Rows[0]["ID"].ToString();
+                                //sql = " select B.id from formtable_main_349 a left join FORMTABLE_MAIN_349_DT1 b on a.id=b.mainid where A.lcbh='" + rk.oano + "' and B.wlbh5='" + dta.Rows[i]["WLBH5"].ToString() + "'";
+                                //cmd = new OracleCommand(sql, conn1);
+                                //da = new OracleDataAdapter(cmd);
+                                //dt = new DataTable();
+                                //da.Fill(dt);
+                                string ida = dt.Rows[i]["ID"].ToString();
                                 sql = "update FORMTABLE_MAIN_349_DT1 set rkdh='" + id_code + "'  where id='" + ida + "'";
                                 cmd = new OracleCommand(sql, conn1);
                                 result = cmd.ExecuteNonQuery();
