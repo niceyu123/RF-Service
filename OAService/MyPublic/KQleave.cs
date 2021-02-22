@@ -363,9 +363,12 @@ namespace OAService.MyPublic
                                                                 }
                                                                 else if (ks <= xb)
                                                                 {
-                                                                    TimeSpan ts1 = xb - bt2;
+
+                                                                    TimeSpan ts1 = xb - ks;
                                                                     double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
-                                                                    x = x + d1 + t1;
+                                                                    TimeSpan ts2 = et2-xe;
+                                                                    double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                                    x = x + d1 + d2;
                                                                 }
                                                                 else
                                                                 {
@@ -2622,9 +2625,11 @@ namespace OAService.MyPublic
                                                                 }
                                                                 else if (ks <= xb)
                                                                 {
-                                                                    TimeSpan ts1 = xb - bt2;
+                                                                    TimeSpan ts1 = xb - ks;
                                                                     double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
-                                                                    x = x + d1 + t1;
+                                                                    TimeSpan ts2 = et2 - xe;
+                                                                    double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                                    x = x + d1 + d2;
                                                                     string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                                     sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                                     conn = ToolHelper.OpenRavoerp("24");
@@ -2636,7 +2641,7 @@ namespace OAService.MyPublic
                                                                     ToolHelper.CloseSql(conn);
                                                                     if (num == 0)
                                                                     {
-                                                                        SqlSaveHelper.SaveQJ("24", manid, qjlx, strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute), strDate + " " + Convert.ToString(et2.Hour) + ":" + Convert.ToString(et2.Minute), Convert.ToString(d1 + t1), "0", oaNo);
+                                                                        SqlSaveHelper.SaveQJ("24", manid, qjlx, strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute), strDate + " " + Convert.ToString(et2.Hour) + ":" + Convert.ToString(et2.Minute), Convert.ToString(d1 + d2), "0", oaNo);
                                                                     }
                                                                 }
                                                                 else
@@ -7089,9 +7094,11 @@ namespace OAService.MyPublic
                                                                 }
                                                                 else if (ks <= xb)
                                                                 {
-                                                                    TimeSpan ts1 = xb - bt2;
+                                                                    TimeSpan ts1 = xb - ks;
                                                                     double d1 = Math.Round((double)(ts1.Hours * 60 + ts1.Minutes) / 60, 2);
-                                                                    x = x + d1 + t1;
+                                                                    TimeSpan ts2 = et2 - xe;
+                                                                    double d2 = Math.Round((double)(ts2.Hours * 60 + ts2.Minutes) / 60, 2);
+                                                                    x = x + d1 + d2;
                                                                     string dayy = strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute);
                                                                     sql = " select * from ask_leave where oano='" + oaNo + "' and leaveday=to_date('" + dayy + "','yyyy-mm-dd hh24:mi:ss') ";
                                                                     conn = ToolHelper.OpenRavoerp(type);
@@ -7103,7 +7110,7 @@ namespace OAService.MyPublic
                                                                     ToolHelper.CloseSql(conn);
                                                                     if (num == 0)
                                                                     {
-                                                                        SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute), strDate + " " + Convert.ToString(et2.Hour) + ":" + Convert.ToString(et2.Minute), Convert.ToString(d1 + t1), "0", oaNo);
+                                                                        SqlSaveHelper.SaveQJ(type, manid, qjlx, strDate + " " + Convert.ToString(ks.Hour) + ":" + Convert.ToString(ks.Minute), strDate + " " + Convert.ToString(et2.Hour) + ":" + Convert.ToString(et2.Minute), Convert.ToString(d1+d2), "0", oaNo);
                                                                     }
                                                                 }
                                                                 else
