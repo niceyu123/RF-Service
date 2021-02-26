@@ -1,0 +1,10 @@
+E:\Code\OAService\EDLWF\bin\Debug\EDLWF.exe.config
+E:\Code\OAService\EDLWF\bin\Debug\EDLWF.exe
+E:\Code\OAService\EDLWF\bin\Debug\EDLWF.pdb
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.csprojAssemblyReference.cache
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.Form1.resources
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.Properties.Resources.resources
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.csproj.GenerateResource.cache
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.csproj.CoreCompileInputs.cache
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.exe
+E:\Code\OAService\EDLWF\obj\Debug\EDLWF.pdb

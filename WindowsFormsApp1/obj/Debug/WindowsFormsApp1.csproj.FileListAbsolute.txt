@@ -83,7 +83,3 @@ E:\Code\OAService\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
 E:\Code\OAService\WindowsFormsApp1\bin\Debug\OAService.XmlSerializers.dll
 E:\Code\OAService\WindowsFormsApp1\bin\Debug\Interop.zkemkeeper.dll
 E:\Code\OAService\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
-E:\Code\OAService\WindowsFormsApp1\bin\Debug\FastReport.Bars.dll
-E:\Code\OAService\WindowsFormsApp1\bin\Debug\FastReport.dll
-E:\Code\OAService\WindowsFormsApp1\bin\Debug\FastReport.Editor.dll
-E:\Code\OAService\WindowsFormsApp1\bin\Debug\FastReport.Web.dll

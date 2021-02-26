@@ -72,10 +72,6 @@ E:\Code\OAService\ERPCZ\bin\IKVM.Reflection.dll
 E:\Code\OAService\ERPCZ\bin\IKVM.Runtime.dll
 E:\Code\OAService\ERPCZ\bin\IKVM.Runtime.JNI.dll
 E:\Code\OAService\ERPCZ\bin\NLog.dll
-E:\Code\OAService\ERPCZ\bin\NPOI.dll
-E:\Code\OAService\ERPCZ\bin\NPOI.OOXML.dll
-E:\Code\OAService\ERPCZ\bin\NPOI.OpenXml4Net.dll
-E:\Code\OAService\ERPCZ\bin\NPOI.OpenXmlFormats.dll
 E:\Code\OAService\ERPCZ\bin\Oracle.ManagedDataAccess.dll
 E:\Code\OAService\ERPCZ\obj\Debug\ERPCZ.csprojAssemblyReference.cache
 E:\Code\OAService\ERPCZ\obj\Debug\ERPCZ.csproj.CoreCompileInputs.cache

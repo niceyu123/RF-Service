@@ -110,12 +110,12 @@ namespace NewERPCZ.MyPublic
                             }
                         }
                     }
-                    Thread.Sleep(60000);
+                    Thread.Sleep(7200000);
                 }
                 catch (Exception ex)
                 {
                     ToolHelper.logger.Debug("错误" + ex.ToString());
-                    Thread.Sleep(60000);
+                    Thread.Sleep(7200000);
                     throw;
                 }
             }
@@ -230,7 +230,7 @@ namespace NewERPCZ.MyPublic
                         " where a.requestid in(select requestid from workflow_requestbase where requestid in (select a.requestid from FORMTABLE_MAIN_480 a " +
                         " left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid " +
                         " where (b.fkcg is null or b.fkcg != '0') and (a.COMPANYNAME like '%汇隆%' or a.COMPANYNAME like '%工业%' or a.COMPANYNAME like '%隆威%') " +
-                        " ) and currentnodetype='3') order by b.id ";//未添加 查证状态不为0的
+                        " ) and currentnodetype='3') and b.fkcg is null or b.fkcg != '0' order by b.id ";//未添加 查证状态不为0的
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -316,14 +316,14 @@ namespace NewERPCZ.MyPublic
                 {
                     OracleConnection conn = ToolHelper.OpenRavoerp("oa");
                     OracleCommand myCommand = conn.CreateCommand();
-                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where b.fkcg = '0' order by b.id  "; 
+                    string sql = " select a.requestid,b.* from FORMTABLE_MAIN_480 a left join FORMTABLE_MAIN_480_DT1 b on a.id=b.mainid where b.fkcg = '0' and xzbh is null order by b.id  "; 
                     OracleCommand cmd = new OracleCommand(sql, conn);
                     OracleDataAdapter da = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     int num = dt.Rows.Count;
                     ToolHelper.CloseSql(conn);
-                    if (num > 0) 
+                    if (num > 0)
                     {
                         for (int i = 0; i < num; i++)
                         {
@@ -339,25 +339,28 @@ namespace NewERPCZ.MyPublic
                                 string dataJson = "{\"Data\":{\"custId\":\"" + custId + "\",\"queryFlag\":\"3\",\"serialNo\":\"" + bno + "\",\"accountSet\":[]}}";
                                 res = NbcbSDK.send("", "accInfo ", "queryReceipt", dataJson);
                             }
-                            Back bk = new JavaScriptSerializer().Deserialize<Back>(res);
-                            string code = bk.Data.retCode;
-                            if (code == "0000")
+                            if (res != "")
                             {
-                                string downloadNo = bk.Data.downloadNo;
-                                conn = ToolHelper.OpenRavoerp("oa");
-                                sql = "update FORMTABLE_MAIN_480_DT1 set xzbh='" + downloadNo + "' where id='" + mid + "'";
-                                cmd = new OracleCommand(sql, conn);
-                                int result = cmd.ExecuteNonQuery();
-                                ToolHelper.CloseSql(conn);
+                                Back bk = new JavaScriptSerializer().Deserialize<Back>(res);
+                                string code = bk.Data.retCode;
+                                if (code == "0000")
+                                {
+                                    string downloadNo = bk.Data.downloadNo;
+                                    conn = ToolHelper.OpenRavoerp("oa");
+                                    sql = "update FORMTABLE_MAIN_480_DT1 set xzbh='" + downloadNo + "' where id='" + mid + "'";
+                                    cmd = new OracleCommand(sql, conn);
+                                    int result = cmd.ExecuteNonQuery();
+                                    ToolHelper.CloseSql(conn);
+                                }
                             }
                         }
                     }
-                    Thread.Sleep(60000);
+                    Thread.Sleep(7200000);
                 }
                 catch (Exception ex)
                 {
                     ToolHelper.logger.Debug("错误" + ex.ToString());
-                    Thread.Sleep(60000);
+                    Thread.Sleep(7200000);
                     throw;
                 }
             }

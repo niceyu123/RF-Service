@@ -31,10 +31,10 @@ E:\Code\OAService\NewERPCZ\bin\log4net.dll
 E:\Code\OAService\NewERPCZ\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Code\OAService\NewERPCZ\bin\Nbcb.Cobp.SDK.dll
 E:\Code\OAService\NewERPCZ\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Code\OAService\NewERPCZ\obj\Debug\NewERPCZ.csprojAssemblyReference.cache
 E:\Code\OAService\NewERPCZ\obj\Debug\NewERPCZ.csproj.CoreCompileInputs.cache
 E:\Code\OAService\NewERPCZ\obj\Debug\NewERPCZ.csproj.CopyComplete
 E:\Code\OAService\NewERPCZ\obj\Debug\NewERPCZ.dll
 E:\Code\OAService\NewERPCZ\obj\Debug\NewERPCZ.pdb
 E:\Code\OAService\NewERPCZ\bin\NLog.dll
 E:\Code\OAService\NewERPCZ\bin\Oracle.ManagedDataAccess.dll
+E:\Code\OAService\NewERPCZ\obj\Debug\NewERPCZ.csprojAssemblyReference.cache

@@ -11,3 +11,16 @@ C:\Users\user\source\repos\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2
 C:\Users\user\source\repos\OAService\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\user\source\repos\OAService\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
 C:\Users\user\source\repos\OAService\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+E:\Code\OAService\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\Code\OAService\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\Code\OAService\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\Code\OAService\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
+E:\Code\OAService\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\Code\OAService\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EDLWF.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EDLWF_SolEdiProxyWebService_SolEdiProxyWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://172.16.11.19:8065/ediserver/ws_services/SolEdiProxyWebService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

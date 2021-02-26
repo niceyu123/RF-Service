@@ -105,7 +105,7 @@ namespace ERPCZ
                     else if (fk.dw == "lw")
                     {
                         payerCorpCode = "1001";
-                        payerAccNo = "32010122000076927";
+                        payerAccNo = "30010122000900367";
                     }
                     else if (fk.dw == "sy")
                     {

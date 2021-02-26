@@ -1,14 +1,9 @@
 E:\Code\OAService\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
 E:\Code\OAService\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
-E:\Code\OAService\WindowsFormsApp3\bin\Debug\FastReport.dll
-E:\Code\OAService\WindowsFormsApp3\bin\Debug\FastReport.Bars.dll
-E:\Code\OAService\WindowsFormsApp3\bin\Debug\FastReport.Editor.dll
-E:\Code\OAService\WindowsFormsApp3\bin\Debug\FastReport.xml
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
-E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CopyComplete
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 E:\Code\OAService\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb

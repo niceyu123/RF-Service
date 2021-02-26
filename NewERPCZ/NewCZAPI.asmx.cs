@@ -154,7 +154,7 @@ namespace NewERPCZ
                     else if (fk.dw == "lw")
                     {
                         corpCode = "1001";
-                        payAcc = "32010122000076927";
+                        payAcc = "30010122000900367";
                     }
                     else if (fk.dw == "sy")
                     {
@@ -280,7 +280,7 @@ namespace NewERPCZ
                         } else if (companyname.IndexOf("隆威婴儿") > 0)
                         {
                             corpCode = "1001";
-                            payAcc = "32010122000076927";
+                            payAcc = "30010122000900367";
                         }
                         else if (companyname.IndexOf("汇隆") > 0)
                         {
@@ -293,7 +293,7 @@ namespace NewERPCZ
                         conn = ToolHelper.OpenRavoerp("oa");
                         myCommand = conn.CreateCommand();
                         sql = "  SELECT a.*,b.* FROM FORMTABLE_MAIN_480_DT1 a," +
-                            " (SELECT sum(realcheckedamt) total FROM FORMTABLE_MAIN_480_DT1 where mainid = '" + id + "') b where mainid = '" + id + "'";
+                            " (SELECT sum(realcheckedamt) total FROM FORMTABLE_MAIN_480_DT1 where mainid = '" + id + "') b where mainid = '" + id + "' order by a.id";
                         cmd = new OracleCommand(sql, conn);
                         OracleDataAdapter das = new OracleDataAdapter(cmd);
                         DataTable dts = new DataTable();
@@ -301,7 +301,7 @@ namespace NewERPCZ
                         int nums = dts.Rows.Count;
                         ToolHelper.CloseSql(conn);
                         string total = dts.Rows[0]["total"].ToString();
-                        string daa = "{\"Data\":{\"batchSerialNo\":\"" + bno + "\",\"businessCode\":\"nis_smart_expense\",\"custId\":\"" + custId + "\",\"totalNumber\":\"" + nums + "\",\"showFlag\":\"1\",\"totalAmt\":\"" + total + "\",\"transferDtls\":[";
+                        string daa = "{\"Data\":{\"batchSerialNo\":\"" + bno + "\",\"businessCode\":\"nis_batch_transfer\",\"custId\":\"" + custId + "\",\"totalNumber\":\"" + nums + "\",\"showFlag\":\"1\",\"totalAmt\":\"" + total + "\",\"transferDtls\":[";
                         string data = "";
                         for (int i = 0; i < nums; i++)
                         {
